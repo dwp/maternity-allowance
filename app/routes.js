@@ -3,16 +3,18 @@ const router = express.Router()
 
 // Add your routes here - above the module.exports line
 
+// Iteration 1
+
 router.post('/', function (req, res) {
-  res.redirect('claimant-details');
+  res.redirect('/iteration-1/claimant-details');
 });
 
-router.post('/claimant-details', function (req, res) {
-  res.redirect('dates');
+router.post('/iteration-1/claimant-details', function (req, res) {
+  res.redirect('/iteration-1/dates');
 });
 
-router.post('/dates', function (req, res) {
-  res.redirect('confirmation');
+router.post('/iteration-1/dates', function (req, res) {
+  res.redirect('/iteration-1/confirmation');
 });
 
 module.exports = router
