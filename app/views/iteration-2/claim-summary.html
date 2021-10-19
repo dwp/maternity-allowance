@@ -22,6 +22,30 @@
 
         <h1 class="govuk-heading-l">Claim summary</h1>
 
+        <h2 class="govuk-heading-m">Maternity Allowance decision</h2>
+
+        {{ govukSummaryList({
+          classes: 'govuk-!-margin-bottom-9',
+          rows: [
+            {
+              key: {
+                text: "Decision"
+              },
+              value: {
+                text: "Allowed"
+              }
+            },
+            {
+              key: {
+                text: "Rate"
+              },
+              value: {
+                text: "Standard rate at £151.97 per week"
+              }
+            }
+          ]
+        }) }}
+
         <h2 class="govuk-heading-m">Claimant details</h2>
 
         {{ govukSummaryList({
@@ -154,30 +178,6 @@
               },
               value: {
                 text: "£200.35"
-              }
-            }
-          ]
-        }) }}
-
-        <h2 class="govuk-heading-m">Maternity Allowance decision</h2>
-
-        {{ govukSummaryList({
-          classes: 'govuk-!-margin-bottom-9',
-          rows: [
-            {
-              key: {
-                text: "Decision"
-              },
-              value: {
-                text: "Allowed"
-              }
-            },
-            {
-              key: {
-                text: "Rate"
-              },
-              value: {
-                text: "Standard rate at £151.97 per week"
               }
             }
           ]

@@ -7,6 +7,9 @@
 
 {% block content %}
 
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
 {% from "govuk/components/tabs/macro.njk" import govukTabs %}
 {% from "govuk/components/table/macro.njk" import govukTable %}
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
@@ -17,6 +20,7 @@
 {% from "govuk/components/table/macro.njk" import govukTable %}
 
 {% set pastDayHtml %}
+
 <h2 class="govuk-heading-l">Claim details</h2>
   <div class="govuk-body">
 
@@ -31,15 +35,6 @@
           },
           value: {
             text: "Sarah Philips"
-          },
-          actions: {
-            items: [
-              {
-                href: "#",
-                text: "Change",
-                visuallyHiddenText: "name"
-              }
-            ]
           }
         },
         {
@@ -48,15 +43,6 @@
           },
           value: {
             text: "HK 76 54 32 Y"
-          },
-          actions: {
-            items: [
-              {
-                href: "#",
-                text: "Change",
-                visuallyHiddenText: "name"
-              }
-            ]
           }
         },
         {
@@ -65,15 +51,6 @@
           },
           value: {
             text: "5 January 1978"
-          },
-          actions: {
-            items: [
-              {
-                href: "#",
-                text: "Change",
-                visuallyHiddenText: "date of birth"
-              }
-            ]
           }
         },
         {
@@ -82,15 +59,6 @@
           },
           value: {
             html: "SE23 6FH"
-          },
-          actions: {
-            items: [
-              {
-                href: "#",
-                text: "Change",
-                visuallyHiddenText: "address"
-              }
-            ]
           }
         },
         {
@@ -99,15 +67,6 @@
           },
           value: {
             html: '07700 900457'
-          },
-          actions: {
-            items: [
-              {
-                href: "#",
-                text: "Change",
-                visuallyHiddenText: "contact details"
-              }
-            ]
           }
         }
       ]
@@ -125,15 +84,6 @@
           },
           value: {
             text: "18 September 2021"
-          },
-          actions: {
-            items: [
-              {
-                href: "#",
-                text: "Change",
-                visuallyHiddenText: "previous application number"
-              }
-            ]
           }
         },
         {
@@ -142,15 +92,6 @@
           },
           value: {
             text: "7 June 2020"
-          },
-          actions: {
-            items: [
-              {
-                href: "#",
-                text: "Change",
-                visuallyHiddenText: "previous application number"
-              }
-            ]
           }
         },
         {
@@ -159,15 +100,6 @@
           },
           value: {
             text: "11 September 2021"
-          },
-          actions: {
-            items: [
-              {
-                href: "#",
-                text: "Change",
-                visuallyHiddenText: "previous application number"
-              }
-            ]
           }
         },
         {
@@ -176,15 +108,6 @@
           },
           value: {
             text: "30 May 2021"
-          },
-          actions: {
-            items: [
-              {
-                href: "#",
-                text: "Change",
-                visuallyHiddenText: "previous application number"
-              }
-            ]
           }
         }
       ]
@@ -201,15 +124,6 @@
           },
           value: {
             text: "Met"
-          },
-          actions: {
-            items: [
-              {
-                href: "#",
-                text: "Change",
-                visuallyHiddenText: "previous application number"
-              }
-            ]
           }
         },
         {
@@ -218,15 +132,6 @@
           },
           value: {
             text: "31 January 2021 to 25 July 2021"
-          },
-          actions: {
-            items: [
-              {
-                href: "#",
-                text: "Change",
-                visuallyHiddenText: "previous application number"
-              }
-            ]
           }
         },
         {
@@ -235,15 +140,6 @@
           },
           value: {
             text: "Met"
-          },
-          actions: {
-            items: [
-              {
-                href: "#",
-                text: "Change",
-                visuallyHiddenText: "previous application number"
-              }
-            ]
           }
         },
         {
@@ -252,15 +148,6 @@
           },
           value: {
             text: "2 May 2021 to 25 July 2021"
-          },
-          actions: {
-            items: [
-              {
-                href: "#",
-                text: "Change",
-                visuallyHiddenText: "previous application number"
-              }
-            ]
           }
         },
         {
@@ -269,15 +156,6 @@
           },
           value: {
             text: "£200.35"
-          },
-          actions: {
-            items: [
-              {
-                href: "#",
-                text: "Change",
-                visuallyHiddenText: "previous application number"
-              }
-            ]
           }
         }
       ]
@@ -330,20 +208,23 @@
 {{ govukTabs({
   items: [
     {
-      label: "Claim details",
-      id: "past-day",
-      panel: {
-        html: pastDayHtml
-      }
-    },
-    {
       label: "Award decision",
       id: "past-week",
       panel: {
         html: pastWeekHtml
+
+      }
+    },
+    {
+      label: "Claim details",
+    id: "past-day",
+    panel: {
+      html: pastDayHtml
       }
     }
   ]
 }) }}
+  </div>
+</div>
 
 {% endblock %}
