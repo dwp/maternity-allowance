@@ -192,6 +192,141 @@
           ]
         }) }}
 
+        <h2 class="govuk-heading-m">Employment and earnings</h2>
+
+        {{ govukSummaryList({
+          classes: 'govuk-!-margin-bottom-9',
+          rows: [
+            {
+              key: {
+                text: "Employment test"
+              },
+              value: {
+                text: "Met"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "#",
+                    text: "Change",
+                    visuallyHiddenText: "previous application number"
+                  }
+                ]
+              }
+            },
+            {
+              key: {
+                text: "Employment test weeks used"
+              },
+              value: {
+                text: "31 January 2021 to 25 July 2021"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "#",
+                    text: "Change",
+                    visuallyHiddenText: "previous application number"
+                  }
+                ]
+              }
+            },
+            {
+              key: {
+                text: "Earnings test"
+              },
+              value: {
+                text: "Met"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "#",
+                    text: "Change",
+                    visuallyHiddenText: "previous application number"
+                  }
+                ]
+              }
+            },
+            {
+              key: {
+                text: "Earnings test weeks used"
+              },
+              value: {
+                text: "2 May 2021 to 25 July 2021"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "#",
+                    text: "Change",
+                    visuallyHiddenText: "previous application number"
+                  }
+                ]
+              }
+            },
+            {
+              key: {
+                text: "Average weekly earnings for earnings test"
+              },
+              value: {
+                text: "£200.35"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "#",
+                    text: "Change",
+                    visuallyHiddenText: "previous application number"
+                  }
+                ]
+              }
+            }
+          ]
+        }) }}
+
+        <h2 class="govuk-heading-m">Maternity Allowance decision</h2>
+
+        {{ govukSummaryList({
+          classes: 'govuk-!-margin-bottom-9',
+          rows: [
+            {
+              key: {
+                text: "Decision"
+              },
+              value: {
+                text: "Allowed"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "#",
+                    text: "Change",
+                    visuallyHiddenText: "previous application number"
+                  }
+                ]
+              }
+            },
+            {
+              key: {
+                text: "Rate"
+              },
+              value: {
+                text: "Standard rate at £151.97 per week"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "#",
+                    text: "Change",
+                    visuallyHiddenText: "previous application number"
+                  }
+                ]
+              }
+            }
+          ]
+        }) }}
+
 
         <form action="/form-handler" method="post" novalidate>
 

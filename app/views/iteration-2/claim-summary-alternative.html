@@ -102,6 +102,14 @@
             },
             {
               key: {
+                text: "Date last worked"
+              },
+              value: {
+                text: "XX XXXXXXXX 2021"
+              }
+            },
+            {
+              key: {
                 text: "First day of Test Period"
               },
               value: {
@@ -175,6 +183,129 @@
             }
           ]
         }) }}
+
+
+        {% from "govuk/components/table/macro.njk" import govukTable %}
+
+{{ govukTable({
+  caption: "Highest earning weeks",
+  captionClasses: "govuk-table__caption--m",
+  firstCellIsHeader: true,
+  head: [
+    {
+      text: "Date"
+    },
+    {
+      text: "Amount"
+    }
+  ],
+  rows: [
+    [
+    {
+      text: "27 Jun to 3 Jul 2021"
+    },
+    {
+      text: "£200.35"
+    }
+  ],
+  [
+    {
+      text: "4 Jul to 10 Jul 2021"
+    },
+    {
+      text: "£200.35"
+    }
+  ],
+  [
+    {
+      text: "11 Jul to 17 Jul 2021"
+    },
+    {
+      text: "£200.35"
+    }
+  ],
+  [
+    {
+      text: "18 Jul to 24 Jul 2021"
+    },
+    {
+      text: "£200.35"
+    }
+  ],
+  [
+    {
+      text: "25 Jul to 31 Jul 2021"
+    },
+    {
+      text: "£200.35"
+    }
+  ],
+  [
+    {
+      text: "1 Aug to 7 Aug 2021"
+    },
+    {
+      text: "£200.35"
+    }
+  ],
+  [
+    {
+      text: "8 Aug to 14 Aug 2021"
+    },
+    {
+      text: "£200.35"
+    }
+  ],
+  [
+    {
+      text: "15 Aug to 21 Aug 2021"
+    },
+    {
+      text: "£200.35"
+    }
+  ],
+  [
+    {
+      text: "22 Aug to 28 Aug 2021"
+    },
+    {
+      text: "£200.35"
+    }
+  ],
+  [
+    {
+      text: "29 Aug to 4 Sep 2021"
+    },
+    {
+      text: "£200.35"
+    }
+  ],
+  [
+    {
+      text: "5 Sep to 11 Sep 2021"
+    },
+    {
+      text: "£200.35"
+    }
+  ],
+  [
+    {
+      text: "12 Sep to 18 Sep 2021"
+    },
+    {
+      text: "£200.35"
+    }
+  ],
+  [
+    {
+      text: "19 Sep to 25 Sep 2021"
+    },
+    {
+      text: "£200.35"
+    }
+    ]
+  ]
+}) }}
 
 
         <form action="/form-handler" method="post" novalidate>
