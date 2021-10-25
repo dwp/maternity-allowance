@@ -17,7 +17,91 @@
 
       <p><a href="/iteration-1/" class="govuk-body govuk-!-font-weight-bold">Prototype iteration 1</a></p>
 
-      <p>Things</p>
+      {% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+
+      {% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+
+    {{ govukAccordion({
+      id: "accordion-default",
+      items: [
+        {
+          heading: {
+            text: "Design decisions"
+          },
+          content: {
+            html:
+            '<ul class="govuk-list govuk-list--bullet">
+              <li>We went for the simplest option of playing back all of the information we expected would be needed by agents in a flat summary list.</li>
+              <li>We avoided change links until a point where users tell us that they&rsquo;re necessary.</li>
+              <li>To interact with the &lsquo;Matching&rsquo; GZ we need to gather full name, date of birth and postcode.</li>
+              <li>We will use DWP standard pattern for full name input. Not using &ldquo;(excluding titles)&rdquo; in iteration 1 - explore through UR.</li>
+              <li>For the data gather, we&rsquo;ve put three (related) things on one page, as opposed to putting them on separate pages, in the interests of speed of input, because this is an agent facing service.</li>
+              <li>When on separate pages, it allows users to digest the content easier, but this is for quick, speedy, input and doesn&rsquo;t need to be digested as it&rsquo;ll be used many times per day.</li>
+              <li>We have re-used patterns from the Bereavement Support Payment agent-facing service as these data-gather elements have been tested with DWP agents.</li>
+            </ul>'
+          }
+        },
+        {
+          heading: {
+            text: "Hypotheses"
+          },
+          content: {
+            html: "<p class='govuk-body'>This is the content for How people read.</p>"
+          }
+        },
+          {
+          heading: {
+            text: "Research notes"
+          },
+          content: {
+            html: "<p class='govuk-body'>This is the content for How people read.</p>"
+          }
+        }
+      ]
+    }) }}
+
+
+
+    <h2 class="govuk-heading-m">Round 2 - 26 October 2021</h2>
+
+    <p><a href="/iteration-2/" class="govuk-body govuk-!-font-weight-bold">Prototype iteration 2</a></p>
+
+    {% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+
+    {% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+
+  {{ govukAccordion({
+    id: "accordion-default",
+    items: [
+      {
+        heading: {
+          text: "Design decisions"
+        },
+        content: {
+          html:
+          '<ul class="govuk-list govuk-list--bullet">
+            <li>TBC</li>
+          </ul>'
+        }
+      },
+      {
+        heading: {
+          text: "Hypotheses"
+        },
+        content: {
+          html: "<p class='govuk-body'>This is the content for How people read.</p>"
+        }
+      },
+        {
+        heading: {
+          text: "Research notes"
+        },
+        content: {
+          html: "<p class='govuk-body'>This is the content for How people read.</p>"
+        }
+      }
+    ]
+  }) }}
 
     </div>
   </div>
