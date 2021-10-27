@@ -31,6 +31,20 @@ router.post('/iteration-2/dates', function (req, res) {
   res.redirect('/iteration-2/claim-summary');
 });
 
+// Iteration 3
+
+router.post('/', function (req, res) {
+  res.redirect('/iteration-3/');
+});
+
+router.post('/iteration-3/', function (req, res) {
+  res.redirect('/iteration-3/dates');
+});
+
+router.post('/iteration-3/dates', function (req, res) {
+  res.redirect('/iteration-3/claim-summary');
+});
+
 
 // Alt
 
