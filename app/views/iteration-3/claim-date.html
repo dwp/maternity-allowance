@@ -9,23 +9,8 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-l">
-        Claim dates
-      </h1>
 
       <form class="form" method="post" novalidate>
-
-      {% from "govuk/components/date-input/macro.njk" import govukDateInput %}
-
-      {{ govukDateInput({
-        id: "due-date",
-        namePrefix: "due-date",
-        fieldset: {
-          legend: {
-            text: "When is the claimant’s baby due?"
-          }
-        }
-      }) }}
 
       {% from "govuk/components/radios/macro.njk" import govukRadios %}
       {% from "govuk/components/input/macro.njk" import govukInput %}
@@ -36,7 +21,7 @@
         namePrefix: "date-last-worked",
         fieldset: {
           legend: {
-            text: "Date last worked"
+            text: "Date the claim was received"
           }
         }
       }) }}
@@ -47,23 +32,36 @@
         name: "contact",
         fieldset: {
           legend: {
-            text: "Has the claimant stopped working to have their baby?"
+            text: "When was the claim received?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
           }
         },
         items: [
           {
             value: "yes",
-            text: "Yes",
-            conditional: {
-              html: dlwHtml
-            }
+            text: "Today (28 October 2021)"
           },
           {
             value: "no",
-            text: "No"
+            text: "Yesterday (27 October 2021)"
+          },
+          {
+            value: "no",
+            text: "Another date",
+            conditional: {
+              html: dlwHtml
+            }
           }
         ]
       }) }}
+
+
+
+
+
+
+
 
       {% from "govuk/components/button/macro.njk" import govukButton %}
 

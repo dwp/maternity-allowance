@@ -38,10 +38,18 @@ router.post('/', function (req, res) {
 });
 
 router.post('/iteration-3/', function (req, res) {
+  res.redirect('/iteration-3/claim-date');
+});
+
+router.post('/iteration-3/claim-date', function (req, res) {
   res.redirect('/iteration-3/dates');
 });
 
 router.post('/iteration-3/dates', function (req, res) {
+  res.redirect('/iteration-3/chosen-map-date');
+});
+
+router.post('/iteration-3/chosen-map-date', function (req, res) {
   res.redirect('/iteration-3/claim-summary');
 });
 
