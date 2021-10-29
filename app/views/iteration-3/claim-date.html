@@ -27,6 +27,14 @@
       }) }}
       {% endset -%}
 
+      {% set todayText %}
+        Today ({{ '' | todayGovuk }})
+      {% endset -%}
+
+      {% set yesterdayText %}
+        Yesterday ({{ '' | yesterdayGovuk }})
+      {% endset -%}
+
       {{ govukRadios({
         idPrefix: "contact",
         name: "contact",
@@ -40,11 +48,11 @@
         items: [
           {
             value: "yes",
-            text: "Today (28 October 2021)"
+            text: todayText
           },
           {
             value: "no",
-            text: "Yesterday (27 October 2021)"
+            text: yesterdayText
           },
           {
             value: "no",
@@ -55,13 +63,6 @@
           }
         ]
       }) }}
-
-
-
-
-
-
-
 
       {% from "govuk/components/button/macro.njk" import govukButton %}
 
