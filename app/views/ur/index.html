@@ -13,7 +13,7 @@
         User Research
       </h1>
 
-      <h2 class="govuk-heading-m">Round 1 - 20 October 2021</h2>
+      <h2 class="govuk-heading-m">Round 1: 20 October 2021</h2>
 
       <p><a href="/iteration-1/" class="govuk-body govuk-!-font-weight-bold">Prototype iteration 1</a></p>
 
@@ -59,7 +59,20 @@
             text: "Research notes"
           },
           content: {
-            html: "<p class='govuk-body'>This is the content for How people read.</p>"
+            html: "<p class='govuk-body'>Number of participants: 5</p>"
+          },
+          content: {
+            html:
+            '<ul class="govuk-list govuk-list--bullet">
+            <li>Overall this was well received by agents. They understood that this was a service that was intended for their use, just not exactly what it would do.</li>
+            <li>There were no issues with the data capture.</li>
+            <li>There was an expectation that this information would be saved if they needed to leave the claim or BF it at any point.</li>
+            <li>Some agents did notice that the date last worked was not shown on the summary page.</li>
+            <li>Agents did not understand where the information on the summary page had come from to form the decision.</li>
+            <li>However, it did seem like there was a greater level of trust in this information than there was during the previous scenario-based research.</li>
+            <li>The MAP was something agents expected to see as part of this decision, or as the next step in the process.</li>
+            <li class ="govuk-!-font-weight-bold">Some future areas to consider: call to action, date last worked, MAP, earnings test.</li>
+            </ul>'
           }
         }
       ]
@@ -67,7 +80,7 @@
 
 
 
-    <h2 class="govuk-heading-m">Round 2 - 26 October 2021</h2>
+    <h2 class="govuk-heading-m">Round 2: 26, 27 October 2021</h2>
 
     <p><a href="/iteration-2/" class="govuk-body govuk-!-font-weight-bold">Prototype iteration 2</a></p>
 
@@ -85,7 +98,7 @@
         content: {
           html:
           '<ul class="govuk-list govuk-list--bullet">
-            <li>We added details of the Hightest earning weeks as some agents stated they needed to know what figures had been used.</li>
+            <li>We added details of the Highest earning weeks as some agents stated they needed to know what figures had been used.</li>
             <li>We put the Highest 13 weeks inside a details toggle, because not all agents stated that they needed to see the full details, and adding the full list to the summary page made it cluttered and difficult to navigate.</li>
           </ul>'
         }
@@ -108,13 +121,60 @@
           text: "Research notes"
         },
         content: {
-          html: "<p class='govuk-body'>This is the content for How people read.</p>"
+          html: "<p class='govuk-body'>Number of participants: </p>"
         }
       }
     ]
   }) }}
 
-    </div>
+  <h2 class="govuk-heading-m">Round 3: 4 November 2021</h2>
+
+  <p><a href="/iteration-3/" class="govuk-body govuk-!-font-weight-bold">Prototype iteration 3</a></p>
+
+  {% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+
+  {% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+
+{{ govukAccordion({
+  id: "accordion-default",
+  items: [
+    {
+      heading: {
+        text: "Design decisions"
+      },
+      content: {
+        html:
+        '<ul class="govuk-list govuk-list--bullet">
+          <li>We updated the labels on question fields to adhere to GDS patterns and guidance for pages with multiple questions.</li>
+          <li>We added a question to collect the claimant&rsquo;s chosen MAP start date. We don&rsquo;t believe it is possible to make the data call and apply the employment and earnings test logic in time for the question to appear dynamically depending on the test results.</li>
+        </ul>'
+      }
+    },
+    {
+      heading: {
+        text: "Hypotheses"
+      },
+      content: {
+        html:
+        '<ul class="govuk-list govuk-list--bullet">
+          <li>We believe that agents will understand why the claimant&rsquo;s chosen date and the actual MAP start date differ, if they are not the same.</li>
+          <li>We believe the agents will notice the difference between the MAP start dates without a visual cue on the summary page.</li>
+          <li>We&rsquo;ll know this is true through observation of users in user research sessions.</li>
+        </ul>'
+      }
+    },
+      {
+      heading: {
+        text: "Research notes"
+      },
+      content: {
+        html: "<p class='govuk-body'>Number of participants: </p>"
+      }
+    }
+  ]
+}) }}
+
+</div>
   </div>
 
 {% endblock %}
