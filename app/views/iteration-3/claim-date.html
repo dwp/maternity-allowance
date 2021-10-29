@@ -28,11 +28,11 @@
       {% endset -%}
 
       {% set todayText %}
-        Today ({{ '' | todayGovuk }})
+        Today, {{ '' | todayGovuk }}
       {% endset -%}
 
       {% set yesterdayText %}
-        Yesterday ({{ '' | yesterdayGovuk }})
+        Yesterday, {{ '' | yesterdayGovuk }}
       {% endset -%}
 
       {{ govukRadios({
@@ -56,7 +56,7 @@
           },
           {
             value: "no",
-            text: "Another date",
+            text: "A different date",
             conditional: {
               html: dlwHtml
             }
