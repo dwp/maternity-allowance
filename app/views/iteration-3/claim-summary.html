@@ -1,5 +1,6 @@
 
 {% extends "layout.html" %}
+{% set bodyAttributes = { id: "summary-screen" } %}
 
 {% block pageTitle %}
   GOV.UK Prototype Kit
@@ -10,18 +11,27 @@
 
   {% block content %}
 
-  <div class="blue-banner">
-    <h1 class="govuk-heading-xl">
-      Alice Crowther
-    </h1>
-  </div>
+  <section class="key-details-bar" role="contentinfo" aria-label="Key details">
+    <dl class="key-details-bar__key-details">
+      <div class="key-details-bar__top-block">
+        <dt class="govuk-visually-hidden">Name:</dt>
+        <dt class="key-details-bar__name">Alice Crowther</dt>
+
+        <dt class="govuk-visually-hidden">National Insurance number:</dt>
+        <dt class="key-details-bar__nino">XX123456X</dt>
+      </div>
+
+      <div class="key-details-bar__bottom-block">
+        <dt>Date of birth:</dt>
+        <dd>16 September 1989</dd>
+      </div>
+    </dl>
+  </section>
 
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
 
-        <h1 class="govuk-heading-l">Claim summary</h1>
-
-        <h2 class="govuk-heading-m">Maternity Allowance decision</h2>
+        <h1 class="govuk-heading-m">Maternity Allowance decision</h1>
 
         {{ govukSummaryList({
           classes: 'govuk-!-margin-bottom-9',
