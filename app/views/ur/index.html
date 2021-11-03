@@ -64,6 +64,8 @@
           content: {
             html:
             '<ul class="govuk-list govuk-list--bullet">
+
+            <li>Number of participants: </li>
             <li>Overall this was well received by agents. They understood that this was a service that was intended for their use, just not exactly what it would do.</li>
             <li>There were no issues with the data capture.</li>
             <li>There was an expectation that this information would be saved if they needed to leave the claim or BF it at any point.</li>
@@ -126,6 +128,7 @@
         content: {
           html:
           '<ul class="govuk-list govuk-list--bullet">
+          <li>Number of participants: </li>
           <li>There was confusion amongst agents as to who the intended audience of the service was. Some thought that it was for citizens and still believed this upon completion.</li>
           <li>Some agents entered a title into the full name field, this did not happen on the previous round so this is an area to observe moving forwards.</li>
           <li>As with the previous round, agents weren’t sure where this information was from, there was slightly less recognition that it could be form a source such as RTI.</li>
@@ -178,10 +181,63 @@
         text: "Research notes"
       },
       content: {
-        html: "<p class='govuk-body'>Number of participants: </p>"
+        html: "<p class='govuk-body'>Number of participants: 5</p>"
+      },
+      content: {
+        html:
+      '<ul class="govuk-list govuk-list--bullet">
+        <li>Number of participants: </li>
+      </ul>'
       }
     }
   ]
+}) }}
+<h2 class="govuk-heading-m">Round 4: 4 November 2021</h2>
+
+<p><a href="/iteration-4/" class="govuk-body govuk-!-font-weight-bold">Prototype iteration 4</a></p>
+
+{% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+
+{% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+
+{{ govukAccordion({
+id: "accordion-default",
+items: [
+  {
+    heading: {
+      text: "Design decisions"
+    },
+    content: {
+      html:
+      '<ul class="govuk-list govuk-list--bullet">
+        <li>To break up the long page of claim summary information, we decided to use tabs to break the content into more manageable sections.</li>
+        <li>Tabs are an experimental pattern in the Design System, and require further research.</li>
+      </ul>'
+    }
+  },
+  {
+    heading: {
+      text: "Hypotheses"
+    },
+    content: {
+      html:
+      '<ul class="govuk-list govuk-list--bullet">
+        <li>We believe that grouping the information into manageable sections, displayed in tabs, will prevent the user from being overwhelmed.</li>
+        <li>We believe that grouping the information into manageable sections, displayed in tabs, will enable the agent to easily digest the information displayed.</li>
+        <li>We believe that the tab headings, which are all displayed above the fold, will reassure agents that all the information they need to see is available. They will not need to scroll to check that it is all there.</li>
+        <li>We will observe user behaviour through usability testing to see if this is the case.</li>
+      </ul>'
+    }
+  },
+    {
+    heading: {
+      text: "Research notes"
+    },
+    content: {
+      html: "<p class='govuk-body'>Number of participants: </p>"
+    }
+  }
+]
 }) }}
 
 </div>
