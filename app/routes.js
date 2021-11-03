@@ -53,6 +53,28 @@ router.post('/iteration-3/chosen-map-date', function (req, res) {
   res.redirect('/iteration-3/claim-summary');
 });
 
+// Iteration 4
+
+router.post('/', function (req, res) {
+  res.redirect('/iteration-4/');
+});
+
+router.post('/iteration-4/', function (req, res) {
+  res.redirect('/iteration-4/claim-date');
+});
+
+router.post('/iteration-4/claim-date', function (req, res) {
+  res.redirect('/iteration-4/dates');
+});
+
+router.post('/iteration-4/dates', function (req, res) {
+  res.redirect('/iteration-4/chosen-map-date');
+});
+
+router.post('/iteration-4/chosen-map-date', function (req, res) {
+  res.redirect('/iteration-4/claim-summary');
+});
+
 
 // Alt
 
