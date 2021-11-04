@@ -159,7 +159,11 @@
         html:
         '<ul class="govuk-list govuk-list--bullet">
           <li>We updated the labels on question fields to adhere to GDS patterns and guidance for pages with multiple questions.</li>
-          <li>We added a question to collect the claimant&rsquo;s chosen MAP start date. We don&rsquo;t believe it is possible to make the data call and apply the employment and earnings test logic in time for the question to appear dynamically depending on the test results.</li>
+          <li>We added a question to capture the date the claim was received into DWP, as this can impact the MAP.</li>
+          <li>We used radio options for Today, Yesterday, and Another date as we believe most claims would be processed within 2 days of receipt.</li>
+          <li>This can save agents inputting the same dates over and over again as they work through multiple cases each day.</li>
+          <li>We added a question to collect the claimant&rsquo;s chosen MAP start date. We believe it is possible to make calculate whether the claimant is entitled to choose their MAP start date in the background, and display or not display the question dynamically, depending on the results of that calculation.</li>
+          <li>We added a banner to the summary page which is very similar to the Searchlight banner, as we believe this will help the agents feel more trust in the information displayed.</li>
         </ul>'
       }
     },
@@ -170,7 +174,8 @@
       content: {
         html:
         '<ul class="govuk-list govuk-list--bullet">
-          <li>We believe that agents will understand why the claimant&rsquo;s chosen date and the actual MAP start date differ, if they are not the same.</li>
+          <li>We believe agents will feel more trust in the information displayed when the screen looks like something they are used to interacting with.</li>
+          <li>**FUTURE SCENARIO TO TEST: We believe that agents will understand why the claimant&rsquo;s chosen date and the actual MAP start date differ, if they are not the same.</li>
           <li>We believe the agents will notice the difference between the MAP start dates without a visual cue on the summary page.</li>
           <li>We&rsquo;ll know this is true through observation of users in user research sessions.</li>
         </ul>'
