@@ -18,6 +18,7 @@ $govuk-assets-path: '/govuk/assets/';
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
 @import "custom/key-details";
+@import "custom/dwp-sub-navigation";
 
 .govuk-details__noborder {
   padding-top: 10px;
@@ -26,4 +27,4 @@ $govuk-assets-path: '/govuk/assets/';
 #summary-screen .govuk-header__container { border-bottom:0; margin-bottom:0; }
 #summary-screen .govuk-header { border-bottom:0; }
 
-.key-details-bar { margin: -50px 0 30px; }
+.key-details-bar { margin: -50px 0 0;}
