@@ -245,6 +245,54 @@ items: [
 ]
 }) }}
 
+<h2 class="govuk-heading-m">Iteration 3 - alt navigation</h2>
+
+<p><a href="/iteration-3-alt/" class="govuk-body govuk-!-font-weight-bold">Prototype iteration 3-alt</a></p>
+
+{% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+
+{% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+
+{{ govukAccordion({
+id: "accordion-default",
+items: [
+{
+  heading: {
+    text: "Design decisions"
+  },
+  content: {
+    html:
+    '<ul class="govuk-list govuk-list--bullet">
+      <li>Because a lot of information is below the fold, agents have needed to scroll to find information.</li>
+      <li>To make the claim summary page easier to navigate, we introduced links to each section at the top of the page, beneath the Key Details banner.</li>
+      <li>This will enable them to jump to the information they need.</li>
+      <li>A similar pattern is used in other internal DWP services, such as Searchlight. Their version is set to full-page width, but we understand they are looking to bring it within the GDS two-thirds layout, so we have taken that approach.</li>
+    </ul>'
+  }
+},
+{
+  heading: {
+    text: "Hypotheses"
+  },
+  content: {
+    html:
+    '<ul class="govuk-list govuk-list--bullet">
+      <li>We believe agents will be reassured that all the information they need is available to them.</li>
+      <li>We believe agents will be able to retrieve key bits of information more quickly, by using the top-of-page navigation links.</li>
+      <li>We will observe agent users through User Research to see if this is true.</li>
+    </ul>'
+  }
+},
+  {
+  heading: {
+    text: "Research notes"
+  },
+  content: {
+    html: "<p class='govuk-body'>Number of participants: </p>"
+  }
+}
+]
+}) }}
 </div>
   </div>
 
