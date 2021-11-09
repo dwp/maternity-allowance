@@ -72,6 +72,10 @@ router.post('/iteration-4/scenario-1/about-the-baby', function (req, res) {
 });
 
 router.post('/iteration-4/scenario-1/date-last-worked', function (req, res) {
+  res.redirect('/iteration-4/scenario-1/chosen-map-date');
+});
+
+router.post('/iteration-4/scenario-1/chosen-map-date', function (req, res) {
   res.redirect('/iteration-4/scenario-1/summary');
 });
 
