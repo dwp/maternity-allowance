@@ -53,28 +53,49 @@ router.post('/iteration-3/chosen-map-date', function (req, res) {
   res.redirect('/iteration-3/claim-summary');
 });
 
-// Iteration 4
+// Iteration 4 - Scenario 1
 
 router.post('/', function (req, res) {
-  res.redirect('/iteration-4/');
+  res.redirect('/iteration-4/scenario-1/');
 });
 
-router.post('/iteration-4/', function (req, res) {
-  res.redirect('/iteration-4/claim-date');
+router.post('/iteration-4/scenario-1/', function (req, res) {
+  res.redirect('/iteration-4/scenario-1/claim-date');
 });
 
-router.post('/iteration-4/claim-date', function (req, res) {
-  res.redirect('/iteration-4/dates');
+router.post('/iteration-4/scenario-1/claim-date', function (req, res) {
+  res.redirect('/iteration-4/scenario-1/about-the-baby');
 });
 
-router.post('/iteration-4/dates', function (req, res) {
-  res.redirect('/iteration-4/chosen-map-date');
+router.post('/iteration-4/scenario-1/about-the-baby', function (req, res) {
+  res.redirect('/iteration-4/scenario-1/date-last-worked');
 });
 
-router.post('/iteration-4/chosen-map-date', function (req, res) {
-  res.redirect('/iteration-4/claim-summary');
+router.post('/iteration-4/scenario-1/date-last-worked', function (req, res) {
+  res.redirect('/iteration-4/scenario-1/summary');
 });
 
+// Iteration 4 - Scenario 1
+
+router.post('/', function (req, res) {
+  res.redirect('/iteration-4/scenario-2/');
+});
+
+router.post('/iteration-4/scenario-2/', function (req, res) {
+  res.redirect('/iteration-4/scenario-2/claim-date');
+});
+
+router.post('/iteration-4/scenario-2/claim-date', function (req, res) {
+  res.redirect('/iteration-4/scenario-2/about-the-baby');
+});
+
+router.post('/iteration-4/scenario-2/about-the-baby', function (req, res) {
+  res.redirect('/iteration-4/scenario-2/date-last-worked');
+});
+
+router.post('/iteration-4/scenario-2/date-last-worked', function (req, res) {
+  res.redirect('/iteration-4/scenario-2/summary');
+});
 
 // Alt
 
