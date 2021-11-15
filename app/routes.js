@@ -79,7 +79,7 @@ router.post('/iteration-4/scenario-1/chosen-map-date', function (req, res) {
   res.redirect('/iteration-4/scenario-1/summary');
 });
 
-// Iteration 4 - Scenario 1
+// Iteration 4 - Scenario 2
 
 router.post('/', function (req, res) {
   res.redirect('/iteration-4/scenario-2/');
@@ -99,6 +99,32 @@ router.post('/iteration-4/scenario-2/about-the-baby', function (req, res) {
 
 router.post('/iteration-4/scenario-2/date-last-worked', function (req, res) {
   res.redirect('/iteration-4/scenario-2/summary');
+});
+
+// Iteration 5
+
+router.post('/', function (req, res) {
+  res.redirect('/iteration-5/');
+});
+
+router.post('/iteration-5/', function (req, res) {
+  res.redirect('/iteration-5/claim-date');
+});
+
+router.post('/iteration-5/claim-date', function (req, res) {
+  res.redirect('/iteration-5/about-the-baby');
+});
+
+router.post('/iteration-5/about-the-baby', function (req, res) {
+  res.redirect('/iteration-5/date-last-worked');
+});
+
+router.post('/iteration-5/date-last-worked', function (req, res) {
+  res.redirect('/iteration-5/chosen-map-date');
+});
+
+router.post('/iteration-5/chosen-map-date', function (req, res) {
+  res.redirect('/iteration-5/summary');
 });
 
 // Alt
