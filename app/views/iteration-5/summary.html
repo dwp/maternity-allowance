@@ -74,7 +74,7 @@
         text: "Maternity Allowance Period rule"
       },
       value: {
-        text: "Non Flexi-map"
+        text: "Non-flexible MAP"
       }
     },
     {
@@ -141,7 +141,7 @@
 {% endset -%}
 
 {% set maMapDatesHtml %}
-<h2 class="govuk-heading-m">MAP dates</h2>
+<h2 class="govuk-heading-m">Maternity Allowance Period dates</h2>
 {{ govukSummaryList({
   classes: 'govuk-!-margin-bottom-0',
   rows: [
@@ -400,7 +400,7 @@ text: "£200.35"
       }
     },
     {
-      label: "MAP dates",
+      label: "Maternity Allowance Period dates",
       id: "ma-map-dates",
       panel: {
         html: maMapDatesHtml
