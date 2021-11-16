@@ -253,9 +253,9 @@ items: [
   }
 ]
 }) }}
- <h2 class="govuk-heading-m">Iteration 3 - alt navigation</h2>
+<h2 class="govuk-heading-m">Round 5: 17 November 2021</h2>
 
-<p><a href="/iteration-3-alt/" class="govuk-body govuk-!-font-weight-bold">Prototype iteration 3-alt</a></p>
+<p><a href="/iteration-5/" class="govuk-body govuk-!-font-weight-bold">Prototype iteration 5</a></p>
 
 {% from "govuk/components/accordion/macro.njk" import govukAccordion %}
 
@@ -264,44 +264,49 @@ items: [
 {{ govukAccordion({
 id: "accordion-default",
 items: [
-{
-  heading: {
-    text: "Design decisions"
-  },
-  content: {
-    html:
-    '<ul class="govuk-list govuk-list--bullet">
-      <li>Because a lot of information is below the fold, agents have needed to scroll to find information.</li>
-      <li>To make the claim summary page easier to navigate, we introduced links to each section at the top of the page, beneath the Key Details banner.</li>
-      <li>This will enable them to jump to the information they need.</li>
-      <li>A similar pattern is used in other internal DWP services, such as Searchlight. Their version is set to full-page width, but we understand they are looking to bring it within the GDS two-thirds layout, so we have taken that approach.</li>
-    </ul>'
-  }
-},
-
-{
-  heading: {
-    text: "Hypotheses"
-  },
-  content: {
-    html:
-    '<ul class="govuk-list govuk-list--bullet">
-      <li>We believe agents will be reassured that all the information they need is available to them.</li>
-      <li>We believe agents will be able to retrieve key bits of information more quickly, by using the top-of-page navigation links.</li>
-      <li>We will observe agent users through User Research to see if this is true.</li>
-    </ul>'
-  }
-},
   {
-  heading: {
-    text: "Research notes"
+    heading: {
+      text: "Design decisions"
+    },
+    content: {
+      html:
+
+        '<ul class="govuk-list govuk-list--bullet">
+          <li>We added (excluding title) to the Full name label, because some agents have entered a title in this field, which we don’t need to collect, and which is difficult for us to handle technically. </li>
+          <li>We added a question to find out if the claimant has chosen a date when they would like their MA payments to start. Not every claimant provides this answer, so we needed a way to make it optional. If they have provided a preferred start date, the agent will be able to input it in the conditional reveal.</li>
+          <li>To add more value to the blue banner, and reduce the number of tabs on the screen, we moved claimant details to the blue banner.</li>
+          <li>We added a tag to reflect the status of the claim to the blue banner. We think it might also be useful to have tags for disallowed claims, and claims awaiting specific pieces of information – we will explore what these might be through UR.</li>
+          <li>We added the MAP rule to the Decision tab, because it influences the MAP start date. We need to explore, through UR, if this is the best place for this rule information to be located.</li>
+	<li>We expanded the MAP acronym to be written out in full.</li>
+        </ul>'
+      }
+    },
+    {
+      heading: {
+        text: "Hypotheses"
+      },
+      content: {
+        html:
+        '<ul class="govuk-list govuk-list--bullet">
+          <li>We believe that agents will read the full label on the name field, and stop entering the title of the claimant.</li>
+          <li>We believe that the additional information within the blue banner will give it more value, and agents will be able to quickly find the information they require within it.</li>
+          <li>We believe that agents will be able to understand the status of a case quickly because of the tag in the blue banner.</li>
+<li>We believe the presence of the MAP rule on the decision tab will reassure agents that the claim has been worked out accurately.</li>
+          <li>We will test these hypotheses through observation and discussion in usability testing.</li>
+        </ul>'
+    }
   },
-  content: {
-    html: "<p class='govuk-body'>Number of participants: </p>"
+    {
+    heading: {
+      text: "Research notes"
+    },
+    content: {
+      html: "<p class='govuk-body'>Number of participants: </p>"
+    }
   }
-}
 ]
 }) }}
+
 
 </div>
   </div>
