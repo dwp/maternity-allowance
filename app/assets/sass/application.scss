@@ -24,18 +24,26 @@ $govuk-assets-path: '/govuk/assets/';
   padding-top: 10px;
 }
 
-#summary-screen .govuk-header__container { border-bottom:0; margin-bottom:0; }
-#summary-screen .govuk-header { border-bottom:0; }
+// #summary-screen .govuk-header__container { border-bottom:0; margin-bottom:0; }
+// #summary-screen .govuk-header { border-bottom:0; }
 
 .key-details-bar {
-  margin: -50px 0 0;
+  margin: -30px 0 0;
   .govuk-tag--white {
       color: #005ea5;
       background: #FFF;
       float: right;
   }
+  .govuk-tag--green {
+      float: right;
+      margin: 10px 0 0 0
+  }
 }
 
 .govuk-header__content {
   padding-left: 0;
+}
+
+dd .govuk-tag--orange {
+    margin: 0 0 0 10px;
 }
