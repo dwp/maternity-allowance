@@ -301,8 +301,63 @@ items: [
           <li>We believe that agents will read the full label on the name field, and stop entering the title of the claimant.</li>
           <li>We believe that the additional information within the blue banner will give it more value, and agents will be able to quickly find the information they require within it.</li>
           <li>We believe that agents will be able to understand the status of a case quickly because of the tag in the blue banner.</li>
-<li>We believe the presence of the MAP rule on the decision tab will reassure agents that the claim has been worked out accurately.</li>
+          <li>We believe the presence of the MAP rule on the decision tab will reassure agents that the claim has been worked out accurately.</li>
           <li>We will test these hypotheses through observation and discussion in usability testing.</li>
+        </ul>'
+    }
+  },
+    {
+    heading: {
+      text: "Research notes"
+    },
+    content: {
+      html: "<p class='govuk-body'>Number of participants: 4</p>"
+    }
+  }
+]
+}) }}
+<h2 class="govuk-heading-m">Round 6: 24 November 2021</h2>
+
+<p><a href="/iteration-6/" class="govuk-body govuk-!-font-weight-bold">Prototype iteration 6</a></p>
+
+{% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+
+{% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+
+{{ govukAccordion({
+id: "accordion-default",
+items: [
+  {
+    heading: {
+      text: "Design decisions"
+    },
+    content: {
+      html:
+
+        '<ul class="govuk-list govuk-list--bullet">
+          <li>We added a flag to make it clear which MAP rule applies to the case to reduce the amount of thinking an agent needs to do, and enable them to quickly recognise why a claimant&rsquo;s preferred start date has not been allowed.</li>
+          <li>We moved the MAP rule information to the MAP dates tab, because agents in usability testing couldn&rsquo;t remember where they had seen the rule, and expected it to be with the date information.</li>
+          <li>We changed the styling at the top of the page to remove the blue banner but keep important claimant information at the top, because agents in usability testing haven&rsquo;t noticed the blue banner, and have missed information within it.</li>
+          <li>We moved the 13 weeks of earnings into flat content, because a lot of agents haven&rsquo;t accessed the details drop-down without being prompted.</li>
+          <li>We have created 2 scenarios so we can cover more ground.</li>
+	        <li>Scenario 1 is a 4-week non-flexible MAP with a Variable rate award. Their employment has been broken up, but they have only had 1 employer.</li>
+          <li>Scenario 2 is a Flexible MAP with a Standard rate award. Their employment dates cover 2 employers, and they have weekly earnings from 2 employers.</li>
+          <li>We know that claimants sometimes contact us to question which weekly earnings have been used, so we have included a breakdown of the earnings by employer, and a total weekly amount.</li>
+          <li>We have not included employer details in the Employment and Earnings tab because we cannot currently get this information from Finance GZ. We will explore with users what details they need here, and use this information to make additional requests to Finance GZ where appropriate.</li>
+        </ul>'
+      }
+    },
+    {
+      heading: {
+        text: "Hypotheses"
+      },
+      content: {
+        html:
+        '<ul class="govuk-list govuk-list--bullet">
+        <li>We believe agents will need to see more information from the highest earning weeks, especially when the case is a variable rate.</li>
+        <li>We believe agents are more likely to notice the claimant details now they have been taken out of the blue banner, which we observed was not seen by most users.</li>
+        <li>We believe the MAP rule flag will reassure users that the system has accurately worked out the claimant&rsquo;s start date, and they will be able to explain why, should a claimant call us.</li>
+        <li>We will test these hypotheses through observation and discussion in usability testing.</li>
         </ul>'
     }
   },
@@ -316,7 +371,6 @@ items: [
   }
 ]
 }) }}
-
 
 </div>
   </div>
