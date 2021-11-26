@@ -6,5 +6,10 @@ if (window.console && window.console.info) {
 }
 
 $(document).ready(function () {
+  $('ul.dwp-sub-navigation__list li a').on('click', function(){
+          $('ul.dwp-sub-navigation__list li a').removeAttr('aria-current');
+          $(this).attr('aria-current', 'page');
+  });
+
   window.GOVUKFrontend.initAll()
 })
