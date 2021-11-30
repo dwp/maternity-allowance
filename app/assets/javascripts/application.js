@@ -18,7 +18,7 @@ $(document).ready(function () {
 
   $(document).scroll(function() {
     var y = $(this).scrollTop();
-    if (y > 400) {
+    if (y > 300) {
       $('.float-right').show();
     } else {
       $('.float-right').hide();
