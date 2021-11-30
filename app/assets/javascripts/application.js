@@ -11,5 +11,19 @@ $(document).ready(function () {
           $(this).attr('aria-current', 'page');
   });
 
+  $('ul.dwp-sub-navigation__list li a.top').on('click', function(){
+          $('ul.dwp-sub-navigation__list li a').removeAttr('aria-current');
+          $('ul.dwp-sub-navigation__list li a.decision').attr('aria-current', 'page');
+  });
+
+  $(document).scroll(function() {
+    var y = $(this).scrollTop();
+    if (y > 400) {
+      $('.float-right').show();
+    } else {
+      $('.float-right').hide();
+    }
+  });
+
   window.GOVUKFrontend.initAll()
 })

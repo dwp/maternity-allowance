@@ -44,14 +44,10 @@ $govuk-assets-path: '/govuk/assets/';
   padding-left: 0;
 }
 
-dd {
-  .govuk-tag--orange, .govuk-tag--green {
-    margin: 0 0 0 10px;
-  }
-}
-
 .no-padding-right {
   .govuk-table__header:last-child, .govuk-table__cell:last-child {
       padding-right: 20px;
   }
 }
+
+.float-right { float: right; margin-right: 0; display: none;}

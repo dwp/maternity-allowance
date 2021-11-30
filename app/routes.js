@@ -186,26 +186,10 @@ router.post('/', function (req, res) {
 });
 
 router.post('/iteration-7/scenario-1/', function (req, res) {
-  res.redirect('/iteration-7/scenario-1/claim-date');
-});
-
-router.post('/iteration-7/scenario-1/claim-date', function (req, res) {
-  res.redirect('/iteration-7/scenario-1/about-the-baby');
-});
-
-router.post('/iteration-7/scenario-1/about-the-baby', function (req, res) {
-  res.redirect('/iteration-7/scenario-1/date-last-worked');
-});
-
-router.post('/iteration-7/scenario-1/date-last-worked', function (req, res) {
-  res.redirect('/iteration-7/scenario-1/chosen-map-date');
-});
-
-router.post('/iteration-7/scenario-1/chosen-map-date', function (req, res) {
   res.redirect('/iteration-7/scenario-1/summary');
 });
 
-// Iteration 6 - Scenario 2
+// Iteration 7 - Scenario 2
 
 router.post('/', function (req, res) {
   res.redirect('/iteration-6/scenario-2/');

@@ -11,6 +11,7 @@
 
 {% block beforeContent %}
 
+
       {{ govukBackLink({
         text: "Back",
         href: "javascript:history.go(-1)"
@@ -25,80 +26,113 @@
         <div class="govuk-grid-column-full">
 
 
-  <section class="key-details-bar govuk-!-margin-bottom-3" role="contentinfo" aria-label="Key details">
+  <section class="key-details-bar govuk-!-margin-bottom-0" role="contentinfo" aria-label="Key details">
     <dl class="key-details-bar__key-details">
       <div class="key-details-bar__top-block">
         <dt class="govuk-visually-hidden">Name:</dt>
-        <dt class="key-details-bar__name">Louise Sophie Arnold</dt>
+        <dt class="key-details-bar__name">Sarah Oliver</dt>
 
         <dt class="govuk-visually-hidden">National Insurance number:</dt>
-        <dt class="key-details-bar__nino">XX123456X</dt>
-
-        {{govukTag({
-          text: "Allowed",
-          classes: "govuk-tag--green"
-        })}}
+        <dt class="key-details-bar__nino">XX123456Z</dt>
       </div>
 
       <div class="key-details-bar__bottom-block">
         <dt>Date of birth:</dt>
-        <dd>14 May 1994</dd>
+        <dd>25 September 1986</dd>
         <dt>Postcode:</dt>
-        <dd>DH7 5RK</dd>
+        <dd>MN6 9PK</dd>
         <dt>Contact number:</dt>
-        <dd>08952 003201</dd>
+        <dd>06895 875896</dd>
       </div>
     </dl>
   </section>
 
 
-{% from "govuk/components/tabs/macro.njk" import govukTabs %}
+
+  <nav class="dwp-sub-navigation govuk-!-margin-top-9" aria-label="Sub navigation">
+
+    <ul class="dwp-sub-navigation__list">
+      <li class="dwp-sub-navigation__item">
+        <a class="dwp-sub-navigation__link decision" aria-current="page" href="#decision">Decision</a>
+      </li>
+
+      <li class="dwp-sub-navigation__item">
+        <a class="dwp-sub-navigation__link" href="#test-period-dates">Test Period dates</a>
+      </li>
+
+      <li class="dwp-sub-navigation__item">
+        <a class="dwp-sub-navigation__link" href="#map-dates">Maternity Allowance Period dates</a>
+      </li>
+
+      <li class="dwp-sub-navigation__item">
+        <a class="dwp-sub-navigation__link" href="#employment-and-earnings">Employment and earnings</a>
+      </li>
+
+      <li class="dwp-sub-navigation__item float-right">
+        <a class="dwp-sub-navigation__link top" href="#">
+          Top
+           <svg class="app-c-back-to-top__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="17" viewBox="0 0 13 17" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M6.5 0L0 6.5 1.4 8l4-4v12.7h2V4l4.3 4L13 6.4z"></path>
+          </svg></a>
+      </li>
+    </ul>
+
+  </nav>
+
 {% from "govuk/components/table/macro.njk" import govukTable %}
 
-{% set maDecisionHtml %}
+<section id="decision" class="govuk-!-padding-top-9">
 <h2 class="govuk-heading-m">Decision</h2>
-{{ govukSummaryList({
-  classes: 'govuk-!-margin-bottom-0',
-  rows: [
-    {
-      key: {
-        text: "Decision",
-        classes: 'govuk-!-width-one-half'
-      },
-      value: {
-        text: "Allowed",
-        classes: 'govuk-!-width-one-half'
-      }
-    },
-    {
-      key: {
-        text: "Rate"
-      },
-      value: {
-        text: "Standard rate at £151.97 per week"
-      }
-    },
-    {
-      key: {
-        text: "Maternity Allowance Period start date"
-      },
-      value: {
-        text: "31 October 2021"
-      }
-    },
-    {
-      key: {
-        text: "Maternity Allowance Period end date"
-      },
-      value: {
-        text: "24 July 2022"
-      }
-    }
-  ]
-}) }}
-{% endset -%}
 
-{% set maTestPeriodHtml %}
+<dl class="govuk-summary-list govuk-!-margin-bottom-0">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key govuk-!-width-one-half">
+      Decision
+    </dt>
+    <dd class="govuk-summary-list__value govuk-!-width-one-half">
+      {{govukTag({
+        text: "Allowed",
+        classes: "govuk-tag--green"
+      })}}
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Decision date
+    </dt>
+    <dd class="govuk-summary-list__value">
+      24 November 2021
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Rate
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Variable rate at £77.20 per week
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Maternity Allowance Period start date
+    </dt>
+    <dd class="govuk-summary-list__value">
+      11 November 2021
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Maternity Allowance Period end date
+    </dt>
+    <dd class="govuk-summary-list__value">
+      4 August 2022
+    </dd>
+  </div>
+</dl>
+</section>
+
+
+<section id="test-period-dates" class="govuk-!-padding-top-9">
 <h2 class="govuk-heading-m">Test Period dates</h2>
 {{ govukSummaryList({
   classes: 'govuk-!-margin-bottom-0',
@@ -109,7 +143,7 @@
         classes: 'govuk-!-width-one-half'
       },
       value: {
-        text: "20 December 2021",
+        text: "2 December 2021",
         classes: 'govuk-!-width-one-half'
       }
     },
@@ -118,7 +152,7 @@
         text: "First day of Test Period"
       },
       value: {
-        text: "13 September 2020"
+        text: "23 August 2020"
       }
     },
     {
@@ -126,7 +160,7 @@
         text: "Last day of Test Period"
       },
       value: {
-        text: "18 December 2021"
+        text: "27 November 2021"
       }
     },
     {
@@ -134,24 +168,24 @@
         text: "15th week before the baby due date"
       },
       value: {
-        text: "5 September 2021"
+        text: "15 August 2021"
       }
     }
   ]
 }) }}
-{% endset -%}
+</section>
 
-{% set maMapDatesHtml %}
+
+<section id="map-dates" class="govuk-!-padding-top-9">
 <h2 class="govuk-heading-m">Maternity Allowance Period dates</h2>
 
-
-<dl class="govuk-summary-list">
+<dl class="govuk-summary-list govuk-!-margin-bottom-0">
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key govuk-!-width-one-half">
       Date the claim was received
     </dt>
     <dd class="govuk-summary-list__value govuk-!-width-one-half">
-      19 November 2021
+      18 November 2021
     </dd>
   </div>
   <div class="govuk-summary-list__row">
@@ -159,7 +193,7 @@
       Date the claimant stopped work
     </dt>
     <dd class="govuk-summary-list__value">
-      25 October 2021
+      9 November 2021
     </dd>
   </div>
   <div class="govuk-summary-list__row">
@@ -167,7 +201,7 @@
       Expected week of confinement
     </dt>
     <dd class="govuk-summary-list__value">
-      19 December 2021
+      28 November 2021
     </dd>
   </div>
   <div class="govuk-summary-list__row">
@@ -175,7 +209,7 @@
       11th week before the baby due date
     </dt>
     <dd class="govuk-summary-list__value">
-      3 October 2021
+      12 September 2021
     </dd>
   </div>
   <div class="govuk-summary-list__row">
@@ -183,7 +217,7 @@
       4th week before the baby due date
     </dt>
     <dd class="govuk-summary-list__value">
-      21 November 2021
+      31 October 2021
     </dd>
   </div>
   <div class="govuk-summary-list__row">
@@ -191,10 +225,10 @@
       Start date requested by the claimant
     </dt>
     <dd class="govuk-summary-list__value">
-      31 October 2021
+      3 December 2021
       {{govukTag({
-        text: "Accepted",
-        classes: "govuk-tag--green"
+        text: "Declined",
+        classes: "govuk-tag--orange"
       })}}
     </dd>
   </div>
@@ -203,7 +237,7 @@
       Maternity Allowance Period rule
     </dt>
     <dd class="govuk-summary-list__value">
-      Flexible Maternity Allowance Period
+      Non-flexible Maternity Allowance Period
     </dd>
   </div>
   <div class="govuk-summary-list__row">
@@ -211,7 +245,7 @@
       Maternity Allowance Period start date
     </dt>
     <dd class="govuk-summary-list__value">
-      31 October 2021
+      11 November 2021
     </dd>
   </div>
   <div class="govuk-summary-list__row">
@@ -219,156 +253,92 @@
       Maternity Allowance Period end date
     </dt>
     <dd class="govuk-summary-list__value">
-      24 July 2022
+      4 August 2022
     </dd>
   </div>
 </dl>
-{% endset -%}
+</section>
 
-{% set maEmploymentEarningsHtml %}
-<h2 class="govuk-heading-m">Employment and earnings</h2>
-{{ govukSummaryList({
-  classes: 'govuk-!-margin-bottom-6',
-  rows: [
-    {
-      key: {
-        text: "Employment test",
-        classes: 'govuk-!-width-one-half'
-      },
-      value: {
-        text: "Met",
-        classes: 'govuk-!-width-one-half'
-      }
-    },
-    {
-      key: {
-        text: "Employment test weeks used"
-      },
-      value: {
-        text: "14 March 2021 to 5 September 2021"
-      }
-    },
-    {
-      key: {
-        text: "Earnings test"
-      },
-      value: {
-        text: "Met"
-      }
-    },
-    {
-      key: {
-        text: "Earnings test weeks used"
-      },
-      value: {
-        text: "13 June 2021 to 5 September 2021"
-      }
-    },
-    {
-      key: {
-        text: "Average weekly earnings for earnings test"
-      },
-      value: {
-        text: "£187.31"
-      }
-    }
-  ]
-}) }}
+
+<section id="employment-and-earnings" class="govuk-!-padding-top-9">
+<h2 class="govuk-heading-m" id="employment-and-earnings">Employment and earnings</h2>
+
+<dl class="govuk-summary-list govuk-!-margin-bottom-9">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key govuk-!-width-one-half">
+      Employment test
+    </dt>
+    <dd class="govuk-summary-list__value govuk-!-width-one-half">
+      Met
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Employment test period 1
+    </dt>
+    <dd class="govuk-summary-list__value">
+      14 March 2021 to 16 May 2021
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Employment test period 2
+    </dt>
+    <dd class="govuk-summary-list__value">
+      13 June 2021 to 26 September 2021
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Earnings test
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Met
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Earnings test weeks used
+    </dt>
+    <dd class="govuk-summary-list__value">
+      4 July 2021 to 26 September 2021
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Average weekly earnings for earnings test
+    </dt>
+    <dd class="govuk-summary-list__value">
+      £85.78
+    </dd>
+  </div>
+</dl>
+
+
 
 {% from "govuk/components/table/macro.njk" import govukTable %}
 
 {{ govukTable({
 caption: "Highest earning weeks",
-classes: 'no-padding-right',
 captionClasses: "govuk-table__caption--m",
+classes: "govuk-!-margin-bottom-9",
 firstCellIsHeader: true,
 head: [
 {
-text: "Start date"
+text: "Start date",
+classes: 'govuk-!-width-one-half'
 },
 {
-text: "Employer 1",
-      format: "numeric",
-      classes: 'govuk-!-width-one-quarter'
-},
-{
-text: "Employer 2",
-      format: "numeric",
-      classes: 'govuk-!-width-one-quarter'
-},
-{
-text: "Total",
-      format: "numeric",
-      classes: 'govuk-!-width-one-quarter'
+text: "Amount"
 }
 ],
 rows: [
 [
 {
-text: "13 June 2021"
-},
-{
-text: "£117.50",
-      format: "numeric"
-},
-{
-text: "£75.00",
-      format: "numeric"
-},
-{
-text: "£192.50",
-      format: "numeric"
-}
-],
-[
-{
-text: "20 June 2021"
-},
-{
-text: "£117.50",
-      format: "numeric"
-},
-{
-text: "£75.00",
-      format: "numeric"
-},
-{
-text: "£192.50",
-      format: "numeric"
-}
-],
-[
-{
-text: "27 June 2021"
-},
-{
-text: "£117.50",
-      format: "numeric"
-},
-{
-text: "£75.00",
-      format: "numeric"
-},
-{
-text: "£192.50",
-      format: "numeric"
-}
-],
-[
-{
 text: "4 July 2021"
 },
 {
-text: "£117.50",
-      format: "numeric"
-},
-{
-text: "£75.00",
-      format: "numeric"
-},
-{
-text: "£192.50",
-      format: "numeric"
+text: "£89.40"
 }
 ],
 [
@@ -376,16 +346,7 @@ text: "£192.50",
 text: "11 July 2021"
 },
 {
-text: "£100.00",
-      format: "numeric"
-},
-{
-text: "£75.00",
-      format: "numeric"
-},
-{
-text: "£175.00",
-      format: "numeric"
+text: "£62.91"
 }
 ],
 [
@@ -393,16 +354,7 @@ text: "£175.00",
 text: "18 July 2021"
 },
 {
-text: "£117.50",
-      format: "numeric"
-},
-{
-text: "£75.00",
-      format: "numeric"
-},
-{
-text: "£192.50",
-      format: "numeric"
+text: "£100.43"
 }
 ],
 [
@@ -410,16 +362,7 @@ text: "£192.50",
 text: "25 July 2021"
 },
 {
-text: "£105.00",
-      format: "numeric"
-},
-{
-text: "£75.00",
-      format: "numeric"
-},
-{
-text: "£180.00",
-      format: "numeric"
+text: "£92.75"
 }
 ],
 [
@@ -427,16 +370,7 @@ text: "£180.00",
 text: "1 August 2021"
 },
 {
-text: "£105.00",
-      format: "numeric"
-},
-{
-text: "£75.00",
-      format: "numeric"
-},
-{
-text: "£180.00",
-      format: "numeric"
+text: "£61.34"
 }
 ],
 [
@@ -444,16 +378,7 @@ text: "£180.00",
 text: "8 August 2021"
 },
 {
-text: "£117.50",
-      format: "numeric"
-},
-{
-text: "£75.00",
-      format: "numeric"
-},
-{
-text: "£192.50",
-      format: "numeric"
+text: "£87.05"
 }
 ],
 [
@@ -461,16 +386,7 @@ text: "£192.50",
 text: "15 August 2021"
 },
 {
-text: "£117.50",
-      format: "numeric"
-},
-{
-text: "£75.00",
-      format: "numeric"
-},
-{
-text: "£192.50",
-      format: "numeric"
+text: "£105.90"
 }
 ],
 [
@@ -478,16 +394,7 @@ text: "£192.50",
 text: "22 August 2021"
 },
 {
-text: "£117.50",
-      format: "numeric"
-},
-{
-text: "£75.00",
-      format: "numeric"
-},
-{
-text: "£192.50",
-      format: "numeric"
+text: "£73.92"
 }
 ],
 [
@@ -495,16 +402,7 @@ text: "£192.50",
 text: "29 August 2021"
 },
 {
-text: "£105.00",
-      format: "numeric"
-},
-{
-text: "£75.00",
-      format: "numeric"
-},
-{
-text: "£180.00",
-      format: "numeric"
+text: "£98.41"
 }
 ],
 [
@@ -512,56 +410,36 @@ text: "£180.00",
 text: "5 September 2021"
 },
 {
-text: "£105.00",
-      format: "numeric"
+text: "£81.90"
+}
+],
+[
+{
+text: "12 September 2021"
 },
 {
-text: "£75.00",
-      format: "numeric"
+text: "£92.30"
+}
+],
+[
+{
+text: "19 September 2021"
 },
 {
-text: "£180.00",
-      format: "numeric"
+text: "£79.41"
+}
+],
+[
+{
+text: "26 September 2021"
+},
+{
+text: "£89.40"
 }
 ]
 ]
 }) }}
-
-{% endset -%}
-
-{{ govukTabs({
-  items: [
-    {
-      label: "Decision",
-      id: "ma-decision",
-      panel: {
-        html: maDecisionHtml
-      }
-    },
-    {
-      label: "Test Period dates",
-      id: "ma-test-period",
-      panel: {
-        html: maTestPeriodHtml
-      }
-    },
-    {
-      label: "Maternity Allowance Period dates",
-      id: "ma-map-dates",
-      panel: {
-        html: maMapDatesHtml
-      }
-    },
-    {
-      label: "Employment and earnings",
-      id: "ma-employment-earnings",
-      panel: {
-        html: maEmploymentEarningsHtml
-      }
-    }
-  ]
-}) }}
-
+</section>
 
         <form action="/form-handler" method="post" novalidate>
 
