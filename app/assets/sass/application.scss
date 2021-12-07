@@ -18,16 +18,44 @@ $govuk-assets-path: '/govuk/assets/';
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
 @import "custom/key-details";
+@import "custom/key-details-old";
+@import "custom/key-details-white-old";
 @import "custom/dwp-sub-navigation";
 
 .govuk-details__noborder {
   padding-top: 10px;
 }
 
-// #summary-screen .govuk-header__container { border-bottom:0; margin-bottom:0; }
-// #summary-screen .govuk-header { border-bottom:0; }
+#no-border .govuk-header__container { border-bottom:0; margin-bottom:0; }
+#no-border .govuk-header { border-bottom:0; }
 
 .key-details-bar {
+  margin: -50px 0 0;
+  .govuk-tag--white {
+      color: #005ea5;
+      background: #FFF;
+      float: right;
+  }
+  .govuk-tag--green {
+      float: right;
+      margin: 10px 0 0 0
+  }
+}
+
+.key-details-bar-white {
+  margin: -30px 0 0;
+  .govuk-tag--white {
+      color: #005ea5;
+      background: #FFF;
+      float: right;
+  }
+  .govuk-tag--green {
+      float: right;
+      margin: 10px 0 0 0
+  }
+}
+
+.key-details-bar-white-old {
   margin: -30px 0 0;
   .govuk-tag--white {
       color: #005ea5;
