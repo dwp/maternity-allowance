@@ -311,7 +311,14 @@ items: [
       text: "Research notes"
     },
     content: {
-      html: "<p class='govuk-body'>Number of participants: 4</p>"
+      html:
+      '<ul class="govuk-list govuk-list--bullet">
+        <li>Number of participants: 4</li>
+        <li>Hint text on the full name field was successful, there were no questions as to what should be entered into this field.</li>
+        <li>Agents were more confident that this service was something for them, this may be due to the removal of the gov.uk branding.</li>
+        <li>The tabs and highest earning weeks were more successful this round. There was still some hesitation to click the tabs though.</li>
+        <li>The MAP rule applied was recognised by agents, but once they had navigated away from the decision tab they couldn&rsquo;t remember where they&rsquo;d seen this piece of information.</li>
+        </ul>'
     }
   }
 ]
@@ -366,12 +373,73 @@ items: [
       text: "Research notes"
     },
     content: {
-      html: "<p class='govuk-body'>Number of participants: </p>"
+      '<ul class="govuk-list govuk-list--bullet">
+        <li>Number of participants: 5</li>
+        <li>The status tag on the claimant requested MAP start date received really positive feedback. It was quick and easy for agents to see whether that date has been used which is helpful, especially for answering queries.</li>
+        <li>The highest earning weeks flat content worked well, agents commented that the highest weeks had been used and they were actively looking at the information contained here.</li>
+        <li>Variable rate and multiple employers didn’t highlight any big issues. Both were expected to be tricky, but agents responded well.</li>
+        <li>Missing information highlighted this round were the employer name and whether the figure presented is gross/net income. We have heard these comments previously, but the description of the earnings figure appeared to be more important for the scenarios that were tested here.</li>
+        <li>There was still apprehension about clicking into the tabs, some completely missed them without prompting.</li>
+        <li>The white key details bar seems to have been more successful this round, we will continue to explore this.</li>
+        </ul>'
     }
   }
 ]
 }) }}
 
+<h2 class="govuk-heading-m">Round 7: 2 December 2021</h2>
+
+<p><a href="/iteration-7/" class="govuk-body govuk-!-font-weight-bold">Prototype iteration 7</a></p>
+
+{% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+
+{% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+
+{{ govukAccordion({
+id: "accordion-default",
+items: [
+  {
+    heading: {
+      text: "Design decisions"
+    },
+    content: {
+      html:
+
+        '<ul class="govuk-list govuk-list--bullet">
+          <li>We introduced a new journey to explore how agents would find a case, for example if a claimant was on the phone and needed to ask questions about their case.</li>
+          <li>In order to explore what agents would expect to be searching with, we kept the search box very minimal.</li>
+          <li>We are testing new navigation for the summary page. We believe this is a strong middle ground between tabs and a long page of information.</li>
+          <li>We have moved the Allowed tag to sit next to the Decision as it was not providing value in the claimant details banner.</li>
+          <li>We will continue to explore how agents notice and interact with the white key details bar.</li>
+        </ul>'
+      }
+    },
+    {
+      heading: {
+        text: "Hypotheses"
+      },
+      content: {
+        html:
+        '<ul class="govuk-list govuk-list--bullet">
+        <li>We believe agents navigate easily around the summary page to answer questions a claimant might ask.</li>
+        <li>We believe agents are more likely to notice the claimant details now they have been taken out of the blue banner.</li>
+        <li>We will test these hypotheses through observation and discussion in usability testing.</li>
+        </ul>'
+    }
+  },
+    {
+    heading: {
+      text: "Research notes"
+    },
+    content: {
+      '<ul class="govuk-list govuk-list--bullet">
+        <li>Number of participants: 5</li>
+
+        </ul>'
+    }
+  }
+]
+}) }}
 </div>
   </div>
 
