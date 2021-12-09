@@ -162,8 +162,9 @@
           <li>We added a question to capture the date the claim was received into DWP, as this can impact the MAP.</li>
           <li>We used radio options for Today, Yesterday, and Another date as we believe most claims would be processed within 2 days of receipt.</li>
           <li>This can save agents inputting the same dates over and over again as they work through multiple cases each day.</li>
-          <li>We added a question to collect the claimant&rsquo;s chosen MAP start date. We believe it is possible to make calculate whether the claimant is entitled to choose their MAP start date in the background, and display or not display the question dynamically, depending on the results of that calculation.</li>
-          <li>We added a banner to the summary page which is very similar to the Searchlight banner, as we believe this will help the agents feel more trust in the information displayed.</li>
+          <li>We added a question to collect the claimant&rsquo;s chosen MAP start date. We believe it is possible to automatically calculate whether the claimant is entitled to choose their MAP start date in the background, and display or not display the question dynamically, depending on the results of that calculation.</li>
+          <li>We added a blue &lsquo;key details&rsquo; banner to the summary page which is very similar to the Searchlight banner, as we believe this will help the agents feel more trust in the information displayed.</li>
+          <li>We took the summary page to full-width to make better use of the space available on the desktop screens used by agents, to allow space for intuitive labels and values, and to stop text falling onto multiple lines, which can be difficult to digest.</li>
         </ul>'
       }
     },
@@ -223,6 +224,7 @@ items: [
       '<ul class="govuk-list govuk-list--bullet">
         <li>To break up the long page of claim summary information, we decided to use tabs to break the content into more manageable sections.</li>
         <li>Tabs are an experimental pattern in the Design System, and require further research.</li>
+        <li>We changed the input for the date the claim was received by DWP, because agents rarely process claims that quickly. It is possible that we will revisit our previous approach in the future, when claims are hopefully processed much more rapidly.</li>
         <li>To further our understanding of the MAP rules and the information agents require for cases which fall into each rule group, we created 2 scenarios for testing in this round of research.</li>
         <li>Scenario 1 – The claimant&rsquo;s baby has been born between the 11th and 4th week. The claimant&rsquo;s chosen MAP start date is too far in the future. The MAP starts the day after the baby is born.</li>
         <li>Scenario 2 – The claimant&rsquo;s employment ended before the 11th week. Their MAP starts on the 11th week.</li>
