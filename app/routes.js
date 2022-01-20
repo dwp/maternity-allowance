@@ -215,6 +215,42 @@ router.post('/iteration-7/scenario-2/chosen-map-date', function (req, res) {
   res.redirect('/iteration-7/scenario-2/summary');
 });
 
+// Iteration 8 - Scenario 1
+
+router.post('/', function (req, res) {
+  res.redirect('/iteration-8/scenario-1/');
+});
+
+router.post('/iteration-8/scenario-1/', function (req, res) {
+  res.redirect('/iteration-8/scenario-1/summary');
+});
+
+// Iteration 8 - Scenario 2
+
+router.post('/', function (req, res) {
+  res.redirect('/iteration-8/scenario-2/');
+});
+
+router.post('/iteration-8/scenario-2/', function (req, res) {
+  res.redirect('/iteration-8/scenario-2/claim-date');
+});
+
+router.post('/iteration-8/scenario-2/claim-date', function (req, res) {
+  res.redirect('/iteration-8/scenario-2/about-the-baby');
+});
+
+router.post('/iteration-8/scenario-2/about-the-baby', function (req, res) {
+  res.redirect('/iteration-8/scenario-2/date-last-worked');
+});
+
+router.post('/iteration-8/scenario-2/date-last-worked', function (req, res) {
+  res.redirect('/iteration-8/scenario-2/chosen-map-date');
+});
+
+router.post('/iteration-8/scenario-2/chosen-map-date', function (req, res) {
+  res.redirect('/iteration-8/scenario-2/summary');
+});
+
 // Alt
 
 router.post('/', function (req, res) {
