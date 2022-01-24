@@ -251,6 +251,66 @@ router.post('/iteration-8/scenario-2/chosen-map-date', function (req, res) {
   res.redirect('/iteration-8/scenario-2/summary');
 });
 
+// Iteration 9 - Scenario 1
+
+router.post('/', function (req, res) {
+  res.redirect('/iteration-9/scenario-1/');
+});
+
+router.post('/iteration-9/scenario-1/', function (req, res) {
+  res.redirect('/iteration-9/scenario-1/claim-date');
+});
+
+router.post('/iteration-9/scenario-1/claim-date', function (req, res) {
+  res.redirect('/iteration-9/scenario-1/about-the-baby');
+});
+
+router.post('/iteration-9/scenario-1/about-the-baby', function (req, res) {
+  res.redirect('/iteration-9/scenario-1/date-last-worked');
+});
+
+router.post('/iteration-9/scenario-1/date-last-worked', function (req, res) {
+  var dlwChoice = req.session.data['stopped-work']
+  if (dlwChoice == 'yes') {
+    res.redirect('/iteration-9/scenario-1/dlw-date');
+  }
+  else {
+    res.redirect('/iteration-9/scenario-1/ma-start-date-provided');
+  }
+});
+
+router.post('/iteration-9/scenario-1/dlw-date', function (req, res) {
+  res.redirect('/iteration-9/scenario-1/chosen-map-date');
+});
+
+router.post('/iteration-9/scenario-1/ma-start-date-provided', function (req, res) {
+  var startDateProvided = req.session.data['ma-start-date-provided']
+  if (startDateProvided == 'yes') {
+    res.redirect('/iteration-9/scenario-1/planned-dlw-date');
+  }
+  else {
+    res.redirect('/iteration-9/scenario-1/chosen-map-date');
+  }
+});
+
+router.post('/iteration-9/scenario-1/planned-dlw-date', function (req, res) {
+  res.redirect('/iteration-9/scenario-1/chosen-map-date');
+});
+
+router.post('/iteration-9/scenario-1/chosen-map-date', function (req, res) {
+  res.redirect('/iteration-9/scenario-1/summary');
+});
+
+// Iteration 9 - Scenario 2
+
+router.post('/', function (req, res) {
+  res.redirect('/iteration-9/scenario-2/');
+});
+
+router.post('/iteration-9/scenario-2/', function (req, res) {
+  res.redirect('/iteration-9/scenario-2/summary');
+});
+
 // Alt
 
 router.post('/', function (req, res) {
