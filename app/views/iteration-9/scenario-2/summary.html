@@ -89,10 +89,10 @@
     <dt class="govuk-summary-list__key govuk-!-width-one-half">
       Decision
     </dt>
-    <dd class="govuk-summary-list__value">
+    <dd class="govuk-summary-list__value govuk-!-width-one-half">
       {{govukTag({
-        text: "Pending",
-        classes: "govuk-tag--blue"
+        text: "Allowed",
+        classes: "govuk-tag--green"
       })}}
     </dd>
   </div>
@@ -101,7 +101,7 @@
       Decision date
     </dt>
     <dd class="govuk-summary-list__value">
-      &nbsp;
+      26 January 2022
     </dd>
   </div>
   <div class="govuk-summary-list__row">
@@ -109,7 +109,7 @@
       Rate
     </dt>
     <dd class="govuk-summary-list__value">
-        Standard rate at £151.97 per week
+      Variable rate at £77.20 per week
     </dd>
   </div>
   <div class="govuk-summary-list__row">
@@ -117,7 +117,7 @@
       Maternity Allowance Period start date
     </dt>
     <dd class="govuk-summary-list__value">
-      &nbsp;
+      14 January 2022
     </dd>
   </div>
   <div class="govuk-summary-list__row">
@@ -125,7 +125,7 @@
       Maternity Allowance Period end date
     </dt>
     <dd class="govuk-summary-list__value">
-      &nbsp;
+      10 July 2022
     </dd>
   </div>
 </dl>
@@ -143,7 +143,8 @@
         classes: 'govuk-!-width-one-half'
       },
       value: {
-        text: "10 February 2022"
+        text: "10 February 2022",
+        classes: 'govuk-!-width-one-half'
       }
     },
     {
@@ -183,11 +184,8 @@
     <dt class="govuk-summary-list__key govuk-!-width-one-half">
       Date the claim was received
     </dt>
-    <dd class="govuk-summary-list__value">
+    <dd class="govuk-summary-list__value govuk-!-width-one-half">
       15 January 2022
-    </dd>
-    <dd class="govuk-summary-list__actions">
-        &nbsp;
     </dd>
   </div>
   <div class="govuk-summary-list__row">
@@ -195,15 +193,7 @@
       Date the claimant stopped work
     </dt>
     <dd class="govuk-summary-list__value">
-      {{govukTag({
-        text: "Pending",
-        classes: "govuk-tag--blue"
-      })}}
-    </dd>
-    <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="#">
-        Change<span class="govuk-visually-hidden"> date the claimant stopped work</span>
-      </a>
+      12 January 2022
     </dd>
   </div>
   <div class="govuk-summary-list__row">
@@ -213,9 +203,6 @@
     <dd class="govuk-summary-list__value">
       6 February 2022
     </dd>
-    <dd class="govuk-summary-list__actions">
-        &nbsp;
-    </dd>
   </div>
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
@@ -223,9 +210,6 @@
     </dt>
     <dd class="govuk-summary-list__value">
       21 November 2021
-    </dd>
-    <dd class="govuk-summary-list__actions">
-        &nbsp;
     </dd>
   </div>
   <div class="govuk-summary-list__row">
@@ -235,9 +219,6 @@
     <dd class="govuk-summary-list__value">
       9 January 2022
     </dd>
-    <dd class="govuk-summary-list__actions">
-        &nbsp;
-    </dd>
   </div>
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
@@ -245,9 +226,10 @@
     </dt>
     <dd class="govuk-summary-list__value">
       4 February 2022
-    </dd>
-    <dd class="govuk-summary-list__actions">
-        &nbsp;
+      {{govukTag({
+        text: "Declined",
+        classes: "govuk-tag--orange govuk-!-margin-left-2"
+      })}}
     </dd>
   </div>
   <div class="govuk-summary-list__row">
@@ -255,10 +237,7 @@
       Maternity Allowance Period rule
     </dt>
     <dd class="govuk-summary-list__value">
-      &nbsp;
-    </dd>
-    <dd class="govuk-summary-list__actions">
-        &nbsp;
+      Non-flexible Maternity Allowance Period
     </dd>
   </div>
   <div class="govuk-summary-list__row">
@@ -266,10 +245,7 @@
       Maternity Allowance Period start date
     </dt>
     <dd class="govuk-summary-list__value">
-      &nbsp;
-    </dd>
-    <dd class="govuk-summary-list__actions">
-        &nbsp;
+      14 January 2022
     </dd>
   </div>
   <div class="govuk-summary-list__row">
@@ -277,10 +253,7 @@
       Maternity Allowance Period end date
     </dt>
     <dd class="govuk-summary-list__value">
-      &nbsp;
-    </dd>
-    <dd class="govuk-summary-list__actions">
-        &nbsp;
+      10 July 2022
     </dd>
   </div>
 </dl>
@@ -295,7 +268,7 @@
     <dt class="govuk-summary-list__key govuk-!-width-one-half">
       Employment test
     </dt>
-    <dd class="govuk-summary-list__value">
+    <dd class="govuk-summary-list__value govuk-!-width-one-half">
       Met
     </dd>
   </div>
@@ -328,7 +301,7 @@
       Average weekly earnings for earnings test
     </dt>
     <dd class="govuk-summary-list__value">
-      £200.00
+      £85.78
     </dd>
   </div>
 </dl>
@@ -354,106 +327,106 @@ text: "Amount"
 rows: [
 [
 {
-  text: "1 November 2021"
-  },
-  {
-  text: "£200.00"
-  }
-  ],
-  [
-  {
-  text: "8 November 2021"
-  },
-  {
-  text: "£200.00"
-  }
-  ],
-  [
-  {
-  text: "15 November 2021"
-  },
-  {
-  text: "£200.00"
-  }
-  ],
-  [
-  {
-  text: "22 November 2021"
-  },
-  {
-  text: "£200.00"
-  }
-  ],
-  [
-  {
-  text: "29 November 2021"
-  },
-  {
-  text: "£200.00"
-  }
-  ],
-  [
-  {
-  text: "6 December 2021"
-  },
-  {
-  text: "£200.00"
-  }
-  ],
-  [
-  {
-  text: "13 December 2021"
-  },
-  {
-  text: "£200.00"
-  }
-  ],
-  [
-  {
-  text: "20 December 2021"
-  },
-  {
-  text: "£200.00"
-  }
-  ],
-  [
-  {
-  text: "27 December 2021"
-  },
-  {
-  text: "£200.00"
-  }
-  ],
-  [
-  {
-  text: "3 January 2021"
-  },
-  {
-  text: "£200.00"
-  }
-  ],
-  [
-  {
-  text: "10 January 2021"
-  },
-  {
-  text: "£200.00"
-  }
-  ],
-  [
-  {
-  text: "17 January 2021"
-  },
-  {
-  text: "£200.00"
-  }
-  ],
-  [
-  {
-  text: "24 January 2021"
+text: "1 November 2021"
 },
 {
-text: "£200.00"
+text: "£89.40"
+}
+],
+[
+{
+text: "8 November 2021"
+},
+{
+text: "£62.91"
+}
+],
+[
+{
+text: "15 November 2021"
+},
+{
+text: "£100.43"
+}
+],
+[
+{
+text: "22 November 2021"
+},
+{
+text: "£92.75"
+}
+],
+[
+{
+text: "29 November 2021"
+},
+{
+text: "£61.34"
+}
+],
+[
+{
+text: "6 December 2021"
+},
+{
+text: "£87.05"
+}
+],
+[
+{
+text: "13 December 2021"
+},
+{
+text: "£105.90"
+}
+],
+[
+{
+text: "20 December 2021"
+},
+{
+text: "£73.92"
+}
+],
+[
+{
+text: "27 December 2021"
+},
+{
+text: "£98.41"
+}
+],
+[
+{
+text: "3 January 2021"
+},
+{
+text: "£81.90"
+}
+],
+[
+{
+text: "10 January 2021"
+},
+{
+text: "£92.30"
+}
+],
+[
+{
+text: "17 January 2021"
+},
+{
+text: "£79.41"
+}
+],
+[
+{
+text: "24 January 2021"
+},
+{
+text: "£89.40"
 }
 ]
 ]
