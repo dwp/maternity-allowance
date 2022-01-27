@@ -270,8 +270,7 @@ router.post('/iteration-9/scenario-1/about-the-baby', function (req, res) {
 });
 
 router.post('/iteration-9/scenario-1/date-last-worked', function (req, res) {
-  var dlwChoice = req.session.data['stopped-work']
-  if (dlwChoice == 'yes') {
+  if (req.session.data['stopped-work'] == 'yes') {
     res.redirect('/iteration-9/scenario-1/dlw-date');
   }
   else {
@@ -284,8 +283,7 @@ router.post('/iteration-9/scenario-1/dlw-date', function (req, res) {
 });
 
 router.post('/iteration-9/scenario-1/ma-start-date-provided', function (req, res) {
-  var startDateProvided = req.session.data['ma-start-date-provided']
-  if (startDateProvided == 'yes') {
+  if (req.session.data['ma-start-date-provided'] == 'yes') {
     res.redirect('/iteration-9/scenario-1/planned-dlw-date');
   }
   else {
