@@ -451,5 +451,54 @@ items: [
 }) }}
 </div>
   </div>
+  <h2 class="govuk-heading-m">Round 8: 26 January 2022</h2>
 
+  <p><a href="/iteration-7/" class="govuk-body govuk-!-font-weight-bold">Prototype iteration 7</a></p>
+
+  {% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+
+  {% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+
+  {{ govukAccordion({
+  id: "accordion-default",
+  items: [
+    {
+      heading: {
+        text: "Design decisions"
+      },
+      content: {
+        html:
+
+          '<ul class="govuk-list govuk-list--bullet">
+            <li></li>
+          </ul>'
+        }
+      },
+      {
+        heading: {
+          text: "Hypotheses"
+        },
+        content: {
+          html:
+          '<ul class="govuk-list govuk-list--bullet">
+            <li></li>
+          </ul>'
+      }
+    },
+      {
+      heading: {
+        text: "Research notes"
+      },
+      content: {
+        html:
+        '<ul class="govuk-list govuk-list--bullet">
+          <li>Number of participants: </li>
+          <li></li>
+          </ul>'
+      }
+    }
+  ]
+  }) }}
+  </div>
+    </div>
 {% endblock %}
