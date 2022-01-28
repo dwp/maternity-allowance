@@ -449,11 +449,10 @@ items: [
   }
 ]
 }) }}
-</div>
-  </div>
+
   <h2 class="govuk-heading-m">Round 8: 26 January 2022</h2>
 
-  <p><a href="/iteration-7/" class="govuk-body govuk-!-font-weight-bold">Prototype iteration 7</a></p>
+  <p><a href="/iteration-8/" class="govuk-body govuk-!-font-weight-bold">Prototype iteration 8</a></p>
 
   {% from "govuk/components/accordion/macro.njk" import govukAccordion %}
 
@@ -470,7 +469,9 @@ items: [
         html:
 
           '<ul class="govuk-list govuk-list--bullet">
-            <li></li>
+            <li>No changes were made to the design for iteration 8.</li>
+            <li>We used the sessions this round to explore more complex and niche circumstances to inform our future iterations.</li>
+            <li>We also revisited changes to the navigation which were introduced in iteration 7 to see how a wider group of users responded to them.</li>
           </ul>'
         }
       },
@@ -499,6 +500,63 @@ items: [
     }
   ]
   }) }}
-  </div>
+
+    <h2 class="govuk-heading-m">Round 9: 3 February 2022</h2>
+
+    <p><a href="/iteration-9/" class="govuk-body govuk-!-font-weight-bold">Prototype iteration 9</a></p>
+
+    {% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+
+    {% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+
+    {{ govukAccordion({
+    id: "accordion-default",
+    items: [
+      {
+        heading: {
+          text: "Design decisions"
+        },
+        content: {
+          html:
+
+            '<ul class="govuk-list govuk-list--bullet">
+              <li>We know that some claimants do not provide a Date Last Worked (DLW), or provide a provisional one.</li>
+              <li>We split the date input onto a new page, and added new questions to gather a confirmed DLW, a provisional DLW, and no DLW provided.</li>
+              <li>Where a provisional or no DLW is provided, we cannot display a decision on the claim summary page.</li>
+              <li>We used the blue PENDING tag from the design system to indicate that the claim is awaiting information for a decision to be made.</li>
+              <li>We will explore through UR what agents understand in this situation, and what they would do next.</li>
+              <li>We removed the tag next to the claimaint&rsquo;s chosen MAP start date, to maintain the value of the remaining tags on the page, and because we cannot allow or decline their selected date without a confirmed DLW.</li>
+              <li>Other dates have been left blank because we cannot calculate them without a confirmed DLW.</li>
+            </ul>'
+          }
+        },
+        {
+          heading: {
+            text: "Hypotheses"
+          },
+          content: {
+            html:
+            '<ul class="govuk-list govuk-list--bullet">
+              <li>We believe that agents will rapidly understand that the case has some outstanding work to do through the PENDING tag, and will expect to provide a new piece of information to move the claim to a decision.</li>
+              <li>We believe that agents will expect to navigate through the Change link to enter a confirmed DLW provided by the claimant.</li>
+              <li>We believe that agents will expect the summary page to update with confirmed dates and calculations when they have provided the final DLW.</li>
+            </ul>'
+        }
+      },
+        {
+        heading: {
+          text: "Research notes"
+        },
+        content: {
+          html:
+          '<ul class="govuk-list govuk-list--bullet">
+            <li>Number of participants: </li>
+            <li></li>
+            </ul>'
+        }
+      }
+    ]
+    }) }}
     </div>
+      </div>
 {% endblock %}
