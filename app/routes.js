@@ -309,6 +309,72 @@ router.post('/iteration-9/scenario-2/', function (req, res) {
   res.redirect('/iteration-9/scenario-2/summary');
 });
 
+// Iteration 10 - Scenario 1
+
+router.post('/', function (req, res) {
+  res.redirect('/iteration-10/scenario-1/');
+});
+
+router.post('/iteration-10/scenario-1/', function (req, res) {
+  res.redirect('/iteration-10/scenario-1/claim-date');
+});
+
+router.post('/iteration-10/scenario-1/claim-date', function (req, res) {
+  res.redirect('/iteration-10/scenario-1/about-the-baby');
+});
+
+router.post('/iteration-10/scenario-1/about-the-baby', function (req, res) {
+  if (req.session.data['baby-born'] == 'yes') {
+    res.redirect('/iteration-10/scenario-1/baby-birth-date');
+  }
+  else {
+    res.redirect('/iteration-10/scenario-1/date-last-worked');
+  }
+});
+
+router.post('/iteration-10/scenario-1/baby-birth-date', function (req, res) {
+  res.redirect('/iteration-10/scenario-1/date-last-worked');
+});
+
+router.post('/iteration-10/scenario-1/date-last-worked', function (req, res) {
+  if (req.session.data['stopped-work'] == 'yes') {
+    res.redirect('/iteration-10/scenario-1/dlw-date');
+  }
+  else {
+    res.redirect('/iteration-10/scenario-1/ma-start-date-provided');
+  }
+});
+
+router.post('/iteration-10/scenario-1/dlw-date', function (req, res) {
+  res.redirect('/iteration-10/scenario-1/chosen-map-date');
+});
+
+router.post('/iteration-10/scenario-1/ma-start-date-provided', function (req, res) {
+  if (req.session.data['ma-start-date-provided'] == 'yes') {
+    res.redirect('/iteration-10/scenario-1/planned-dlw-date');
+  }
+  else {
+    res.redirect('/iteration-10/scenario-1/chosen-map-date');
+  }
+});
+
+router.post('/iteration-10/scenario-1/planned-dlw-date', function (req, res) {
+  res.redirect('/iteration-10/scenario-1/chosen-map-date');
+});
+
+router.post('/iteration-10/scenario-1/chosen-map-date', function (req, res) {
+  if (req.session.data['ma-date-requested'] == 'yes') {
+    res.redirect('/iteration-10/scenario-1/requested-start-date');
+  }
+  else {
+    res.redirect('/iteration-10/scenario-1/summary');
+  }
+});
+
+router.post('/iteration-10/scenario-1/requested-start-date', function (req, res) {
+  res.redirect('/iteration-10/scenario-1/summary');
+});
+
 // Alt
 
 router.post('/', function (req, res) {
