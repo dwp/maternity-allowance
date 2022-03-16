@@ -341,12 +341,24 @@ router.post('/iteration-10/scenario-1/date-last-worked', function (req, res) {
     res.redirect('/iteration-10/scenario-1/dlw-date');
   }
   else {
-    res.redirect('/iteration-10/scenario-1/ma-start-date-provided');
+    if (req.session.data['action'] == 'change') {
+      req.session.data['action'] = null;
+      res.redirect('/iteration-10/scenario-1/summary');
+    }
+    else {
+      res.redirect('/iteration-10/scenario-1/ma-start-date-provided');
+    }
   }
 });
 
 router.post('/iteration-10/scenario-1/dlw-date', function (req, res) {
-  res.redirect('/iteration-10/scenario-1/chosen-map-date');
+  if (req.session.data['action'] == 'change') {
+    req.session.data['action'] = null;
+    res.redirect('/iteration-10/scenario-1/summary');
+  }
+  else {
+    res.redirect('/iteration-10/scenario-1/chosen-map-date');
+  }
 });
 
 router.post('/iteration-10/scenario-1/ma-start-date-provided', function (req, res) {
