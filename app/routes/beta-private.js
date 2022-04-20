@@ -3,13 +3,18 @@ module.exports = router => {
 
 // Add your routes here - above the module.exports line
 
-// Iteration 10 - Scenario 1
+///////// (Used Alpha Iteration 10)
+// Iteration 1 - Scenario 1
 
 router.post('/beta-private/', function (req, res) {
   res.redirect('/beta-private/iteration-1/scenario-1/');
 });
 
 router.post('/beta-private/iteration-1/scenario-1/', function (req, res) {
+  res.redirect('/beta-private/iteration-1/scenario-1/claimant-details');
+});
+
+router.post('/beta-private/iteration-1/scenario-1/claimant-details', function (req, res) {
   res.redirect('/beta-private/iteration-1/scenario-1/claim-date');
 });
 
@@ -81,7 +86,7 @@ router.post('/beta-private/iteration-1/scenario-1/requested-start-date', functio
   res.redirect('/beta-private/iteration-1/scenario-1/summary');
 });
 
-// Iteration 10 - Scenario 2
+// Iteration 1 - Scenario 2
 
 router.post('/beta-private/', function (req, res) {
   res.redirect('/beta-private/iteration-1/scenario-2/');

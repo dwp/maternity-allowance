@@ -23,6 +23,8 @@ $govuk-assets-path: '/govuk/assets/';
 @import "custom/dwp-sub-navigation";
 @import "custom/letters";
 @import "custom/content-highlight";
+@import "custom/navbuttons";
+@import "custom/hidden";
 
 .govuk-details__noborder {
   padding-top: 10px;
