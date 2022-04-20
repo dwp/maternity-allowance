@@ -30,19 +30,19 @@
     <dl class="key-details-bar__key-details">
       <div class="key-details-bar__top-block">
         <dt class="govuk-visually-hidden">Name:</dt>
-        <dt class="key-details-bar__name">Sarah Oliver</dt>
+        <dt class="key-details-bar__name">Helen Ashfield</dt>
 
         <dt class="govuk-visually-hidden">National Insurance number:</dt>
-        <dt class="key-details-bar__nino">XX123456Z</dt>
+        <dt class="key-details-bar__nino">XX112233X</dt>
       </div>
 
       <div class="key-details-bar__bottom-block">
         <dt>Date of birth:</dt>
-        <dd>25 September 1986</dd>
+        <dd>16 September 1987</dd>
         <dt>Postcode:</dt>
-        <dd>MN6 9PK</dd>
+        <dd>DH5 9YR</dd>
         <dt>Contact number:</dt>
-        <dd>06895 875896</dd>
+        <dd>07847 171740</dd>
       </div>
     </dl>
   </section>
@@ -91,8 +91,7 @@
     </dt>
     <dd class="govuk-summary-list__value">
       {{govukTag({
-        text: "Pending",
-        classes: "govuk-tag--blue"
+        text: "Allowed"
       })}}
     </dd>
   </div>
@@ -101,7 +100,7 @@
       Decision date
     </dt>
     <dd class="govuk-summary-list__value">
-      &nbsp;
+      5 May 2022
     </dd>
   </div>
   <div class="govuk-summary-list__row">
@@ -109,7 +108,7 @@
       Rate
     </dt>
     <dd class="govuk-summary-list__value">
-      Standard rate at £151.97 per week
+      Standard rate at £156.66 per week
     </dd>
   </div>
   <div class="govuk-summary-list__row">
@@ -117,7 +116,7 @@
       Maternity Allowance Period start date
     </dt>
     <dd class="govuk-summary-list__value">
-      &nbsp;
+      10 April 2022
     </dd>
   </div>
   <div class="govuk-summary-list__row">
@@ -125,7 +124,7 @@
       Maternity Allowance Period end date
     </dt>
     <dd class="govuk-summary-list__value">
-      &nbsp;
+      8 January 2023
     </dd>
   </div>
 </dl>
@@ -143,7 +142,7 @@
         classes: 'govuk-!-width-one-half'
       },
       value: {
-        text: "10 February 2022"
+        text: "18 May 2022"
       }
     },
     {
@@ -151,7 +150,7 @@
         text: "First day of Test Period"
       },
       value: {
-        text: "1 November 2020"
+        text: "7 February 2021"
       }
     },
     {
@@ -159,7 +158,7 @@
         text: "Last day of Test Period"
       },
       value: {
-        text: "5 February 2022"
+        text: "14 May 2022"
       }
     },
     {
@@ -167,7 +166,7 @@
         text: "15th week before the baby due date"
       },
       value: {
-        text: "24 October 2021"
+        text: "30 January 2022"
       }
     }
   ]
@@ -184,7 +183,7 @@
       Date the claim was received
     </dt>
     <dd class="govuk-summary-list__value">
-      15 January 2022
+      20 April 2022
     </dd>
     <dd class="govuk-summary-list__actions">
       &nbsp;
@@ -195,15 +194,14 @@
       Date the claimant stopped work
     </dt>
     <dd class="govuk-summary-list__value">
-      {{govukTag({
-        text: "Pending",
-        classes: "govuk-tag--blue"
-      })}}
+      9 April 2022
     </dd>
     <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="date-last-worked?action=change">
+      <!--
+        <a class="govuk-link" href="date-last-worked?action=change">
         Change<span class="govuk-visually-hidden"> date of birth</span>
       </a>
+      -->
     </dd>
   </div>
   <div class="govuk-summary-list__row">
@@ -211,7 +209,7 @@
       Expected week of confinement
     </dt>
     <dd class="govuk-summary-list__value">
-      6 February 2022
+      15 May 2022
     </dd>
     <dd class="govuk-summary-list__actions">
       &nbsp;
@@ -222,7 +220,7 @@
       11th week before the baby due date
     </dt>
     <dd class="govuk-summary-list__value">
-      21 November 2021
+      27 February 2022
     </dd>
     <dd class="govuk-summary-list__actions">
       &nbsp;
@@ -233,7 +231,7 @@
       4th week before the baby due date
     </dt>
     <dd class="govuk-summary-list__value">
-      9 January 2022
+      7 April 2022
     </dd>
     <dd class="govuk-summary-list__actions">
       &nbsp;
@@ -244,7 +242,11 @@
       Start date requested by the claimant
     </dt>
     <dd class="govuk-summary-list__value">
-      4 February 2022
+      12 April 2022
+      {{govukTag({
+        text: "Declined",
+        classes: "govuk-!-margin-left-2"
+      })}}
     </dd>
     <dd class="govuk-summary-list__actions">
       &nbsp;
@@ -255,7 +257,7 @@
       Maternity Allowance Period rule
     </dt>
     <dd class="govuk-summary-list__value">
-      &nbsp;
+      Flexible Maternity Allowance Period
     </dd>
     <dd class="govuk-summary-list__actions">
       &nbsp;
@@ -266,7 +268,7 @@
       Maternity Allowance Period start date
     </dt>
     <dd class="govuk-summary-list__value">
-      &nbsp;
+      10 April 2022
     </dd>
     <dd class="govuk-summary-list__actions">
       &nbsp;
@@ -277,7 +279,7 @@
       Maternity Allowance Period end date
     </dt>
     <dd class="govuk-summary-list__value">
-      &nbsp;
+      8 January 2023
     </dd>
     <dd class="govuk-summary-list__actions">
       &nbsp;
@@ -299,12 +301,22 @@
       Met
     </dd>
   </div>
+  <!--
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
       Employment test period
     </dt>
     <dd class="govuk-summary-list__value">
-      1 November 2020 to 25 April 2021
+      7 February 2021 to 8 August 2021
+    </dd>
+  </div>
+  -->
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Employer
+    </dt>
+    <dd class="govuk-summary-list__value">
+      ASDA GROUP LIMITED
     </dd>
   </div>
   <div class="govuk-summary-list__row">
@@ -315,14 +327,16 @@
       Met
     </dd>
   </div>
+  <!--
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
       Earnings test weeks used
     </dt>
     <dd class="govuk-summary-list__value">
-      1 November 2020 to 24 January 2021
+      7 February 2021 to 9 May 2021
     </dd>
   </div>
+  -->
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
       Average weekly earnings for earnings test
@@ -354,7 +368,7 @@ text: "Amount"
 rows: [
 [
 {
-text: "1 November 2021"
+text: "7 February 2021"
 },
 {
 text: "£200.00"
@@ -362,7 +376,7 @@ text: "£200.00"
 ],
 [
 {
-text: "8 November 2021"
+text: "14 February 2021"
 },
 {
 text: "£200.00"
@@ -370,7 +384,7 @@ text: "£200.00"
 ],
 [
 {
-text: "15 November 2021"
+text: "21 February 2021"
 },
 {
 text: "£200.00"
@@ -378,7 +392,7 @@ text: "£200.00"
 ],
 [
 {
-text: "22 November 2021"
+text: "28 February 2021"
 },
 {
 text: "£200.00"
@@ -386,7 +400,7 @@ text: "£200.00"
 ],
 [
 {
-text: "29 November 2021"
+text: "7 March 2021"
 },
 {
 text: "£200.00"
@@ -394,7 +408,7 @@ text: "£200.00"
 ],
 [
 {
-text: "6 December 2021"
+text: "14 March 2021"
 },
 {
 text: "£200.00"
@@ -402,7 +416,7 @@ text: "£200.00"
 ],
 [
 {
-text: "13 December 2021"
+text: "21 March 2021"
 },
 {
 text: "£200.00"
@@ -410,7 +424,7 @@ text: "£200.00"
 ],
 [
 {
-text: "20 December 2021"
+text: "28 March 2021"
 },
 {
 text: "£200.00"
@@ -418,7 +432,7 @@ text: "£200.00"
 ],
 [
 {
-text: "27 December 2021"
+text: "4 April 2021"
 },
 {
 text: "£200.00"
@@ -426,7 +440,7 @@ text: "£200.00"
 ],
 [
 {
-text: "3 January 2021"
+text: "11 April 2021"
 },
 {
 text: "£200.00"
@@ -434,7 +448,7 @@ text: "£200.00"
 ],
 [
 {
-text: "10 January 2021"
+text: "18 April 2021"
 },
 {
 text: "£200.00"
@@ -442,7 +456,7 @@ text: "£200.00"
 ],
 [
 {
-text: "17 January 2021"
+text: "25 April 2021"
 },
 {
 text: "£200.00"
@@ -450,7 +464,7 @@ text: "£200.00"
 ],
 [
 {
-text: "24 January 2021"
+text: "2 May 2021"
 },
 {
 text: "£200.00"

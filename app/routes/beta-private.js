@@ -6,123 +6,86 @@ module.exports = router => {
 ///////// (Used Alpha Iteration 10)
 // Iteration 1 - Scenario 1
 
-router.post('/beta-private/', function (req, res) {
-  res.redirect('/beta-private/iteration-1/scenario-1/');
+router.post('/beta-private/iteration-1/start-a-claim/', function (req, res) {
+  res.redirect('/beta-private/iteration-1/start-a-claim/claim-date');
 });
 
-router.post('/beta-private/iteration-1/scenario-1/', function (req, res) {
-  res.redirect('/beta-private/iteration-1/scenario-1/claimant-details');
+router.post('/beta-private/iteration-1/start-a-claim/claim-date', function (req, res) {
+  res.redirect('/beta-private/iteration-1/start-a-claim/about-the-baby');
 });
 
-router.post('/beta-private/iteration-1/scenario-1/claimant-details', function (req, res) {
-  res.redirect('/beta-private/iteration-1/scenario-1/claim-date');
-});
-
-router.post('/beta-private/iteration-1/scenario-1/claim-date', function (req, res) {
-  res.redirect('/beta-private/iteration-1/scenario-1/about-the-baby');
-});
-
-router.post('/beta-private/iteration-1/scenario-1/about-the-baby', function (req, res) {
+router.post('/beta-private/iteration-1/start-a-claim/about-the-baby', function (req, res) {
   if (req.session.data['baby-born'] == 'yes') {
-    res.redirect('/beta-private/iteration-1/scenario-1/baby-birth-date');
+    res.redirect('/beta-private/iteration-1/start-a-claim/baby-birth-date');
   }
   else {
-    res.redirect('/beta-private/iteration-1/scenario-1/date-last-worked');
+    res.redirect('/beta-private/iteration-1/start-a-claim/date-last-worked');
   }
 });
 
-router.post('/beta-private/iteration-1/scenario-1/baby-birth-date', function (req, res) {
-  res.redirect('/beta-private/iteration-1/scenario-1/date-last-worked');
+router.post('/beta-private/iteration-1/start-a-claim/baby-birth-date', function (req, res) {
+  res.redirect('/beta-private/iteration-1/start-a-claim/date-last-worked');
 });
 
-router.post('/beta-private/iteration-1/scenario-1/date-last-worked', function (req, res) {
+router.post('/beta-private/iteration-1/start-a-claim/date-last-worked', function (req, res) {
   if (req.session.data['stopped-work'] == 'yes') {
-    res.redirect('/beta-private/iteration-1/scenario-1/dlw-date');
+    res.redirect('/beta-private/iteration-1/start-a-claim/dlw-date');
   }
   else {
     if (req.session.data['action'] == 'change') {
       req.session.data['action'] = null;
-      res.redirect('/beta-private/iteration-1/scenario-1/summary');
+      res.redirect('/beta-private/iteration-1/start-a-claim/summary');
     }
     else {
-      res.redirect('/beta-private/iteration-1/scenario-1/ma-start-date-provided');
+      res.redirect('/beta-private/iteration-1/start-a-claim/ma-start-date-provided');
     }
   }
 });
 
-router.post('/beta-private/iteration-1/scenario-1/dlw-date', function (req, res) {
+router.post('/beta-private/iteration-1/start-a-claim/dlw-date', function (req, res) {
   if (req.session.data['action'] == 'change') {
     req.session.data['action'] = null;
-    res.redirect('/beta-private/iteration-1/scenario-1/summary');
+    res.redirect('/beta-private/iteration-1/start-a-claim/summary');
   }
   else {
-    res.redirect('/beta-private/iteration-1/scenario-1/chosen-map-date');
+    res.redirect('/beta-private/iteration-1/start-a-claim/chosen-map-date');
   }
 });
 
-router.post('/beta-private/iteration-1/scenario-1/ma-start-date-provided', function (req, res) {
+router.post('/beta-private/iteration-1/start-a-claim/ma-start-date-provided', function (req, res) {
   if (req.session.data['ma-start-date-provided'] == 'yes') {
-    res.redirect('/beta-private/iteration-1/scenario-1/planned-dlw-date');
+    res.redirect('/beta-private/iteration-1/start-a-claim/planned-dlw-date');
   }
   else {
-    res.redirect('/beta-private/iteration-1/scenario-1/chosen-map-date');
+    res.redirect('/beta-private/iteration-1/start-a-claim/chosen-map-date');
   }
 });
 
-router.post('/beta-private/iteration-1/scenario-1/planned-dlw-date', function (req, res) {
-  res.redirect('/beta-private/iteration-1/scenario-1/chosen-map-date');
+router.post('/beta-private/iteration-1/start-a-claim/planned-dlw-date', function (req, res) {
+  res.redirect('/beta-private/iteration-1/start-a-claim/chosen-map-date');
 });
 
-router.post('/beta-private/iteration-1/scenario-1/chosen-map-date', function (req, res) {
+router.post('/beta-private/iteration-1/start-a-claim/chosen-map-date', function (req, res) {
   if (req.session.data['ma-date-requested'] == 'yes') {
-    res.redirect('/beta-private/iteration-1/scenario-1/requested-start-date');
+    res.redirect('/beta-private/iteration-1/start-a-claim/requested-start-date');
   }
   else {
-    res.redirect('/beta-private/iteration-1/scenario-1/summary');
+    res.redirect('/beta-private/iteration-1/start-a-claim/summary');
   }
 });
 
-router.post('/beta-private/iteration-1/scenario-1/requested-start-date', function (req, res) {
-  res.redirect('/beta-private/iteration-1/scenario-1/summary');
+router.post('/beta-private/iteration-1/start-a-claim/requested-start-date', function (req, res) {
+  res.redirect('/beta-private/iteration-1/start-a-claim/summary');
 });
 
 // Iteration 1 - Scenario 2
 
 router.post('/beta-private/', function (req, res) {
-  res.redirect('/beta-private/iteration-1/scenario-2/');
+  res.redirect('/beta-private/iteration-1/find-a-claim/');
 });
 
-router.post('/beta-private/iteration-1/scenario-2/', function (req, res) {
-  res.redirect('/beta-private/iteration-1/scenario-2/summary');
-});
-
-// Alt
-
-router.post('/beta-private/', function (req, res) {
-  res.redirect('/beta-private/iteration-alt/');
-});
-
-router.post('/beta-private/iteration-alt/', function (req, res) {
-  res.redirect('/beta-private/iteration-alt/dates');
-});
-
-router.post('/beta-private/iteration-alt/dates', function (req, res) {
-  res.redirect('/beta-private/iteration-alt/award-decision');
-});
-
-
-// Tabs
-
-router.post('/beta-private/', function (req, res) {
-  res.redirect('/beta-private/iteration-alt-tabs/');
-});
-
-router.post('/beta-private/iteration-alt-tabs/', function (req, res) {
-  res.redirect('/beta-private/iteration-alt-tabs/dates');
-});
-
-router.post('/beta-private/iteration-alt-tabs/dates', function (req, res) {
-  res.redirect('/beta-private/iteration-alt-tabs/award-decision');
+router.post('/beta-private/iteration-1/find-a-claim/', function (req, res) {
+  res.redirect('/beta-private/iteration-1/find-a-claim/summary');
 });
 
 }
