@@ -13,9 +13,9 @@
         User Research Private Beta
       </h1>
 
-      <h2 class="govuk-heading-m">Round 1: 20 October 2021</h2>
+      <h2 class="govuk-heading-m">PB Round 1: 5 May 2022</h2>
 
-      <p><a href="/iteration-1/" class="govuk-body govuk-!-font-weight-bold">Prototype iteration 1</a></p>
+      <p><a href="/beta-private/iteration-1/" class="govuk-body govuk-!-font-weight-bold">Prototype iteration 1</a></p>
 
       {% from "govuk/components/accordion/macro.njk" import govukAccordion %}
 
@@ -31,13 +31,18 @@
           content: {
             html:
             '<ul class="govuk-list govuk-list--bullet">
-              <li>We went for the simplest option of playing back all of the information we expected would be needed by agents in a flat summary list.</li>
-              <li>We avoided change links until a point where users tell us that they&rsquo;re necessary.</li>
-              <li>To interact with the &lsquo;Matching&rsquo; GZ we need to gather full name, date of birth and postcode.</li>
-              <li>We will use DWP standard pattern for full name input. Not using &ldquo;(excluding titles)&rdquo; in iteration 1 - explore through UR.</li>
-              <li>For the data gather, we&rsquo;ve put three (related) things on one page, as opposed to putting them on separate pages, in the interests of speed of input, because this is an agent facing service.</li>
-              <li>When on separate pages, it allows users to digest the content easier, but this is for quick, speedy, input and doesn&rsquo;t need to be digested as it&rsquo;ll be used many times per day.</li>
-              <li>We have re-used patterns from the Bereavement Support Payment agent-facing service as these data-gather elements have been tested with DWP agents.</li>
+              <li>As we move into the Private Beta phase we have rearranged the prototype to group iterations tested in Alpha phase together. Private Beta iterations will sit in a new folder.</li>
+              <li>At the start of the journey we have created a simple landing page from which the agent will choose the type of activity they need to complete: Start a claim or Find a claim.</li>
+              <li>We were unable to find any established patterns from other agent-facing services, so have created something new.</li>
+              <li>We considered radio buttons but felt this created additional effort for the user. We also considered plain links on the page but this looked aesthetically odd. We have used Gov Blue and created a large target area for each option which we believe will be easy for agents to use as they progress through their workload.</li>
+              <li>We also considered having a default state for agents such as Start a claim, and an option for agents to move from that default state to Find a claim if they needed to, but this felt complicated, and there is no clear indication of what a default selection should be.</li>
+              <li>The data gather questions have been changed from conditional reveals to radio questions with date input on a following page. This removes Accessibility concerns raised around the conditional reveal.</li>
+              <li>We have changed the format of the pages to have a short H1 and a following question - we hope that this will help users to enter the correct dates on each page.</li>
+              <li>On the Summary we have changed our tags to be blue and lowercase to see if this aids readability and removes any potential bias or assumptions related to the colour of tags.</li>
+              <li>We have added the name of the employer as we can gather this from RTI. We have used the name registered with Companies House as this is what HMRC can provide to us.</li>
+              <li>As we have built a good level of trust among agents and a longer period of time has lapsed since we last tested with them, we want to explore whether we can remove some information from the Summary page and maintain that agent trust and confidence. The first thing we have decided to remove is the dates used for the Employment and Earnings tests.</li>
+              <li>Research has shown that agents expect to find a claim using the claimant&rsquo;s National Insurance Number so we have used that for the Find a claim search.</li>
+              <li>At this time we have not included anything for a security check, as agents have indicated there may be enough information on the summary page to confirm the claimant&rsquo;s identity through standard questions. We may need to amend this if additional ID&V requirements are exposed.</li>
             </ul>'
           }
         },
@@ -48,9 +53,9 @@
           content: {
             html:
             '<ul class="govuk-list govuk-list--bullet">
-            <li>We believe the award details are the most important thing to see, and that some agents will not need to look at the rest of the information on the screen.</li>
-            <li>We believe that some agents will need to see more information to support the claim and decision, and will get that from the rest of the page.</li>
-            <li>We can measure (through UR) how many agents look at the rest of the page, and observe how they view and interact with the content and information available.</li>
+            <li>We believe the new H1 and subsequent question will help agents to enter the required dates in the right places.</li>
+            <li>We believe that we can remove the dates used for the Employment and Earnings tests because the highest earning weeks are detailed further down the page, and that the agent will trust the system has worked out the correct number of weeks for the Employment test.</li>
+            <li>NOTE: For scenarios where the Employment test is NOT met, we believe we will need to provide additional information such as the number of weeks they were employed, by whom, and when.</li>
             </ul>'
           }
         },
@@ -59,20 +64,17 @@
             text: "Research notes"
           },
           content: {
-            html: "<p class='govuk-body'>Number of participants: 5</p>"
+            html: "<p class='govuk-body'>Number of participants: </p>"
           },
           content: {
             html:
             '<ul class="govuk-list govuk-list--bullet">
 
-            <li>Number of participants: 5</li>
-            <li>Overall this was well received by agents. They understood that this was a service that was intended for their use, just not exactly what it would do.</li>
-            <li>There were no issues with the data capture.</li>
-            <li>There was an expectation that this information would be saved if they needed to leave the claim or BF it at any point.</li>
-            <li>Some agents did notice that the date last worked was not shown on the summary page.</li>
-            <li>Agents did not understand where the information on the summary page had come from to form the decision.</li>
-            <li>However, it did seem like there was a greater level of trust in this information than there was during the previous scenario-based research.</li>
-            <li>The MAP was something agents expected to see as part of this decision, or as the next step in the process.</li>
+            <li>Number of participants: </li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
             <li class ="govuk-!-font-weight-bold">Some future areas to consider: call to action, date last worked, MAP, earnings test.</li>
             </ul>'
           }
