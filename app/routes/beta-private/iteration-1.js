@@ -3,11 +3,24 @@ module.exports = router => {
 
 // Add your routes here - above the module.exports line
 
-///////// (Used Alpha Iteration 10)
-// Iteration 1 - Scenario 1
+// (Used Alpha Iteration 10)
+// **************** ITERATION 1 ******************** /
+// **************** START A CLAIM ****************** /
+
+// has a match been made, in this scenario?
+var match = "no"
 
 router.post('/beta-private/iteration-1/start-a-claim/', function (req, res) {
-  res.redirect('/beta-private/iteration-1/start-a-claim/claim-date');
+  if (match == 'no') {
+    res.redirect('/beta-private/iteration-1/start-a-claim/more-claimant-information');
+  }
+  else {
+    res.redirect('/beta-private/iteration-1/start-a-claim/about-the-baby');
+  }
+});
+
+router.post('/beta-private/iteration-1/start-a-claim/more-claimant-information', function (req, res) {
+  res.redirect('/beta-private/iteration-1/start-a-claim/about-the-baby');
 });
 
 router.post('/beta-private/iteration-1/start-a-claim/claim-date', function (req, res) {
@@ -78,7 +91,7 @@ router.post('/beta-private/iteration-1/start-a-claim/requested-start-date', func
   res.redirect('/beta-private/iteration-1/start-a-claim/summary');
 });
 
-// Iteration 1 - Scenario 2
+// **************** FIND A CLAIM ****************** /
 
 router.post('/beta-private/', function (req, res) {
   res.redirect('/beta-private/iteration-1/find-a-claim/');

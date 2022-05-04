@@ -17,35 +17,14 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-l">
-        Claimant details
+        Enter more claimant information
       </h1>
 
       <form class="form" method="post" novalidate>
 
-        {% from "govuk/components/input/macro.njk" import govukInput %}
-
-        {{ govukInput({
-          label: {
-            text: "Full name (excluding title)"
-          },
-          classes: "govuk-!-width-two-thirds",
-          id: "full-name",
-          name: "full-name"
-        }) }}
-
 
       {% from "govuk/components/date-input/macro.njk" import govukDateInput %}
       {% from "govuk/components/input/macro.njk" import govukInput %}
-
-      {{ govukDateInput({
-        id: "claimant-dob",
-        namePrefix: "claimant-dob",
-        fieldset: {
-          legend: {
-            text: "Date of birth"
-          }
-        }
-      }) }}
 
       {{ govukInput({
         label: {
