@@ -3,5 +3,6 @@ const router = express.Router()
 
 require('./routes/alpha')(router)
 require('./routes/beta-private/iteration-1')(router)
+require('./routes/beta-private/iteration-2')(router)
 
 module.exports = router
