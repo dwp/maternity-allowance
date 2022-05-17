@@ -7,7 +7,7 @@ module.exports = router => {
 // **************** ITERATION 1 ******************** /
 // **************** START A CLAIM ****************** /
 
-// *** Scenario 1 *** //
+// *** Scenario 1 ***************************************************************************************************************** //
 
 router.post('/beta-private/iteration-2/scenario-1/start-a-claim/', function (req, res) {
   // has a match been made, in this scenario?
@@ -95,11 +95,11 @@ router.post('/beta-private/iteration-2/scenario-1/start-a-claim/requested-start-
 });
 
 
-// *** Scenario 2 *** //
+// *** Scenario 2 ***************************************************************************************************************** //
 
 router.post('/beta-private/iteration-2/scenario-2/start-a-claim/', function (req, res) {
   // has a match been made, in this scenario?
-  var match = "no";
+  var match = "yes";
 
   if (match == 'no') {
     var match = null;
@@ -174,12 +174,14 @@ router.post('/beta-private/iteration-2/scenario-2/start-a-claim/chosen-map-date'
     res.redirect('/beta-private/iteration-2/scenario-2/start-a-claim/requested-start-date');
   }
   else {
-    res.redirect('/beta-private/iteration-2/scenario-2/start-a-claim/summary');
+    //res.redirect('/beta-private/iteration-2/scenario-2/start-a-claim/summary');
+    res.redirect('/beta-private/iteration-2/scenario-2/start-a-claim/problem-with-service');
   }
 });
 
 router.post('/beta-private/iteration-2/scenario-2/start-a-claim/requested-start-date', function (req, res) {
-  res.redirect('/beta-private/iteration-2/scenario-2/start-a-claim/summary');
+  //res.redirect('/beta-private/iteration-2/scenario-2/start-a-claim/summary');
+  res.redirect('/beta-private/iteration-2/scenario-2/start-a-claim/problem-with-service');
 });
 
 // **************** FIND A CLAIM ****************** /
