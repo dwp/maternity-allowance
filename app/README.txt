@@ -4,3 +4,4 @@ New Iteration Checklist:
 - Add a reference to this new file in "/views/routes.js"
 - Add a link to the new iteration in BOTH "/beta-private/index.html" AND "/beta-private/iteration-[new]/index.html"
 - Amend links to reflect the new iteration in "/beta-private/iteration-[new]/scenario-[all]/index.html"
+- Add design decisions and hypotheses to previous iteration
