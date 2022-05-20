@@ -10,6 +10,16 @@ module.exports = router => {
 // *** Scenario 1 ***************************************************************************************************************** //
 
 router.post('/beta-private/iteration-3/scenario-1/start-a-claim/', function (req, res) {
+
+  // Claimant information
+  req.session.data['claimant-name'] = 'Helen Ashfield';
+  req.session.data['claimant-nino'] = 'XX112233X';
+  req.session.data['claimant-dob'] = '16 September 1987';
+  req.session.data['claimant-postcode'] = 'DH5 9YR';
+  req.session.data['claimant-contact-number'] = '07847 171740';
+  req.session.data['ma-decision'] = 'Pending';
+  req.session.data['ma-claim-creation-date'] = '26 May 2022';
+
   // has a match been made, in this scenario?
   var match = "yes";
 

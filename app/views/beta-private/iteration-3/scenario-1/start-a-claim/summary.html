@@ -30,19 +30,19 @@
     <dl class="key-details-bar__key-details">
       <div class="key-details-bar__top-block">
         <dt class="govuk-visually-hidden">Name:</dt>
-        <dt class="key-details-bar__name">Helen Ashfield</dt>
+        <dt class="key-details-bar__name">{{ data['claimant-name'] }}</dt>
 
         <dt class="govuk-visually-hidden">National Insurance number:</dt>
-        <dt class="key-details-bar__nino">XX112233X</dt>
+        <dt class="key-details-bar__nino">{{ data['claimant-nino'] }}</dt>
       </div>
 
       <div class="key-details-bar__bottom-block">
         <dt>Date of birth:</dt>
-        <dd>16 September 1987</dd>
+        <dd>{{ data['claimant-dob'] }}</dd>
         <dt>Postcode:</dt>
-        <dd>DH5 9YR</dd>
+        <dd>{{ data['claimant-postcode'] }}</dd>
         <dt>Contact number:</dt>
-        <dd>07847 171740</dd>
+        <dd>{{ data['claimant-contact-number'] }}</dd>
       </div>
     </dl>
   </section>
@@ -91,7 +91,7 @@
     </dt>
     <dd class="govuk-summary-list__value">
       {{govukTag({
-        text: "Pending"
+        text: data['ma-decision']
       })}}
     </dd>
   </div>
@@ -100,7 +100,7 @@
         Claim created
       </dt>
       <dd class="govuk-summary-list__value">
-        19 May 2022
+        {{ data['ma-claim-creation-date'] }}
       </dd>
     </div>
 </dl>
