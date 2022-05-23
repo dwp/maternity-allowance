@@ -95,14 +95,46 @@
       })}}
     </dd>
   </div>
-    <div class="govuk-summary-list__row">
-      <dt class="govuk-summary-list__key govuk-!-width-one-half">
-        Claim created
-      </dt>
-      <dd class="govuk-summary-list__value">
-        {{ data['ma-claim-creation-date'] }}
-      </dd>
-    </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key govuk-!-width-one-half">
+      Claim created
+    </dt>
+    <dd class="govuk-summary-list__value">
+      {{ data['ma-claim-creation-date'] }}
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Decision date
+    </dt>
+    <dd class="govuk-summary-list__value">
+      &nbsp;
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Rate
+    </dt>
+    <dd class="govuk-summary-list__value">
+      {{ data['ma-rate'] }}
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Maternity Allowance Period start date
+    </dt>
+    <dd class="govuk-summary-list__value">
+      {{ data['ma-map-start'] }}
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Maternity Allowance Period end date
+    </dt>
+    <dd class="govuk-summary-list__value">
+      {{ data['ma-map-end'] }}
+    </dd>
+  </div>
 </dl>
 </section>
 
@@ -118,7 +150,7 @@
         classes: 'govuk-!-width-one-half'
       },
       value: {
-        text: "18 May 2022"
+        text: data['ma-baby-due-date']
       }
     },
     {
@@ -126,7 +158,7 @@
         text: "First day of Test Period"
       },
       value: {
-        text: "7 February 2021"
+        text: data['ma-test-period-first-day']
       }
     },
     {
@@ -134,7 +166,7 @@
         text: "Last day of Test Period"
       },
       value: {
-        text: "14 May 2022"
+        text: data['ma-test-period-last-day']
       }
     },
     {
@@ -142,7 +174,7 @@
         text: "15th week before the baby due date"
       },
       value: {
-        text: "30 January 2022"
+        text: data['ma-test-period-week-fifteen']
       }
     }
   ]
@@ -159,7 +191,7 @@
       Date the claim was received
     </dt>
     <dd class="govuk-summary-list__value">
-      20 April 2022
+      {{ data['ma-map-claim-date-received'] }}
     </dd>
     <dd class="govuk-summary-list__actions">
       &nbsp;
@@ -170,10 +202,10 @@
       Date the claimant stopped work
     </dt>
     <dd class="govuk-summary-list__value">
-      8 April 2022
+      {{ data['ma-map-claimant-stopped-work'] }}
     </dd>
     <dd class="govuk-summary-list__actions">
-      <!--
+      &nbsp;<!--
         <a class="govuk-link" href="date-last-worked?action=change">
         Change<span class="govuk-visually-hidden"> date of birth</span>
       </a>
@@ -185,7 +217,7 @@
       Expected week of confinement
     </dt>
     <dd class="govuk-summary-list__value">
-      15 May 2022
+      {{ data['ma-map-expected-week-of-confinement'] }}
     </dd>
     <dd class="govuk-summary-list__actions">
       &nbsp;
@@ -196,7 +228,7 @@
       11th week before the baby due date
     </dt>
     <dd class="govuk-summary-list__value">
-      27 February 2022
+      {{ data['ma-week-eleventh'] }}
     </dd>
     <dd class="govuk-summary-list__actions">
       &nbsp;
@@ -207,7 +239,7 @@
       4th week before the baby due date
     </dt>
     <dd class="govuk-summary-list__value">
-      17 April 2022
+      {{ data['ma-week-fourth'] }}
     </dd>
     <dd class="govuk-summary-list__actions">
       &nbsp;
@@ -218,13 +250,40 @@
       Start date requested by the claimant
     </dt>
     <dd class="govuk-summary-list__value">
-      12 April 2022
-      <!--
-      {{govukTag({
-        text: "Allowed",
-        classes: "govuk-!-margin-left-2"
-      })}}
-      -->
+      {{ data['ma-start-date-requested'] }}
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      &nbsp;
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Maternity Allowance Period rule
+    </dt>
+    <dd class="govuk-summary-list__value">
+      {{ data['ma-map-rule'] }}
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      &nbsp;
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Maternity Allowance Period start date
+    </dt>
+    <dd class="govuk-summary-list__value">
+      {{ data['ma-map-start'] }}
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      &nbsp;
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Maternity Allowance Period end date
+    </dt>
+    <dd class="govuk-summary-list__value">
+      {{ data['ma-map-end'] }}
     </dd>
     <dd class="govuk-summary-list__actions">
       &nbsp;
@@ -243,7 +302,7 @@
       Employment test
     </dt>
     <dd class="govuk-summary-list__value">
-      10 weeks employment provided by Real Time Information
+      {{ data['ma-employment-test'] }}
     </dd>
   </div>
   <!--
@@ -261,7 +320,7 @@
       Employer
     </dt>
     <dd class="govuk-summary-list__value">
-      DIRECT HOME CARE LTD
+      {{ data['ma-employer-1'] }}
     </dd>
   </div>
   <div class="govuk-summary-list__row">
@@ -269,7 +328,7 @@
       Earnings test
     </dt>
     <dd class="govuk-summary-list__value">
-      10 weeks earnings provided by Real Time Information
+      {{ data['ma-employment-test'] }}
     </dd>
   </div>
   <!--
@@ -282,6 +341,14 @@
     </dd>
   </div>
   -->
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Average weekly earnings for earnings test
+    </dt>
+    <dd class="govuk-summary-list__value">
+      {{ data['ma-average-earnings'] }}
+    </dd>
+  </div>
 </dl>
 
 
@@ -303,86 +370,86 @@ text: "Amount"
 }
 ],
 rows: [
-  [
-  {
-  text: "14 November 2021"
-  },
-  {
-  text: "£200.00"
-  }
-  ],
-  [
-  {
-  text: "21 November 2021"
-  },
-  {
-  text: "£200.00"
-  }
-  ],
-  [
-  {
-  text: "28 November 2021"
-  },
-  {
-  text: "£200.00"
-  }
-  ],
-  [
-  {
-  text: "5 December 2021"
-  },
-  {
-  text: "£200.00"
-  }
-  ],
-  [
-  {
-  text: "12 December 2021"
-  },
-  {
-  text: "£200.00"
-  }
-  ],
-  [
-  {
-  text: "19 December 2021"
-  },
-  {
-  text: "£200.00"
-  }
-  ],
-  [
-  {
-  text: "30 January 2022"
-  },
-  {
-  text: "£200.00"
-  }
-  ],
-  [
-  {
-  text: "6 February 2022"
-  },
-  {
-  text: "£200.00"
-  }
-  ],
-  [
-  {
-  text: "13 February 2022"
-  },
-  {
-  text: "£200.00"
-  }
-  ],
-  [
-  {
-  text: "20 February 2022"
-  },
-  {
-  text: "£200.00"
-  }
-  ]
+[
+{
+  text: data['ma-week-1']
+},
+{
+  text: data['ma-week-1-employer-1-amount']
+}
+],
+[
+{
+  text: data['ma-week-2']
+},
+{
+  text: data['ma-week-2-employer-1-amount']
+}
+],
+[
+{
+  text: data['ma-week-3']
+},
+{
+  text: data['ma-week-3-employer-1-amount']
+}
+],
+[
+{
+  text: data['ma-week-4']
+},
+{
+  text: data['ma-week-4-employer-1-amount']
+}
+],
+[
+{
+  text: data['ma-week-5']
+},
+{
+  text: data['ma-week-5-employer-1-amount']
+}
+],
+[
+{
+  text: data['ma-week-6']
+},
+{
+  text: data['ma-week-6-employer-1-amount']
+}
+],
+[
+{
+  text: data['ma-week-7']
+},
+{
+  text: data['ma-week-7-employer-1-amount']
+}
+],
+[
+{
+  text: data['ma-week-8']
+},
+{
+  text: data['ma-week-8-employer-1-amount']
+}
+],
+[
+{
+  text: data['ma-week-9']
+},
+{
+  text: data['ma-week-9-employer-1-amount']
+}
+],
+[
+{
+  text: data['ma-week-10']
+},
+{
+  text: data['ma-week-10-employer-1-amount']
+}
+]
 ]
 }) }}
 </section>
