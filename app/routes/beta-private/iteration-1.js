@@ -10,7 +10,7 @@ module.exports = router => {
 router.post('/beta-private/iteration-1/start-a-claim/', function (req, res) {
   // has a match been made, in this scenario?
   var match = "no";
-  
+
   if (match == 'no') {
     var match = null;
     res.redirect('/beta-private/iteration-1/start-a-claim/more-claimant-information');
