@@ -13,6 +13,136 @@
         User Research Private Beta
       </h1>
 
+        <h2 class="govuk-heading-m">Round 3: 26 May 2022</h2>
+
+        <p><a href="/beta-private/iteration-3/" class="govuk-body govuk-!-font-weight-bold">Prototype iteration 2</a></p>
+
+        {% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+
+        {% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+
+        {{ govukAccordion({
+        id: "accordion-default",
+        items: [
+          {
+            heading: {
+            text: "Design decisions"
+            },
+            content: {
+              html:
+              '<ul class="govuk-list govuk-list--bullet">
+                <li>Scenario 1 The Pending tag did not draw a response from agents so we have changed this tag to Incomplete.</li>
+                <li>We have reinstated the lines in the table where information cannot yet be determined.</li>
+                <li>Scenario 2 Agents demonstrated a need for a little additional context when an error has occured. They need reassurance that the error is not due to something they have done. They need to know what to do next.</li>
+                <li>We have amended the body text to reassure agents that it is a system error, not a user error.</li>
+                <li>We will explore what they believe next steps will be if this were to occur.</li>
+              </ul>'
+            }
+          },
+          {
+            heading: {
+              text: "Hypotheses"
+            },
+            content: {
+              html:
+              '<ul class="govuk-list govuk-list--bullet">
+              <li>We believe the Incomplete tag will draw agents attention to the fact the claim cannot be decided at this point.</li>
+              <li>We believe agents will understand why some fields in the table are empty, and will understand that the system will update them when it has sufficient data to make a decision assessment.</li>
+              <li>We believe agents will be reassured that the service error is a technical one, and not caused by something in the case or something they have done.</li>
+              </ul>'
+            }
+          },
+          {
+            heading: {
+              text: "Research notes"
+            },
+            content: {
+              html: "<p class='govuk-body'>Number of participants: </p>"
+            },
+            content: {
+              html:
+              '<ul class="govuk-list govuk-list--bullet">
+
+              <li>Number of participants: </li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li class ="govuk-!-font-weight-bold"></li>
+              </ul>'
+            }
+          }
+        ]
+        }) }}
+
+
+        <h2 class="govuk-heading-m">Round 2: 19 May 2022</h2>
+
+        <p><a href="/beta-private/iteration-2/" class="govuk-body govuk-!-font-weight-bold">Prototype iteration 2</a></p>
+
+        {% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+
+        {% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+
+        {{ govukAccordion({
+        id: "accordion-default",
+        items: [
+          {
+            heading: {
+              text: "Design decisions"
+            },
+            content: {
+              html:
+              '<ul class="govuk-list govuk-list--bullet">
+                <li>In this round of UR we wanted to start exploring non happy path scenarios which agents may encounter with the new service i.e. Partial RTI data and an RTI error.</li>
+                <li>Scenario 1 enables an agent to start processing a claim, however, there is only 10 weeks of employment and earnings information available from RTI.</li>
+                <li>This could be due to the claimant only having a short spell of employment, or being employed by another employer who does not declare their payroll to HMRC. This applies to some small employers.</li>
+                <li>As a result of the 10 weeks information, the system cannot assess the employment and earnings tests, and cannot make a decision whether to award the claim. This also prevents the determination of the MAP start and end dates, which we could work out, but should not be displayed without a decision.</li>
+                <li>We chose to use the Pending tag to reflect the status of the case, we show a Claim created date, we removed any line in the table where we do not have a response to display.</li>
+                <li>As we cannot confidently assess the employment and earnings tests we provided details that only 10 weeks of data was provided by RTI.</li>
+                <li>In the table of highest earning weeks it was not obvious that only 10 weeks were listed, so we expanded the table heading to state this.</li>
+                <li>Scenario 2 explores agent response when there is an error with the RTI API.</li>
+                <li>The dates gather questions did not test well in the last round of testing, but we decided not to change them yet as we had mixed results in the sessions, and there was not a consistent way of interacting with them.</li>
+                <li>We have started with the There is a problem with the service pages pattern, which is in an Experimental state in the Design System. We will use this to explore what agents need in a service-error situation, and what they understand about what might have happened. This insight will help to inform further iterations.</li>
+              </ul>'
+            }
+          },
+          {
+            heading: {
+              text: "Hypotheses"
+            },
+            content: {
+              html:
+              '<ul class="govuk-list govuk-list--bullet">
+              <li>We believe agents will understand the Pending state of the case means a decision cannot be made at this time.</li>
+              <li>We believe agents will explore the case further to understand why it is Pending.</li>
+              <li>We believe agents will understand that the 10 weeks of employment and earnings could be supplemented by further information from the claimant. We hope to understand what they would expect to do next to move the case into a Decision state.</li>
+              <li>We believe agents will need some more information when the service has a problem. We will use exploratory questions to understand what sort of information this might be.</li>
+              </ul>'
+            }
+          },
+            {
+            heading: {
+              text: "Research notes"
+            },
+            content: {
+              html: "<p class='govuk-body'>Number of participants: </p>"
+            },
+            content: {
+              html:
+              '<ul class="govuk-list govuk-list--bullet">
+
+              <li>Number of participants: </li>
+              <li>Dates tested really smoothly in this round.</li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li class ="govuk-!-font-weight-bold"></li>
+              </ul>'
+            }
+          }
+        ]
+        }) }}
       <h2 class="govuk-heading-m">Round 1: 5 May 2022</h2>
 
       <p><a href="/beta-private/iteration-1/" class="govuk-body govuk-!-font-weight-bold">Prototype iteration 1</a></p>
