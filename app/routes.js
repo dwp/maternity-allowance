@@ -5,5 +5,6 @@ require('./routes/alpha')(router)
 require('./routes/beta-private/iteration-1')(router)
 require('./routes/beta-private/iteration-2')(router)
 require('./routes/beta-private/iteration-3')(router)
+require('./routes/beta-private/iteration-4')(router)
 
 module.exports = router
