@@ -108,7 +108,7 @@
       Decision date
     </dt>
     <dd class="govuk-summary-list__value">
-      &nbsp;
+      {{ data['ma-claim-decision-date'] }}
     </dd>
   </div>
   <div class="govuk-summary-list__row">
@@ -205,11 +205,9 @@
       {{ data['ma-map-claimant-stopped-work'] }}
     </dd>
     <dd class="govuk-summary-list__actions">
-      &nbsp;<!--
-        <a class="govuk-link" href="date-last-worked?action=change">
-        Change<span class="govuk-visually-hidden"> date of birth</span>
+      <a class="govuk-link" href="date-last-worked?change=true">
+        Change<span class="govuk-visually-hidden"> date the claimant stopped work</span>
       </a>
-      -->
     </dd>
   </div>
   <div class="govuk-summary-list__row">
@@ -356,7 +354,7 @@
 {% from "govuk/components/table/macro.njk" import govukTable %}
 
 {{ govukTable({
-caption: "Highest earning weeks (10 weeks available)",
+caption: "Highest earning weeks",
 captionClasses: "govuk-table__caption--m",
 classes: "govuk-!-margin-bottom-9",
 firstCellIsHeader: true,
@@ -448,6 +446,30 @@ rows: [
 },
 {
   text: data['ma-week-10-employer-1-amount']
+}
+],
+[
+{
+  text: data['ma-week-11']
+},
+{
+  text: data['ma-week-11-employer-1-amount']
+}
+],
+[
+{
+  text: data['ma-week-12']
+},
+{
+  text: data['ma-week-12-employer-1-amount']
+}
+],
+[
+{
+  text: data['ma-week-13']
+},
+{
+  text: data['ma-week-13-employer-1-amount']
 }
 ]
 ]
