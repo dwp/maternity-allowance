@@ -31,7 +31,7 @@ router.post('/beta-private/iteration-4/scenario-1/start-a-claim/', function (req
   req.session.data['ma-test-period-week-fifteen'] = '03 April 2022';
   // Maternity Allowance period dates
   req.session.data['ma-map-claim-date-received'] = '10 June 2022';
-  req.session.data['ma-map-claimant-stopped-work'] = 'Date last worked not provided';
+  req.session.data['ma-map-claimant-stopped-work'] = 'Claimant has not stopped work';
   req.session.data['ma-map-expected-week-of-confinement'] = '17 July 2022';
   req.session.data['ma-week-eleventh'] = '1 May 2022';
   req.session.data['ma-week-fourth'] = '19 June 2022';
@@ -70,11 +70,10 @@ router.post('/beta-private/iteration-4/scenario-1/start-a-claim/', function (req
   req.session.data['ma-week-12-employer-1-amount'] = '£200.00';
   req.session.data['ma-week-13-employer-1-amount'] = '£200.00';
 
-  // has a match been made, in this scenario?
-  var match = "yes";
+  // Is more claimant information needed, in this scenario?
+  var matchMoreInformationNeeded = false;
 
-  if (match == 'no') {
-    var match = null;
+  if (matchMoreInformationNeeded == true) {
     res.redirect('/beta-private/iteration-4/scenario-1/start-a-claim/more-claimant-information');
   }
   else {
@@ -83,7 +82,16 @@ router.post('/beta-private/iteration-4/scenario-1/start-a-claim/', function (req
 });
 
 router.post('/beta-private/iteration-4/scenario-1/start-a-claim/more-claimant-information', function (req, res) {
-  res.redirect('/beta-private/iteration-4/scenario-1/start-a-claim/claim-date');
+  // Has a match been made, in this scenario?
+  var match = true;
+
+  if (match == false) {
+    var match = null;
+    res.redirect('/beta-private/iteration-4/scenario-1/start-a-claim/no-match-found');
+  }
+  else {
+    res.redirect('/beta-private/iteration-4/scenario-1/start-a-claim/claim-date');
+  }
 });
 
 router.post('/beta-private/iteration-4/scenario-1/start-a-claim/claim-date', function (req, res) {
@@ -168,11 +176,10 @@ router.post('/beta-private/iteration-4/scenario-1/start-a-claim/requested-start-
 // *** Scenario 2 ***************************************************************************************************************** //
 
 router.post('/beta-private/iteration-4/scenario-2/start-a-claim/', function (req, res) {
-  // has a match been made, in this scenario?
-  var match = "yes";
+  // Is more claimant information needed, in this scenario?
+  var matchMoreInformationNeeded = true;
 
-  if (match == 'no') {
-    var match = null;
+  if (matchMoreInformationNeeded == true) {
     res.redirect('/beta-private/iteration-4/scenario-2/start-a-claim/more-claimant-information');
   }
   else {
@@ -181,7 +188,16 @@ router.post('/beta-private/iteration-4/scenario-2/start-a-claim/', function (req
 });
 
 router.post('/beta-private/iteration-4/scenario-2/start-a-claim/more-claimant-information', function (req, res) {
-  res.redirect('/beta-private/iteration-4/scenario-2/start-a-claim/claim-date');
+  // Has a match been made, in this scenario?
+  var match = false;
+
+  if (match == false) {
+    var match = null;
+    res.redirect('/beta-private/iteration-4/scenario-2/start-a-claim/no-match-found');
+  }
+  else {
+    res.redirect('/beta-private/iteration-4/scenario-2/start-a-claim/claim-date');
+  }
 });
 
 router.post('/beta-private/iteration-4/scenario-2/start-a-claim/claim-date', function (req, res) {
