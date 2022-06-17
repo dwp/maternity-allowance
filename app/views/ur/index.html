@@ -13,9 +13,66 @@
         User Research Private Beta
       </h1>
 
+      <h2 class="govuk-heading-m">Round 4: 14 June 2022</h2>
+
+      <p><a href="/beta-private/iteration-4/" class="govuk-body govuk-!-font-weight-bold">Prototype iteration 4</a></p>
+
+      {% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+
+      {% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+
+      {{ govukAccordion({
+      id: "accordion-default",
+      items: [
+        {
+          heading: {
+          text: "Design decisions"
+          },
+          content: {
+            html:
+            '<ul class="govuk-list govuk-list--bullet">
+              <li>Aligned the \'Yes/No\' radio buttons to be side by side rather than stacked, to match Gov UK styling standards.</li>
+              <li>Removed the \'Maternity Leave\' question as it isn\'t necessary to the journey.</li>
+              <li>Added a \'Change\' link to the date last worked answer on the summary screen.</li>
+              <li>For date last worked answer when the claimant hasn\'t provided a date, we chose to say \'Claimant has not stopped work\' as it makes sense to answer the first question.</li>
+              <li>Removed statement on the date last worked screen heading and replaced it with the question because there was inconsistency between page headings throughout the journey. All single question screens now revert back to question headings, as before, and multi question screens have statements that summarise the questions at hand.</li>
+            </ul>'
+          }
+        },
+        {
+          heading: {
+            text: "Hypotheses"
+          },
+          content: {
+            html:
+            '<ul class="govuk-list govuk-list--bullet">
+            <li>We believe users will see the \'Change\' link or the \'Back\' button in order to change the date last worked.</li>
+            <li>We believe users will be able to easier navigate through the questions and it will aid their understanding by removing the \'Maternity Leave\' question.</li>
+            <li>We believe users will easier understand questions by reverting headings on single question pages to questions rather than statements.</li>
+            </ul>'
+          }
+        },
+        {
+          heading: {
+            text: "Research notes"
+          },
+          content: {
+            html: "<p class='govuk-body'>Number of participants: </p>"
+          },
+          content: {
+            html:
+            '<ul class="govuk-list govuk-list--bullet">
+
+            <li>Number of participants: 4</li>
+            </ul>'
+          }
+        }
+      ]
+      }) }}
+
         <h2 class="govuk-heading-m">Round 3: 26 May 2022</h2>
 
-        <p><a href="/beta-private/iteration-3/" class="govuk-body govuk-!-font-weight-bold">Prototype iteration 2</a></p>
+        <p><a href="/beta-private/iteration-3/" class="govuk-body govuk-!-font-weight-bold">Prototype iteration 3</a></p>
 
         {% from "govuk/components/accordion/macro.njk" import govukAccordion %}
 
