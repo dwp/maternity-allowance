@@ -150,6 +150,15 @@
       },
       value: {
         text: data['ma-baby-due-date']
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "baby due date"
+          }
+        ]
       }
     },
     {
@@ -193,7 +202,9 @@
       {{ data['ma-map-claim-date-received'] }}
     </dd>
     <dd class="govuk-summary-list__actions">
-      &nbsp;
+      <a class="govuk-link" href="#">
+        Change<span class="govuk-visually-hidden"> date the claim was received</span>
+      </a>
     </dd>
   </div>
   <div class="govuk-summary-list__row">
@@ -254,7 +265,9 @@
       })}}
     </dd>
     <dd class="govuk-summary-list__actions">
-      &nbsp;
+      <a class="govuk-link" href="#">
+        Change<span class="govuk-visually-hidden"> start date requested by claimant</span>
+      </a>
     </dd>
   </div>
   <div class="govuk-summary-list__row">

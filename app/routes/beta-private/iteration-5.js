@@ -19,7 +19,7 @@ router.post('/beta-private/iteration-5/scenario-1/start-a-claim/', function (req
   req.session.data['claimant-contact-number'] = '07847 171740';
   // Decision
   req.session.data['ma-decision'] = 'Incomplete';
-  req.session.data['ma-claim-creation-date'] = '14 June 2022';
+  req.session.data['ma-claim-creation-date'] = '30 June 2022';
   req.session.data['ma-claim-decision-date'] = null;
   req.session.data['ma-rate'] = 'Standard rate at £156.66 per week';
   req.session.data['ma-map-start'] = null;
@@ -130,7 +130,7 @@ router.post('/beta-private/iteration-5/scenario-1/start-a-claim/dlw-date', funct
     // Add changed session data here for alternative summary screen
 
     req.session.data['ma-decision'] = 'Allowed';
-    req.session.data['ma-claim-decision-date'] = '14 June 2022';
+    req.session.data['ma-claim-decision-date'] = '30 June 2022';
     req.session.data['ma-map-claimant-stopped-work'] = '9 June 2022';
     req.session.data['ma-map-start'] = '12 June 2022';
     req.session.data['ma-map-end'] = '12 March 2023';
