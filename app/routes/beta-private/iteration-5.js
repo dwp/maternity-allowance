@@ -16,6 +16,7 @@ router.post('/beta-private/iteration-5/scenario-1/start-a-claim/', function (req
   req.session.data['claimant-nino'] = 'XX112233X';
   req.session.data['claimant-dob'] = '16 September 1987';
   req.session.data['claimant-postcode'] = 'DH5 9YR';
+  req.session.data['claimant-address'] = '18 St. Wilfreds Court, Nottingham';
   req.session.data['claimant-contact-number'] = '07847 171740';
   // Decision
   req.session.data['ma-decision'] = 'Incomplete';
@@ -26,6 +27,7 @@ router.post('/beta-private/iteration-5/scenario-1/start-a-claim/', function (req
   req.session.data['ma-map-end'] = null;
   // Test period dates
   req.session.data['ma-baby-due-date'] = '18 July 2022';
+  req.session.data['ma-baby-birth-date'] = 'Baby not born yet';
   req.session.data['ma-test-period-first-day'] = '11 April 2021';
   req.session.data['ma-test-period-last-day'] = '16 July 2022';
   req.session.data['ma-test-period-week-fifteen'] = '03 April 2022';
@@ -176,6 +178,13 @@ router.post('/beta-private/iteration-5/scenario-1/start-a-claim/requested-start-
 // *** Scenario 2 ***************************************************************************************************************** //
 
 router.post('/beta-private/iteration-5/scenario-2/start-a-claim/', function (req, res) {
+  // Claimant information
+  req.session.data['claimant-name'] = 'Helen Ashfield';
+  req.session.data['claimant-nino'] = 'XX112233X';
+  req.session.data['claimant-dob'] = '16 September 1987';
+  req.session.data['claimant-postcode'] = 'DH5 9YR';
+  req.session.data['claimant-address'] = '18 St. Wilfreds Court, Nottingham';
+  req.session.data['claimant-contact-number'] = '07847 171740';
   // Is more claimant information needed, in this scenario?
   var matchMoreInformationNeeded = true;
 
