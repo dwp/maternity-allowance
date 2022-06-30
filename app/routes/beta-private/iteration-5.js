@@ -179,12 +179,12 @@ router.post('/beta-private/iteration-5/scenario-1/start-a-claim/requested-start-
 
 router.post('/beta-private/iteration-5/scenario-2/start-a-claim/', function (req, res) {
   // Claimant information
-  req.session.data['claimant-name'] = 'Helen Ashfield';
-  req.session.data['claimant-nino'] = 'XX112233X';
-  req.session.data['claimant-dob'] = '16 September 1987';
-  req.session.data['claimant-postcode'] = 'DH5 9YR';
+  req.session.data['claimant-name'] = 'Lana Pietrov';
+  req.session.data['claimant-nino'] = 'ZZ112233Z';
+  req.session.data['claimant-dob'] = '4 December 1994';
+  req.session.data['claimant-postcode'] = 'NG6 8UD';
   req.session.data['claimant-address'] = '18 St. Wilfreds Court, Nottingham';
-  req.session.data['claimant-contact-number'] = '07847 171740';
+  req.session.data['claimant-contact-number'] = '07525 252101';
   // Is more claimant information needed, in this scenario?
   var matchMoreInformationNeeded = true;
 
