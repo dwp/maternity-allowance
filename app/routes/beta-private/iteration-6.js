@@ -268,7 +268,7 @@ router.post('/beta-private/iteration-6/scenario-4/start-a-claim/', function (req
   req.session.data['claimant-name'] = 'Lana Pietrov';
   req.session.data['claimant-nino'] = 'ZZ112233Z';
   req.session.data['claimant-dob'] = '4 December 1994';
-  req.session.data['claimant-postcode'] = 'HR4 7GN';
+  req.session.data['claimant-postcode'] = 'HG6 8UD';
   req.session.data['claimant-address'] = '18 St. Wilfreds Court, Nottingham';
   req.session.data['claimant-contact-number'] = '07525 252101';
   // Is more claimant information needed, in this scenario?
