@@ -27,7 +27,7 @@ router.post('/beta-private/iteration-6/scenario-1/start-a-claim/', function (req
   req.session.data['ma-map-end'] = null;
   // Test period dates
   req.session.data['ma-baby-due-date'] = '29 August 2022';
-  req.session.data['ma-baby-birth-date'] = null;
+  req.session.data['ma-baby-birth-date'] = 'Baby not born yet';
   req.session.data['ma-test-period-first-day'] = '23 May 2021';
   req.session.data['ma-test-period-last-day'] = '27 August 2022';
   req.session.data['ma-test-period-week-fifteen'] = '15 May 2022';
@@ -177,35 +177,35 @@ router.post('/beta-private/iteration-6/scenario-1/start-a-claim/requested-start-
 
 // *** Scenario 2 ***************************************************************************************************************** //
 
-router.post('/beta-private/', function (req, res) {
+router.post('/beta-private/iteration-6/scenario-2/find-a-claim/', function (req, res) {
 
   // Claimant information
-  req.session.data['claimant-name'] = 'Helen Ashfield';
-  req.session.data['claimant-nino'] = 'XX112233X';
-  req.session.data['claimant-dob'] = '16 September 1987';
-  req.session.data['claimant-postcode'] = 'DH5 9YR';
-  req.session.data['claimant-address'] = '18 St. Wilfreds Court, Nottingham';
-  req.session.data['claimant-contact-number'] = '07847 171740';
+  req.session.data['claimant-name'] = 'Priya Ashgarth';
+  req.session.data['claimant-nino'] = 'ZZ123456Z';
+  req.session.data['claimant-dob'] = '03 September 1991';
+  req.session.data['claimant-postcode'] = 'MN9 3FJ';
+  req.session.data['claimant-address'] = null;
+  req.session.data['claimant-contact-number'] = '07847 172369';
   // Decision
   req.session.data['ma-decision'] = 'Incomplete';
-  req.session.data['ma-claim-creation-date'] = '30 June 2022';
+  req.session.data['ma-claim-creation-date'] = '16 June 2022';
   req.session.data['ma-claim-decision-date'] = null;
   req.session.data['ma-rate'] = 'Standard rate at £156.66 per week';
   req.session.data['ma-map-start'] = null;
   req.session.data['ma-map-end'] = null;
   // Test period dates
-  req.session.data['ma-baby-due-date'] = '18 July 2022';
+  req.session.data['ma-baby-due-date'] = '24 July 2022';
   req.session.data['ma-baby-birth-date'] = 'Baby not born yet';
-  req.session.data['ma-test-period-first-day'] = '11 April 2021';
-  req.session.data['ma-test-period-last-day'] = '16 July 2022';
-  req.session.data['ma-test-period-week-fifteen'] = '03 April 2022';
+  req.session.data['ma-test-period-first-day'] = '18 April 2021';
+  req.session.data['ma-test-period-last-day'] = '23 July 2022';
+  req.session.data['ma-test-period-week-fifteen'] = '10 April 2022';
   // Maternity Allowance period dates
-  req.session.data['ma-map-claim-date-received'] = '10 June 2022';
+  req.session.data['ma-map-claim-date-received'] = '28 May 2022';
   req.session.data['ma-map-claimant-stopped-work'] = 'Claimant has not stopped work';
-  req.session.data['ma-map-expected-week-of-confinement'] = '17 July 2022';
-  req.session.data['ma-week-eleventh'] = '1 May 2022';
-  req.session.data['ma-week-fourth'] = '19 June 2022';
-  req.session.data['ma-start-date-requested'] = '12 June 2022';
+  req.session.data['ma-map-expected-week-of-confinement'] = '24 July 2022';
+  req.session.data['ma-week-eleventh'] = '8 May 2022';
+  req.session.data['ma-week-fourth'] = '26 June 2022';
+  req.session.data['ma-start-date-requested'] = '20 June 2022';
   req.session.data['ma-map-rule'] = null;
   // Employment and earnings
   req.session.data['ma-employment-test'] = 'Met';
@@ -240,20 +240,27 @@ router.post('/beta-private/', function (req, res) {
   req.session.data['ma-week-12-employer-1-amount'] = '£200.00';
   req.session.data['ma-week-13-employer-1-amount'] = '£200.00';
 
-  res.redirect('/beta-private/iteration-6/scenario-2/find-a-claim/');
+  res.redirect('/beta-private/iteration-6/scenario-2/find-a-claim/summary');
 });
 
-router.post('/beta-private/iteration-6/scenario-2/find-a-claim/', function (req, res) {
-  res.redirect('/beta-private/iteration-1/find-a-claim/summary');
+router.post('/beta-private/iteration-6/scenario-2/find-a-claim/date-last-worked', function (req, res) {
+    res.redirect('/beta-private/iteration-6/scenario-2/find-a-claim/dlw-date');
 });
 
-//    req.session.data['ma-decision'] = 'Allowed';
-//    req.session.data['ma-claim-decision-date'] = '30 June 2022';
-//    req.session.data['ma-map-claimant-stopped-work'] = '9 June 2022';
-//    req.session.data['ma-map-start'] = '12 June 2022';
-//    req.session.data['ma-map-end'] = '12 March 2023';
-//    req.session.data['ma-map-rule'] = 'Flexible Maternity Allowance Period';
+router.post('/beta-private/iteration-6/scenario-2/find-a-claim/dlw-date', function (req, res) {
+    // Add changed session data here for alternative summary screen
 
+    req.session.data['ma-decision'] = 'Allowed';
+    req.session.data['ma-claim-decision-date'] = '12 July 2022';
+    req.session.data['ma-map-claimant-stopped-work'] = '19 June 2022';
+    req.session.data['ma-map-start'] = '20 June 2022';
+    req.session.data['ma-map-end'] = '20 March 2023';
+    req.session.data['ma-map-rule'] = 'Flexible Maternity Allowance Period';
+    // ------------------------------------------------------------
+    // Return the session data to null so as to stop the routing taking place on the next journey through.
+    req.session.data['change'] == null;
+    res.redirect('/beta-private/iteration-6/scenario-2/find-a-claim/summary-change');
+});
 
 // *** Scenario 3 ***************************************************************************************************************** //
 
@@ -268,7 +275,7 @@ router.post('/beta-private/iteration-6/scenario-4/start-a-claim/', function (req
   req.session.data['claimant-name'] = 'Lana Pietrov';
   req.session.data['claimant-nino'] = 'ZZ112233Z';
   req.session.data['claimant-dob'] = '4 December 1994';
-  req.session.data['claimant-postcode'] = 'HG6 8UD';
+  req.session.data['claimant-postcode'] = 'NG6 8UD';
   req.session.data['claimant-address'] = '18 St. Wilfreds Court, Nottingham';
   req.session.data['claimant-contact-number'] = '07525 252101';
   // Is more claimant information needed, in this scenario?
