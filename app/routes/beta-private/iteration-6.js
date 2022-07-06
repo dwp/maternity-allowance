@@ -10,7 +10,10 @@ module.exports = router => {
 // *** Scenario 1 ***************************************************************************************************************** //
 
 router.post('/beta-private/iteration-6/scenario-1/start-a-claim/', function (req, res) {
-
+  // clear data
+  req.session.data['baby-born'] = null;
+  req.session.data['stopped-work'] = null;
+  req.session.data['ma-date-requested'] = null;
   // Claimant information
   req.session.data['claimant-name'] = 'Ashleigh Smithson';
   req.session.data['claimant-nino'] = 'XX123456X';
@@ -23,8 +26,8 @@ router.post('/beta-private/iteration-6/scenario-1/start-a-claim/', function (req
   req.session.data['ma-claim-creation-date'] = '12 July 2022';
   req.session.data['ma-claim-decision-date'] = null;
   req.session.data['ma-rate'] = null;
-  req.session.data['ma-map-start'] = null;
-  req.session.data['ma-map-end'] = null;
+  req.session.data['ma-map-start'] = '27 June 2022';
+  req.session.data['ma-map-end'] = '27 March 2023';
   // Test period dates
   req.session.data['ma-baby-due-date'] = '29 August 2022';
   req.session.data['ma-baby-birth-date'] = 'Baby not born yet';
@@ -37,8 +40,8 @@ router.post('/beta-private/iteration-6/scenario-1/start-a-claim/', function (req
   req.session.data['ma-map-expected-week-of-confinement'] = '28 August 2022';
   req.session.data['ma-week-eleventh'] = '12 June 2022';
   req.session.data['ma-week-fourth'] = '31 July 2022';
-  req.session.data['ma-start-date-requested'] = null;
-  req.session.data['ma-map-rule'] = null;
+  req.session.data['ma-start-date-requested'] = '27 June 2022';
+  req.session.data['ma-map-rule'] = 'Flexible Maternity Allowance Period';
   // Employment and earnings
   req.session.data['ma-employment-test'] = 'Met';
   req.session.data['ma-employer-1'] = 'ASDA LTD';
@@ -128,23 +131,7 @@ router.post('/beta-private/iteration-6/scenario-1/start-a-claim/date-last-worked
 });
 
 router.post('/beta-private/iteration-6/scenario-1/start-a-claim/dlw-date', function (req, res) {
-  if (req.session.data['change'] == 'true') {
-    // Add changed session data here for alternative summary screen
-
-    req.session.data['ma-decision'] = 'Allowed';
-    req.session.data['ma-claim-decision-date'] = '30 June 2022';
-    req.session.data['ma-map-claimant-stopped-work'] = '9 June 2022';
-    req.session.data['ma-map-start'] = '12 June 2022';
-    req.session.data['ma-map-end'] = '12 March 2023';
-    req.session.data['ma-map-rule'] = 'Flexible Maternity Allowance Period';
-    // ------------------------------------------------------------
-    // Return the session data to null so as to stop the routing taking place on the next journey through.
-    req.session.data['change'] == null;
-    res.redirect('/beta-private/iteration-6/scenario-1/start-a-claim/summary-change');
-  }
-  else {
     res.redirect('/beta-private/iteration-6/scenario-1/start-a-claim/chosen-map-date');
-  }
 });
 
 // Removed maternity leave question
@@ -178,7 +165,10 @@ router.post('/beta-private/iteration-6/scenario-1/start-a-claim/requested-start-
 // *** Scenario 2 ***************************************************************************************************************** //
 
 router.post('/beta-private/iteration-6/scenario-2/find-a-claim/', function (req, res) {
-
+  // clear data
+  req.session.data['baby-born'] = null;
+  req.session.data['stopped-work'] = null;
+  req.session.data['ma-date-requested'] = null;
   // Claimant information
   req.session.data['claimant-name'] = 'Priya Ashgarth';
   req.session.data['claimant-nino'] = 'ZZ123456Z';
@@ -256,9 +246,7 @@ router.post('/beta-private/iteration-6/scenario-2/find-a-claim/dlw-date', functi
     req.session.data['ma-map-start'] = '20 June 2022';
     req.session.data['ma-map-end'] = '20 March 2023';
     req.session.data['ma-map-rule'] = 'Flexible Maternity Allowance Period';
-    // ------------------------------------------------------------
-    // Return the session data to null so as to stop the routing taking place on the next journey through.
-    req.session.data['change'] == null;
+
     res.redirect('/beta-private/iteration-6/scenario-2/find-a-claim/summary-change');
 });
 
@@ -271,6 +259,10 @@ router.post('/beta-private/iteration-6/scenario-3/start-a-claim/', function (req
 // *** Scenario 4 ***************************************************************************************************************** //
 
 router.post('/beta-private/iteration-6/scenario-4/start-a-claim/', function (req, res) {
+  // clear data
+  req.session.data['baby-born'] = null;
+  req.session.data['stopped-work'] = null;
+  req.session.data['ma-date-requested'] = null;
   // Claimant information
   req.session.data['claimant-name'] = 'Lana Pietrov';
   req.session.data['claimant-nino'] = 'ZZ112233Z';
