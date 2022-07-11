@@ -13,6 +13,69 @@
         User Research Private Beta
       </h1>
 
+      <h2 class="govuk-heading-m">Round 6: 12 July 2022</h2>
+
+      <p><a href="/beta-private/iteration-6/" class="govuk-body govuk-!-font-weight-bold">Prototype iteration 6</a></p>
+
+      {% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+
+      {% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+
+      {{ govukAccordion({
+      id: "accordion-default",
+      items: [
+        {
+          heading: {
+          text: "Design decisions"
+          },
+          content: {
+            html:
+            '<ul class="govuk-list govuk-list--bullet">
+              <li></li>
+              <li></li>
+            </ul>'
+          }
+        },
+        {
+          heading: {
+            text: "Hypotheses"
+          },
+          content: {
+            html:
+            '<ul class="govuk-list govuk-list--bullet">
+              <li></li>
+              <li></li>
+            </ul>'
+          }
+        },
+        {
+          heading: {
+            text: "Research notes"
+          },
+          content: {
+            html: "<p class='govuk-body'>Number of participants: </p>"
+          },
+          content: {
+            html:
+            '<ul class="govuk-list govuk-list--bullet">
+
+              <li>Number of participants: </li>
+              <li></li>
+
+            </ul>'
+          }
+        }
+      ]
+      }) }}
+
+      <!--
+      *******************************************************************************************************************************
+      *******************************************************************************************************************************
+      *******************************************************************************************************************************
+      *******************************************************************************************************************************
+      *******************************************************************************************************************************
+      -->
+
       <h2 class="govuk-heading-m">Round 5: 30 June 2022</h2>
 
       <p><a href="/beta-private/iteration-5/" class="govuk-body govuk-!-font-weight-bold">Prototype iteration 5</a></p>
@@ -40,7 +103,6 @@
                 <li>Start Date Requested by Claimant</li>
               </ul>
               </li>
-              <li></li>
             </ul>'
           }
         },
@@ -52,7 +114,6 @@
             html:
             '<ul class="govuk-list govuk-list--bullet">
             <li>We believe users will see the \'Change\' when there are more \'Change\' links on the page.</li>
-            <li></li>
             </ul>'
           }
         },
@@ -67,8 +128,11 @@
             html:
             '<ul class="govuk-list govuk-list--bullet">
 
-            <li>Number of participants: 4</li>
-            
+              <li>Number of participants: 3</li>
+              <li>The date capture questions are not causing any issues. Some agents were assuming that the claimant would have finished work, and almost answered yes to whether they had finished working, but this was due to current assumption and behaviour rather than a misinterpretation of what the questions were asking.</li>
+              <li>Some agents struggled to find the change link. The addition of the other change elements did not seem to make this clearer. One user was unable to complete the change journey despite extensive prompting.</li>
+              <li>The addition of the claimant details when matching has been unable to find a match did prevent the behaviour seen in the previous round whereby agents were immediately navigating back through the journey to check what they had entered. The only extra insight here is that agents do not use the term manually in general.</li>
+
             </ul>'
           }
         }
