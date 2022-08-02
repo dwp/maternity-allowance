@@ -13,6 +13,69 @@
         User Research Private Beta
       </h1>
 
+      <h2 class="govuk-heading-m">Round 7: XX XX 2022</h2>
+
+      <p><a href="/beta-private/iteration-7/" class="govuk-body govuk-!-font-weight-bold">Prototype iteration 7</a></p>
+
+      {% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+
+      {% from "govuk/components/accordion/macro.njk" import govukAccordion %}
+
+      {{ govukAccordion({
+      id: "accordion-default",
+      items: [
+        {
+          heading: {
+          text: "Design decisions"
+          },
+          content: {
+            html:
+            '<ul class="govuk-list govuk-list--bullet">
+              <li></li>
+              <li></li>
+            </ul>'
+          }
+        },
+        {
+          heading: {
+            text: "Hypotheses"
+          },
+          content: {
+            html:
+            '<ul class="govuk-list govuk-list--bullet">
+              <li></li>
+              <li></li>
+            </ul>'
+          }
+        },
+        {
+          heading: {
+            text: "Research notes"
+          },
+          content: {
+            html: "<p class='govuk-body'>Number of participants: </p>"
+          },
+          content: {
+            html:
+            '<ul class="govuk-list govuk-list--bullet">
+
+              <li>Number of participants: </li>
+              <li></li>
+
+            </ul>'
+          }
+        }
+      ]
+      }) }}
+
+      <!--
+      *******************************************************************************************************************************
+      *******************************************************************************************************************************
+      *******************************************************************************************************************************
+      *******************************************************************************************************************************
+      *******************************************************************************************************************************
+      -->
+
       <h2 class="govuk-heading-m">Round 6: 12 July 2022</h2>
 
       <p><a href="/beta-private/iteration-6/" class="govuk-body govuk-!-font-weight-bold">Prototype iteration 6</a></p>
@@ -60,7 +123,32 @@
             '<ul class="govuk-list govuk-list--bullet">
 
               <li>Number of participants: </li>
-              <li></li>
+
+              <li>MAST-398 – No earnings information held in RTI (to iterate)
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>Agents understood that no earnings information was showing here, however they were not sure why this was the case and their next action would be to check RTI data in Searchlight which would duplicate the search just carried out by the service.</li>
+                </ul>
+              </li>
+
+              <li>MAST- 520 – Changing DLW from summary screen (to iterate)
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>There was still difficulty with this scenario despite changing it to a find rather than a new claim. Agents recognised that the DLW had not been provided, and that was therefore likely the reason that the claimant was contacting the department. However, there was uncertainty about how to add this information to the summary screen once provided. Agents understood that they would need to, and that the claimant could have the MAP that they had requested, but the change link recognition was low.</li>
+                </ul>
+              </li>
+
+              <li>MAST-484 – Matching API failed (validated)
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>Agents were confident here that the error being presented was due to a system issue rather than anything that they had caused themselves. The content used here is similar to the content displayed when there is a technical issue with Searchlight, so it is something the agents are familiar with.</li>
+                  <li>Agents in this round would tend to try again straight away and then if issues still persisted, they would check with colleagues and DWP Place to see if there were any widespread issues reported.</li>
+                </ul>
+              </li>
+
+              <li>MAST-403 – No match found (validated)
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>Agents understood that there were issues with the personal information that the claimant had provided. Previous behaviour of navigating back to the data entry screens was not repeated as with the first round.</li>
+                  <li>Next actions would be to determine which piece or pieces of information were incorrect by tracing the claimant to see if the information could be corrected or whether it would require further claimant interaction.</li>
+                </ul>
+              </li>
 
             </ul>'
           }
