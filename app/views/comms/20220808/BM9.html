@@ -1,7 +1,11 @@
 {% extends "layout.html" %}
 
-{% set dpName = 'Jane Doe' %}
-{% set dpNino = 'XX123456X' %}
+{% set claimantName = 'Mrs J Doe' %}
+{% set claimantFullName = 'Jane Doe' %}
+{% set claimantNino = 'XX123456X' %}
+{% set claimantAddress1 = '1 Address Street' %}
+{% set claimantTown = 'Newcastle' %}
+{% set claimantPostCode = 'NE1 EBR' %}
 {% set claimLetterDate = '08 August 2022' %}
 {% set claimDate = '01 February 2022' %}
 {% set claimRate = '£156.66' %}
@@ -11,7 +15,7 @@
 {% set claimFirstPayment = '£290.94' %}
 {% set claimTimeToPaymentStart = '5' %}
 {% set claimTimeToPaymentEnd = '10' %}
-{% set claimPayFrequency = '4' %}
+{% set claimPayFrequency = '4 weeks' %}
 {% set claimPayDay = 'Monday' %}
 {% set claimPayStart = '19 September 2022' %}
 
@@ -35,10 +39,10 @@ GOV.UK Prototype Kit
               <div class="address-row">
                 <div class="address-row-item">
                   <p>
-                    {{ dpName }} <br><br>
-                    68  Green Lane <br>
-                    Margate <br>
-                    CT10 3RT
+                    {{ claimantName }} <br><br>
+                    {{ claimantAddress1 }} <br>
+                    {{ claimantTown }} <br>
+                    {{ claimantPostCode }}
                   </p>
                 </div>
                 <div class="address-row-item">
@@ -55,7 +59,7 @@ GOV.UK Prototype Kit
                     Textphone: 0800 169 0286<br>
                   </p>
                   <p>Your reference:<br>
-                    {{ dpNino }}</p>
+                    {{ claimantNino }}</p>
 
                 </div>
               </div>
@@ -73,7 +77,7 @@ GOV.UK Prototype Kit
                                 <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-9">
 
                   <p>
-                    Dear {{ dpName }}
+                    Dear {{ claimantFullName }}
                   </p>
 
                   <p>
@@ -84,7 +88,7 @@ GOV.UK Prototype Kit
                   </p>
                   <p>You will recieve this payment within {{ claimTimeToPaymentStart }} to {{ claimTimeToPaymentEnd }} days.</p>
                   <p>
-                    You will then be paid every {{ claimPayFrequency }} weeks on a {{ claimPayDay }} starting from {{ claimPayStart }}.
+                    You will then be paid every {{ claimPayFrequency }} on a {{ claimPayDay }} starting from {{ claimPayStart }}.
                   </p>
                   <p>
                     We will pay you into the account you have told us about.
@@ -194,7 +198,7 @@ GOV.UK Prototype Kit
 
 
                   <h4 class="govuk-heading-s">About National Insurance (NI) contributions</h4>
-                  <p>From 6 April 2015, HMRC changed the way it collects Class 2 NI contributions from self-employed people. There is more information at <a href="http://www.gov.uk">www.gov.uk</a></p>
+                  <p>From 6 April 2015, HMRC changed the way it collects Class 2 NI contributions from self-employed people. There is more information at <strong>www.gov.uk</strong></p>
  <p> You can pay your Class 2 NI contribution early to help you qualify for the standard rate of Maternity Allowance if you are self-employed and</p>
                   <ul class="govuk-list govuk-list--bullet">
                     <li>your baby was due on or after 12 July 2015</li>
@@ -258,7 +262,7 @@ GOV.UK Prototype Kit
               </ul>
              <p>You cannot get SSP while you are getting Maternity Allowance.  <p>
               <h4 class="govuk-heading-s">Help and advice</h4>
-              <p>  If you live in England or Wales you can get free, independent and confidential advice about Maternity Allowance and other benefits. Call Civil Legal Advice on <strong>0345 345 4345</strong>. You can visit their website at <a href="http://www.gov.uk/civil-legal-advice  ">www.gov.uk/civil-legal-advice  </a></p>
+              <p>  If you live in England or Wales you can get free, independent and confidential advice about Maternity Allowance and other benefits. Call Civil Legal Advice on <strong>0345 345 4345</strong>. You can visit their website at <strong>www.gov.uk/civil-legal-advice  </strong></p>
               <p>Calls to <strong>0345</strong> numbers cost no more than a standard geographic call, and count towards any free or inclusive minutes in your landline or mobile phone contract.</p>
 
 
@@ -335,7 +339,7 @@ GOV.UK Prototype Kit
         <div class="letter-content-primary">
 
 
-        <p>For more information visit <a href="#">www.gov.uk/shared-parental-leave-and-pay</a>  </p>
+        <p>For more information visit <strong>www.gov.uk/shared-parental-leave-and-pay</strong>  </p>
         <p>Other changes that affect your benefit  You or your representative must also tell us if you
         <ul class="govuk-list govuk-list--bullet">
           <li>do any work as an employed or self-employed person</li>
@@ -416,7 +420,7 @@ GOV.UK Prototype Kit
 
 <h4 class="govuk-heading-s">Why DWP needs personal information and how we treat it</h4>
 
-<p>We treat personal information carefully. We may use it for any of our purposes. To learn more about information rights and how we use information, please see our DWP Personal Information Charter at <a href="#">www.gov.uk/dwp/personal-information-charter</a></p>
+<p>We treat personal information carefully. We may use it for any of our purposes. To learn more about information rights and how we use information, please see our DWP Personal Information Charter at <strong>www.gov.uk/dwp/personal-information-charter</strong></p>
 
 
 
