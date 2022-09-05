@@ -235,11 +235,11 @@ router.post('/beta-private/iteration-8/scenario-1/find-a-claim/', function (req,
   res.redirect('/beta-private/iteration-8/scenario-1/find-a-claim/summary');
 });
 
-router.post('/beta-private/iteration-8/scenario-1/find-a-claim/date-last-worked', function (req, res) {
-    res.redirect('/beta-private/iteration-8/scenario-1/find-a-claim/dlw-date');
+router.post('/beta-private/iteration-8/scenario-1/find-a-claim/about-the-baby', function (req, res) {
+    res.redirect('/beta-private/iteration-8/scenario-1/find-a-claim/baby-birth-date');
 });
 
-router.post('/beta-private/iteration-8/scenario-1/find-a-claim/dlw-date', function (req, res) {
+router.post('/beta-private/iteration-8/scenario-1/find-a-claim/baby-birth-date', function (req, res) {
     // Add changed session data here for alternative summary screen
 
     req.session.data['ma-map-claimant-stopped-work'] = '13 August 2022';
@@ -362,7 +362,7 @@ router.post('/beta-private/iteration-8/scenario-2/start-a-claim/baby-birth-date'
 
 router.post('/beta-private/iteration-8/scenario-2/start-a-claim/date-last-worked', function (req, res) {
   if (req.session.data['stopped-work'] == 'yes') {
-    res.redirect('/beta-private/iteration-8/scenario-2/start-a-claim/dlw-date');
+    res.redirect('/beta-private/iteration-8/scenario-2/start-a-claim/stopped-work-reason');
   }
   else {
     // For Private Beta testing for Iteration 4, we will set the change scenario
@@ -372,6 +372,10 @@ router.post('/beta-private/iteration-8/scenario-2/start-a-claim/date-last-worked
     // req.session.data['change'] = true;
     res.redirect('/beta-private/iteration-8/scenario-2/start-a-claim/chosen-map-date');
   }
+});
+
+router.post('/beta-private/iteration-8/scenario-2/start-a-claim/stopped-work-reason', function (req, res) {
+    res.redirect('/beta-private/iteration-8/scenario-2/start-a-claim/chosen-map-date');
 });
 
 router.post('/beta-private/iteration-8/scenario-2/start-a-claim/dlw-date', function (req, res) {
