@@ -281,6 +281,7 @@ router.post('/beta-private/iteration-8/scenario-2/start-a-claim/', function (req
   // Maternity Allowance period dates
   req.session.data['ma-map-claim-date-received'] = '1 July 2022';
   req.session.data['ma-map-claimant-stopped-work'] = '26 June 2022';
+  req.session.data['ma-map-claimant-stopped-work-reason'] = 'Redundancy';
   req.session.data['ma-map-expected-week-of-confinement'] = '28 August 2022';
   req.session.data['ma-week-eleventh'] = '12 June 2022';
   req.session.data['ma-week-fourth'] = '31 July 2022';
@@ -375,7 +376,7 @@ router.post('/beta-private/iteration-8/scenario-2/start-a-claim/date-last-worked
 });
 
 router.post('/beta-private/iteration-8/scenario-2/start-a-claim/stopped-work-reason', function (req, res) {
-    res.redirect('/beta-private/iteration-8/scenario-2/start-a-claim/chosen-map-date');
+    res.redirect('/beta-private/iteration-8/scenario-2/start-a-claim/dlw-date');
 });
 
 router.post('/beta-private/iteration-8/scenario-2/start-a-claim/dlw-date', function (req, res) {
