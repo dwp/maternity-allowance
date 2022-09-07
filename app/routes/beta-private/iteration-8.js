@@ -23,24 +23,24 @@ router.post('/beta-private/iteration-8/scenario-1/start-a-claim/', function (req
   req.session.data['claimant-contact-number'] = '07847 172369';
   // Decision
   req.session.data['ma-decision'] = 'Allowed';
-  req.session.data['ma-claim-creation-date'] = '17 August 2022';
-  req.session.data['ma-claim-decision-date'] = '17 August 2022';
+  req.session.data['ma-claim-creation-date'] = '19 August 2022';
+  req.session.data['ma-claim-decision-date'] = '29 August 2022';
   req.session.data['ma-rate'] = 'Standard rate at £156.66 per week ';
-  req.session.data['ma-map-start'] = '20 July 2022';
-  req.session.data['ma-map-end'] = '19 April 2023';
+  req.session.data['ma-map-start'] = '5 September 2022';
+  req.session.data['ma-map-end'] = '4 June 2023';
   // Test period dates
-  req.session.data['ma-baby-due-date'] = '25 August 2022';
+  req.session.data['ma-baby-due-date'] = '10 October 2022';
   req.session.data['ma-baby-birth-date'] = 'Baby not born yet';
-  req.session.data['ma-test-period-first-day'] = '16 May 2021';
-  req.session.data['ma-test-period-last-day'] = '20 August 2022';
-  req.session.data['ma-test-period-week-fifteen'] = '8 May 2022';
+  req.session.data['ma-test-period-first-day'] = '4 July 2021';
+  req.session.data['ma-test-period-last-day'] = '8 October 2022';
+  req.session.data['ma-test-period-week-fifteen'] = '26 June 2022';
   // Maternity Allowance period dates
-  req.session.data['ma-map-claim-date-received'] = '24 July 2022';
-  req.session.data['ma-map-claimant-stopped-work'] = '13 July 2022';
-  req.session.data['ma-map-expected-week-of-confinement'] = '21 August 2022';
-  req.session.data['ma-week-eleventh'] = '5 June 2022';
-  req.session.data['ma-week-fourth'] = '24 July 2022';
-  req.session.data['ma-start-date-requested'] = '20 July 2022';
+  req.session.data['ma-map-claim-date-received'] = '19 August 2022';
+  req.session.data['ma-map-claimant-stopped-work'] = '10 August 2022';
+  req.session.data['ma-map-expected-week-of-confinement'] = '9 October 2022';
+  req.session.data['ma-week-eleventh'] = '24 July 2022';
+  req.session.data['ma-week-fourth'] = '11 September 2022';
+  req.session.data['ma-start-date-requested'] = '5 September 2022';
   req.session.data['ma-start-date-requested-status'] = 'Allowed';
   req.session.data['ma-map-rule'] = 'Flexible Maternity Allowance Period';
   // Employment and earnings
@@ -179,24 +179,24 @@ router.post('/beta-private/iteration-8/scenario-1/find-a-claim/', function (req,
   req.session.data['claimant-contact-number'] = '07847 172369';
   // Decision
   req.session.data['ma-decision'] = 'Allowed';
-  req.session.data['ma-claim-creation-date'] = '17 August 2022';
-  req.session.data['ma-claim-decision-date'] = '17 August 2022';
+  req.session.data['ma-claim-creation-date'] = '19 August 2022';
+  req.session.data['ma-claim-decision-date'] = '29 August 2022';
   req.session.data['ma-rate'] = 'Standard rate at £156.66 per week ';
-  req.session.data['ma-map-start'] = '20 July 2022';
-  req.session.data['ma-map-end'] = '19 April 2023';
+  req.session.data['ma-map-start'] = '5 September 2022';
+  req.session.data['ma-map-end'] = '4 June 2023';
   // Test period dates
-  req.session.data['ma-baby-due-date'] = '25 August 2022';
+  req.session.data['ma-baby-due-date'] = '10 October 2022';
   req.session.data['ma-baby-birth-date'] = 'Baby not born yet';
-  req.session.data['ma-test-period-first-day'] = '16 May 2021';
-  req.session.data['ma-test-period-last-day'] = '20 August 2022';
-  req.session.data['ma-test-period-week-fifteen'] = '8 May 2022';
+  req.session.data['ma-test-period-first-day'] = '4 July 2021';
+  req.session.data['ma-test-period-last-day'] = '8 October 2022';
+  req.session.data['ma-test-period-week-fifteen'] = '26 June 2022';
   // Maternity Allowance period dates
-  req.session.data['ma-map-claim-date-received'] = '24 July 2022';
-  req.session.data['ma-map-claimant-stopped-work'] = '13 July 2022';
-  req.session.data['ma-map-expected-week-of-confinement'] = '21 August 2022';
-  req.session.data['ma-week-eleventh'] = '5 June 2022';
-  req.session.data['ma-week-fourth'] = '24 July 2022';
-  req.session.data['ma-start-date-requested'] = '20 July 2022';
+  req.session.data['ma-map-claim-date-received'] = '19 August 2022';
+  req.session.data['ma-map-claimant-stopped-work'] = '10 August 2022';
+  req.session.data['ma-map-expected-week-of-confinement'] = '9 October 2022';
+  req.session.data['ma-week-eleventh'] = '24 July 2022';
+  req.session.data['ma-week-fourth'] = '11 September 2022';
+  req.session.data['ma-start-date-requested'] = '5 September 2022';
   req.session.data['ma-start-date-requested-status'] = 'Allowed';
   req.session.data['ma-map-rule'] = 'Flexible Maternity Allowance Period';
   // Employment and earnings
@@ -242,11 +242,7 @@ router.post('/beta-private/iteration-8/scenario-1/find-a-claim/about-the-baby', 
 router.post('/beta-private/iteration-8/scenario-1/find-a-claim/baby-birth-date', function (req, res) {
     // Add changed session data here for alternative summary screen
 
-    req.session.data['ma-map-claimant-stopped-work'] = '13 August 2022';
-    req.session.data['ma-map-start'] = '15 August 2022';
-    req.session.data['ma-map-end'] = '15 May 2023';
-    req.session.data['ma-start-date-requested-status'] = 'Declined';
-    req.session.data['ma-map-rule'] = 'Non-Flexible Maternity Allowance Period';
+    req.session.data['ma-baby-birth-date'] = '8 September 2022';
 
     res.redirect('/beta-private/iteration-8/scenario-1/find-a-claim/summary-change');
 });
