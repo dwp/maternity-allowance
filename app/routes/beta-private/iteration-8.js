@@ -262,27 +262,28 @@ router.post('/beta-private/iteration-8/scenario-2/start-a-claim/', function (req
   req.session.data['claimant-address'] = null;
   req.session.data['claimant-contact-number'] = '07847 171740';
   // Decision
-  req.session.data['ma-decision'] = 'Incomplete';
-  req.session.data['ma-claim-creation-date'] = '17 August 2022';
-  req.session.data['ma-claim-decision-date'] = null;
-  req.session.data['ma-rate'] = null;
-  req.session.data['ma-map-start'] = '27 June 2022';
-  req.session.data['ma-map-end'] = '27 March 2023';
+  req.session.data['ma-decision'] = 'Allowed';
+  req.session.data['ma-claim-creation-date'] = '8 September 2022';
+  req.session.data['ma-claim-decision-date'] = '8 September 2022';
+  req.session.data['ma-rate'] = '£156.66';
+  req.session.data['ma-map-start'] = '26 June 2022';
+  req.session.data['ma-map-end'] = '25 March 2023';
   // Test period dates
-  req.session.data['ma-baby-due-date'] = '29 August 2022';
+  req.session.data['ma-baby-due-date'] = '12 September 2022';
   req.session.data['ma-baby-birth-date'] = 'Baby not born yet';
-  req.session.data['ma-test-period-first-day'] = '23 May 2021';
-  req.session.data['ma-test-period-last-day'] = '27 August 2022';
-  req.session.data['ma-test-period-week-fifteen'] = '15 May 2022';
+  req.session.data['ma-test-period-first-day'] = '6 June 2021';
+  req.session.data['ma-test-period-last-day'] = '10 September 2022';
+  req.session.data['ma-test-period-week-fifteen'] = '29 May 2022';
   // Maternity Allowance period dates
-  req.session.data['ma-map-claim-date-received'] = '1 July 2022';
-  req.session.data['ma-map-claimant-stopped-work'] = '26 June 2022';
-  req.session.data['ma-map-claimant-stopped-work-reason'] = 'Redundancy';
-  req.session.data['ma-map-expected-week-of-confinement'] = '28 August 2022';
-  req.session.data['ma-week-eleventh'] = '12 June 2022';
-  req.session.data['ma-week-fourth'] = '31 July 2022';
-  req.session.data['ma-start-date-requested'] = '27 June 2022';
-  req.session.data['ma-map-rule'] = 'Flexible Maternity Allowance Period';
+  req.session.data['ma-map-claim-date-received'] = '1 August 2022';
+  req.session.data['ma-map-claimant-stopped-work'] = '15 June 2022';
+  req.session.data['ma-map-claimant-stopped-work-reason'] = 'End of contract';
+  req.session.data['ma-map-expected-week-of-confinement'] = '11 September 2022';
+  req.session.data['ma-week-eleventh'] = '26 June 2022';
+  req.session.data['ma-week-fourth'] = '14 August 2022';
+  req.session.data['ma-start-date-requested'] = '17 August 2022';
+  req.session.data['ma-start-date-requested-status'] = 'Declined';
+  req.session.data['ma-map-rule'] = 'Non-flexible Maternity Allowance Period';
   // Employment and earnings
   req.session.data['ma-employment-test'] = 'Met';
   req.session.data['ma-employer-1'] = 'ASDA LTD';
