@@ -1,5 +1,5 @@
 
-{% extends "layout.html" %}
+{% extends "layout-summary.html" %}
 {% set bodyAttributes = { id: "summary-screen" } %}
 
 {% block pageTitle %}
@@ -24,6 +24,7 @@
 
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-full">
+
 
   <section class="key-details-bar-white govuk-!-margin-bottom-0" role="contentinfo" aria-label="Key details">
     <dl class="key-details-bar__key-details">
@@ -94,6 +95,14 @@
       })}}
     </dd>
   </div>
+  <!--div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key govuk-!-width-one-half">
+      !!!!!!!!!!!Missing information!!!!!!!!!!!
+    </dt>
+    <dd class="govuk-summary-list__value">
+      !!!!!!!!!!!Employment and earnings!!!!!!!!!!!
+    </dd>
+  </div -->
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key govuk-!-width-one-half">
       Claim created
@@ -233,6 +242,19 @@
   </div>
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
+      Baby's date of birth
+    </dt>
+    <dd class="govuk-summary-list__value">
+      {{ data['ma-baby-birth-date'] }}
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="about-the-baby?change=true">
+        Change<span class="govuk-visually-hidden"> baby birth date</span>
+      </a>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
       11th week before the baby due date
     </dt>
     <dd class="govuk-summary-list__value">
@@ -260,12 +282,12 @@
     <dd class="govuk-summary-list__value">
       {{ data['ma-start-date-requested'] }}
       {{govukTag({
-        text: "Allowed",
+        text: data['ma-start-date-requested-status'],
         classes: "govuk-!-margin-left-2"
       })}}
     </dd>
     <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="#">
+      <a class="govuk-link" href="chosen-map-date?change=true">
         Change<span class="govuk-visually-hidden"> start date requested by claimant</span>
       </a>
     </dd>
