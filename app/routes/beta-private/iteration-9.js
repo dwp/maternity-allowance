@@ -457,7 +457,7 @@ router.post('/beta-private/iteration-9/scenario-3/find-a-claim/', function (req,
   req.session.data['ma-map-expected-week-of-confinement'] = '9 October 2022';
   req.session.data['ma-week-eleventh'] = '24 July 2022';
   req.session.data['ma-week-fourth'] = '11 September 2022';
-  req.session.data['ma-start-date-requested'] = '5 September 2022';
+  req.session.data['ma-start-date-requested'] = 'No start date requested';
   req.session.data['ma-start-date-requested-status'] = 'Allowed';
   req.session.data['ma-map-rule'] = 'Flexible Maternity Allowance Period';
   // Employment and earnings
@@ -503,7 +503,7 @@ router.post('/beta-private/iteration-9/scenario-3/find-a-claim/chosen-map-date',
 router.post('/beta-private/iteration-9/scenario-3/find-a-claim/requested-start-date', function (req, res) {
     // Add changed session data here for alternative summary screen
 
-    req.session.data['ma-baby-birth-date'] = '8 September 2022';
+    req.session.data['ma-start-date-requested'] = '8 September 2022';
 
     res.redirect('/beta-private/iteration-9/scenario-3/find-a-claim/summary-change');
 });
