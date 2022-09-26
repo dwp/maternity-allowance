@@ -23,32 +23,24 @@ classes: "govuk-radios--inline",
       {% from "govuk/components/input/macro.njk" import govukInput %}
 
       {{ govukRadios({
-        classes: "govuk-radios",
-        idPrefix: "stopped-work",
-        name: "stopped-work",
+        classes: "govuk-radios--inline",
+        idPrefix: "pregnancy-related",
+        name: "pregnancy-related",
         fieldset: {
           legend: {
-            text: "Why has the claimant stopped work?",
+            text: "Is the sickness pregnancy related?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--l"
           }
         },
         items: [
           {
-            value: "maternity",
-            text: "Maternity leave"
+            value: "yes",
+            text: "Yes"
           },
           {
-            value: "sick",
-            text: "Sick leave"
-          },
-          {
-            value: "redundant",
-            text: "Redundancy"
-          },
-          {
-            value: "end-of-contract",
-            text: "End of contract"
+            value: "no",
+            text: "No"
           }
         ]
       }) }}

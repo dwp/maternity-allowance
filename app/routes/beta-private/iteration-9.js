@@ -350,17 +350,17 @@ router.post('/beta-private/iteration-9/scenario-2/start-a-claim/about-the-baby',
     res.redirect('/beta-private/iteration-9/scenario-2/start-a-claim/baby-birth-date');
   }
   else {
-    res.redirect('/beta-private/iteration-9/scenario-2/start-a-claim/date-last-worked');
+    res.redirect('/beta-private/iteration-9/scenario-2/start-a-claim/stopped-work/');
   }
 });
 
 router.post('/beta-private/iteration-9/scenario-2/start-a-claim/baby-birth-date', function (req, res) {
-  res.redirect('/beta-private/iteration-9/scenario-2/start-a-claim/date-last-worked');
+  res.redirect('/beta-private/iteration-9/scenario-2/start-a-claim/stopped-work/');
 });
 
-router.post('/beta-private/iteration-9/scenario-2/start-a-claim/date-last-worked', function (req, res) {
+router.post('/beta-private/iteration-9/scenario-2/start-a-claim/stopped-work/', function (req, res) {
   if (req.session.data['stopped-work'] == 'yes') {
-    res.redirect('/beta-private/iteration-9/scenario-2/start-a-claim/stopped-work-reason');
+    res.redirect('/beta-private/iteration-9/scenario-2/start-a-claim/stopped-work/reason');
   }
   else {
     // For Private Beta testing for Iteration 4, we will set the change scenario
@@ -372,11 +372,28 @@ router.post('/beta-private/iteration-9/scenario-2/start-a-claim/date-last-worked
   }
 });
 
-router.post('/beta-private/iteration-9/scenario-2/start-a-claim/stopped-work-reason', function (req, res) {
-    res.redirect('/beta-private/iteration-9/scenario-2/start-a-claim/dlw-date');
+router.post('/beta-private/iteration-9/scenario-2/start-a-claim/stopped-work/reason', function (req, res) {
+  if (req.session.data['stopped-work-reason'] == 'sick') {
+    res.redirect('/beta-private/iteration-9/scenario-2/start-a-claim/stopped-work/sickness/pregnancy-related');
+  }
+  else {
+    res.redirect('/beta-private/iteration-9/scenario-2/start-a-claim/stopped-work/date-last-worked');
+  }
 });
 
-router.post('/beta-private/iteration-9/scenario-2/start-a-claim/dlw-date', function (req, res) {
+router.post('/beta-private/iteration-9/scenario-2/start-a-claim/stopped-work/sickness/pregnancy-related', function (req, res) {
+    res.redirect('/beta-private/iteration-9/scenario-2/start-a-claim/stopped-work/sickness/allowance-type');
+});
+
+router.post('/beta-private/iteration-9/scenario-2/start-a-claim/stopped-work/sickness/allowance-type', function (req, res) {
+    res.redirect('/beta-private/iteration-9/scenario-2/start-a-claim/stopped-work/sickness/benefit-end-date');
+});
+
+router.post('/beta-private/iteration-9/scenario-2/start-a-claim/stopped-work/sickness/benefit-end-date', function (req, res) {
+    res.redirect('/beta-private/iteration-9/scenario-2/start-a-claim/stopped-work/date-last-worked');
+});
+
+router.post('/beta-private/iteration-9/scenario-2/start-a-claim/stopped-work/date-last-worked', function (req, res) {
     res.redirect('/beta-private/iteration-9/scenario-2/start-a-claim/chosen-map-date');
 });
 
