@@ -281,6 +281,10 @@
     </dt>
     <dd class="govuk-summary-list__value">
       {{ data['ma-start-date-requested'] }}
+      {{govukTag({
+        text: data['ma-start-date-requested-status'],
+        classes: "govuk-!-margin-left-2"
+      })}}
     </dd>
     <dd class="govuk-summary-list__actions">
       <a class="govuk-link" href="chosen-map-date?change=true">
