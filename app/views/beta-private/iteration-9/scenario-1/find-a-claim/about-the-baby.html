@@ -31,7 +31,24 @@
           legend: {
             text: "When is the claimant’s baby due?"
           }
-        }
+        },
+        items: [
+          {
+            classes: "govuk-input--width-2",
+            name: "day",
+            value: "10"
+          },
+          {
+            classes: "govuk-input--width-2",
+            name: "month",
+            value: "10"
+          },
+          {
+            classes: "govuk-input--width-4",
+            name: "year",
+            value: "2022"
+          }
+        ]
       }) }}
 
       {% from "govuk/components/radios/macro.njk" import govukRadios %}
