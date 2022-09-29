@@ -450,11 +450,11 @@ router.post('/beta-private/iteration-9/scenario-3/find-a-claim/', function (req,
   req.session.data['ma-map-start'] = '11 September 2022';
   req.session.data['ma-map-end'] = '10 June 2023';
   // Test period dates
-  req.session.data['ma-baby-due-date'] = '10 October 2022';
+  req.session.data['ma-baby-due-date'] = '18 October 2022';
   req.session.data['ma-baby-birth-date'] = 'Baby not born yet';
   req.session.data['ma-test-period-first-day'] = '11 July 2021';
   req.session.data['ma-test-period-last-day'] = '15 October 2022';
-  req.session.data['ma-test-period-week-fifteen'] = '3 June 2022';
+  req.session.data['ma-test-period-week-fifteen'] = '3 July 2022';
   // Maternity Allowance period dates
   req.session.data['ma-map-claim-date-received'] = '25 August 2022';
   req.session.data['ma-map-claimant-stopped-work'] = '10 September 2022';
