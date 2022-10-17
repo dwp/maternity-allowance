@@ -24,7 +24,7 @@ router.post('/beta-private/iteration-10/scenario-1/start-a-claim/', function (re
   // Decision
   req.session.data['ma-decision'] = 'Allowed';
   req.session.data['ma-claim-creation-date'] = '19 August 2022';
-  req.session.data['ma-claim-decision-date'] = '29 August 2022';
+  req.session.data['ma-claim-decision-date'] = '29 October 2022';
   req.session.data['ma-rate'] = 'Standard rate at £156.66 per week ';
   req.session.data['ma-map-start'] = '5 September 2022';
   req.session.data['ma-map-end'] = '4 June 2023';
@@ -180,7 +180,7 @@ router.post('/beta-private/iteration-10/scenario-1/find-a-claim/', function (req
   // Decision
   req.session.data['ma-decision'] = 'Allowed';
   req.session.data['ma-claim-creation-date'] = '19 August 2022';
-  req.session.data['ma-claim-decision-date'] = '29 September 2022';
+  req.session.data['ma-claim-decision-date'] = '29 October 2022';
   req.session.data['ma-rate'] = 'Standard rate at £156.66 per week ';
   req.session.data['ma-map-start'] = '5 September 2022';
   req.session.data['ma-map-end'] = '4 June 2023';
@@ -500,19 +500,10 @@ router.post('/beta-private/iteration-10/scenario-3/find-a-claim/', function (req
   res.redirect('/beta-private/iteration-10/scenario-3/find-a-claim/summary');
 });
 
-router.post('/beta-private/iteration-10/scenario-3/find-a-claim/chosen-map-date', function (req, res) {
-    res.redirect('/beta-private/iteration-10/scenario-3/find-a-claim/requested-start-date');
-});
-
-router.post('/beta-private/iteration-10/scenario-3/find-a-claim/requested-start-date', function (req, res) {
-    // Add changed session data here for alternative summary screen
-
-    req.session.data['ma-start-date-requested'] = '17 September 2022';
-    req.session.data['ma-start-date-requested-status'] = 'Allowed';
-    req.session.data['ma-map-start'] = '17 September 2022';
-    req.session.data['ma-map-end'] = '16 June 2023';
-
-    res.redirect('/beta-private/iteration-10/scenario-3/find-a-claim/summary-change');
+router.post('/beta-private/iteration-10/scenario-3/find-a-claim/about-the-baby', function (req, res) {
+  // Add changed session data here for alternative summary screen
+  req.session.data['ma-baby-due-date'] = '28 October 2022';
+  res.redirect('/beta-private/iteration-10/scenario-3/find-a-claim/summary-change');
 });
 
 }
