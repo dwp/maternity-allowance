@@ -180,7 +180,7 @@ router.post('/beta-private/iteration-10/scenario-1/find-a-claim/', function (req
   // Decision
   req.session.data['ma-decision'] = 'Allowed';
   req.session.data['ma-claim-creation-date'] = '19 August 2022';
-  req.session.data['ma-claim-decision-date'] = '29 October 2022';
+  req.session.data['ma-claim-decision-date'] = '20 October 2022';
   req.session.data['ma-rate'] = 'Standard rate at £156.66 per week ';
   req.session.data['ma-map-start'] = '5 September 2022';
   req.session.data['ma-map-end'] = '4 June 2023';
@@ -263,8 +263,8 @@ router.post('/beta-private/iteration-10/scenario-2/start-a-claim/', function (re
   req.session.data['claimant-contact-number'] = '07847 171740';
   // Decision
   req.session.data['ma-decision'] = 'Allowed';
-  req.session.data['ma-claim-creation-date'] = '19 October 2022';
-  req.session.data['ma-claim-decision-date'] = '19 October 2022';
+  req.session.data['ma-claim-creation-date'] = '20 October 2022';
+  req.session.data['ma-claim-decision-date'] = '20 October 2022';
   req.session.data['ma-rate'] = 'Standard rate at £156.66 per week';
   req.session.data['ma-map-start'] = '12 August 2022';
   req.session.data['ma-map-end'] = '11 May 2023';
@@ -502,7 +502,7 @@ router.post('/beta-private/iteration-10/scenario-3/find-a-claim/', function (req
 
 router.post('/beta-private/iteration-10/scenario-3/find-a-claim/about-the-baby', function (req, res) {
   // Add changed session data here for alternative summary screen  // Decision
-  req.session.data['ma-claim-decision-date'] = '19 October 2022';
+  req.session.data['ma-claim-decision-date'] = '20 October 2022';
   // Test period dates
   req.session.data['ma-baby-due-date'] = '15 December 2022';
   req.session.data['ma-baby-birth-date'] = 'Baby not born yet';
