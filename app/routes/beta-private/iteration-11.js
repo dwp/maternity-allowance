@@ -370,7 +370,7 @@ router.post('/beta-private/iteration-11/scenario/start-a-claim/requested-start-d
   res.redirect('/beta-private/iteration-11/scenario/start-a-claim/summary/');
 });
 
-router.get('/beta-private/iteration-11/scenario/start-a-claim/summary', function (req, res) {
+router.get('/beta-private/iteration-11/scenario/start-a-claim/summary/', function (req, res) {
   if (req.session.data['scenario'] == 'scenario-1') {
     res.redirect('/beta-private/iteration-11/scenario/start-a-claim/summary/1');
   } else if (req.session.data['scenario'] == 'scenario-2') {
