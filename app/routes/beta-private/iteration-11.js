@@ -311,24 +311,24 @@ router.post('/beta-private/iteration-11/scenario/start-a-claim/stopped-work/', f
 
 router.post('/beta-private/iteration-11/scenario/start-a-claim/stopped-work/reason', function (req, res) {
   if (req.session.data['stopped-work-reason'] == 'sick') {
-    res.redirect('/beta-private/iteration-11/scenario/start-a-claim/stopped-work/sickness/pregnancy-related');
+    res.redirect('/beta-private/iteration-11/scenario/start-a-claim/stopped-work/sickness/allowance-type');
   }
   else {
     res.redirect('/beta-private/iteration-11/scenario/start-a-claim/stopped-work/date-last-worked');
   }
 });
 
-router.post('/beta-private/iteration-11/scenario/start-a-claim/stopped-work/sickness/pregnancy-related', function (req, res) {
-    res.redirect('/beta-private/iteration-11/scenario/start-a-claim/stopped-work/sickness/allowance-type');
-});
-
 router.post('/beta-private/iteration-11/scenario/start-a-claim/stopped-work/sickness/allowance-type', function (req, res) {
   if (req.session.data['allowance-type'] == 'statutory-sick-pay') {
-    res.redirect('/beta-private/iteration-11/scenario/start-a-claim/stopped-work/sickness/benefit-end-date');    
+    res.redirect('/beta-private/iteration-11/scenario/start-a-claim/stopped-work/sickness/pregnancy-related');    
   }
   else {
     res.redirect('/beta-private/iteration-11/scenario/start-a-claim/stopped-work/sickness/benefit-start-date');
   }
+});
+
+router.post('/beta-private/iteration-11/scenario/start-a-claim/stopped-work/sickness/pregnancy-related', function (req, res) {
+  res.redirect('/beta-private/iteration-11/scenario/start-a-claim/stopped-work/sickness/benefit-end-date');
 });
 
 router.post('/beta-private/iteration-11/scenario/start-a-claim/stopped-work/sickness/benefit-end-date', function (req, res) {
