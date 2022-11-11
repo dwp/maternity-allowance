@@ -1,0 +1,49 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <form class="form" method="post" novalidate>
+        
+      {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+      {{ govukRadios({
+        name: "select-claim",
+        fieldset: {
+          legend: {
+            text: "There is more than one claim for this claimant, which claim do you want to view?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        items: [
+          {
+            value: "claim-1",
+            text: data['ma-claim-creation-date'] or '[Claim 1]'
+          },
+          {
+            value: "claim-2",
+            text: data['ma-claim-two-creation-date'] or '[Claim 1]'
+          }
+        ]
+      }) }}
+
+      {% from "govuk/components/button/macro.njk" import govukButton %}
+
+      {{ govukButton({
+        text: "Save and continue"
+      }) }}
+    </form>
+
+    </div>
+  </div>
+
+{% endblock %}

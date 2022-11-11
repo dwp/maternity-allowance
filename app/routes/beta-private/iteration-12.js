@@ -9,6 +9,7 @@ router.post('/beta-private/iteration-12/', function (req, res) {
   req.session.data['baby-born'] = null;
   req.session.data['stopped-work'] = null;
   req.session.data['ma-date-requested'] = null;
+  req.session.data['ma-claim-two-creation-date'] = '14 January 2024';
 
   // SCENARIO 1 ---------------------------------------------------------------------------------- SCENARIO 1 ---/
   // ------------------------------------------------------------------------------------------------------------/
@@ -380,5 +381,14 @@ router.get('/beta-private/iteration-12/scenario/start-a-claim/summary/', functio
   }
 });
 
+// *** Find a claim *** //
+
+router.post('/beta-private/iteration-12/scenario/find-a-claim/', function (req, res) {
+  res.redirect('/beta-private/iteration-12/scenario/find-a-claim/select-claim');
+});
+
+router.post('/beta-private/iteration-12/scenario/find-a-claim/select-claim', function (req, res) {
+  res.redirect('/beta-private/iteration-12/scenario/find-a-claim/summary');
+});
 
 }
