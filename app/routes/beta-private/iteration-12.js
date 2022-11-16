@@ -280,20 +280,49 @@ router.post('/beta-private/iteration-12/scenario/start-a-claim/more-claimant-inf
 });
 
 router.post('/beta-private/iteration-12/scenario/start-a-claim/claim-date', function (req, res) {
-  res.redirect('/beta-private/iteration-12/scenario/start-a-claim/about-the-baby');
+  res.redirect('/beta-private/iteration-12/scenario/start-a-claim/baby-due-date');
 });
 
-router.post('/beta-private/iteration-12/scenario/start-a-claim/about-the-baby', function (req, res) {
+router.post('/beta-private/iteration-12/scenario/start-a-claim/baby-due-date', function (req, res) {
+  res.redirect('/beta-private/iteration-12/scenario/start-a-claim/baby-born');
+});
+
+router.post('/beta-private/iteration-12/scenario/start-a-claim/baby-born', function (req, res) {
+
+  if (req.session.data['change'] == null) {
+    req.session.data['change'] = false;
+  } else {
+    req.session.data['change'] = true;
+  }
+
   if (req.session.data['baby-born'] == 'yes') {
     res.redirect('/beta-private/iteration-12/scenario/start-a-claim/baby-birth-date');
   }
   else {
-    res.redirect('/beta-private/iteration-12/scenario/start-a-claim/stopped-work/');
+
+    if (req.session.data['change'] == true ) {
+      req.session.data['change'] = null;
+      // GO TO CHANGED SUMMARY
+      res.redirect('/beta-private/iteration-12/scenario/start-a-claim/summary/'); // NEEDS TO BE CHANGED TO CHANGED SUMMARY
+    }
+    else {
+      req.session.data['change'] = null;
+      res.redirect('/beta-private/iteration-12/scenario/start-a-claim/stopped-work/');
+    }
+
   }
+
 });
 
 router.post('/beta-private/iteration-12/scenario/start-a-claim/baby-birth-date', function (req, res) {
-  res.redirect('/beta-private/iteration-12/scenario/start-a-claim/stopped-work/');
+  if (req.session.data['change'] == true ) {
+    req.session.data['change'] = null;
+    // GO TO CHANGED SUMMARY
+    res.redirect('/beta-private/iteration-12/scenario/start-a-claim/summary/'); // NEEDS TO BE CHANGED TO CHANGED SUMMARY
+  }
+  else {
+    res.redirect('/beta-private/iteration-12/scenario/start-a-claim/stopped-work/');
+  }
 });
 
 router.post('/beta-private/iteration-12/scenario/start-a-claim/stopped-work/', function (req, res) {
