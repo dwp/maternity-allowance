@@ -19,19 +19,22 @@
         name: "select-claim",
         fieldset: {
           legend: {
-            text: "There is more than one claim for this claimant, which claim do you want to view?",
+            text: "Which claim do you want to view?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--l"
           }
         },
+        hint: {
+          text: "This claimant has more than one claim."
+        },
         items: [
           {
             value: "claim-1",
-            text: data['ma-claim-creation-date'] or '[claim-one-creation-date (dd Month yyyy)]'
+            text: "Claim recieved on " + data['ma-claim-creation-date'] or '[claim-one-creation-date (dd Month yyyy)]'
           },
           {
             value: "claim-2",
-            text: data['ma-claim-two-creation-date'] or '[claim-two-creation-date (dd Month yyyy)]'
+            text: "Claim recieved on " + data['ma-claim-two-creation-date'] or '[claim-two-creation-date (dd Month yyyy)]'
           }
         ]
       }) }}
@@ -39,7 +42,7 @@
       {% from "govuk/components/button/macro.njk" import govukButton %}
 
       {{ govukButton({
-        text: "Save and continue"
+        text: "Continue"
       }) }}
     </form>
 
