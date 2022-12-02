@@ -59,7 +59,7 @@ router.post('/beta-private/iteration-12/', function (req, res) {
     req.session.data['ma-employment-type'] = 'Employed';
     req.session.data['ma-employment-agency-test-period'] = null;
     req.session.data['ma-employment-agency-employment-start-date'] = null;
-    req.session.data['ma-employment-agency-current'] = null;
+    req.session.data['ma-employment-agency-status'] = null;
     req.session.data['ma-employment-test'] = 'Met';
     req.session.data['ma-employer-1'] = 'B&Q';
     req.session.data['ma-earnings-test'] = 'Met';
@@ -142,7 +142,7 @@ router.post('/beta-private/iteration-12/', function (req, res) {
     req.session.data['ma-employment-type'] = 'Employed';
     req.session.data['ma-employment-agency-test-period'] = null;
     req.session.data['ma-employment-agency-employment-start-date'] = null;
-    req.session.data['ma-employment-agency-current'] = null;
+    req.session.data['ma-employment-agency-status'] = null;
     req.session.data['ma-employment-test'] = 'Met';
     req.session.data['ma-employer-1'] = 'ARGOS';
     req.session.data['ma-earnings-test'] = 'Met';
@@ -222,10 +222,10 @@ router.post('/beta-private/iteration-12/', function (req, res) {
     req.session.data['ma-map-claimant-stopped-work-allowance-end-date'] = null;
 
     // Employment and earnings
-    req.session.data['ma-employment-type'] = 'Employed';
+    req.session.data['ma-employment-type'] = 'Agency worker';
     req.session.data['ma-employment-agency-test-period'] = 'Employed during Test Period';
     req.session.data['ma-employment-agency-employment-start-date'] = 'XX Month XXXX';
-    req.session.data['ma-employment-agency-current'] = 'Still employed by agency';
+    req.session.data['ma-employment-agency-status'] = 'Still employed by agency';
     req.session.data['ma-employment-test'] = 'Met';
     req.session.data['ma-employer-1'] = 'ROBSONS CARE FORUM';
     req.session.data['ma-earnings-test'] = 'Met';
