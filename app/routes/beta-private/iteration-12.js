@@ -302,12 +302,12 @@ router.post('/beta-private/iteration-12/scenario/start-a-claim/baby-born', funct
 
     if (req.session.data['change'] == true ) {
       req.session.data['change'] = null;
-      // GO TO CHANGED SUMMARY
-      res.redirect('/beta-private/iteration-12/scenario/start-a-claim/summary/'); // NEEDS TO BE CHANGED TO CHANGED SUMMARY
+      // No change
+      res.redirect('/beta-private/iteration-12/scenario/start-a-claim/summary/'); // Goes back to unchanged summary
     }
     else {
       req.session.data['change'] = null;
-      res.redirect('/beta-private/iteration-12/scenario/start-a-claim/stopped-work/');
+      res.redirect('/beta-private/iteration-12/scenario/start-a-claim/employment/');
     }
 
   }
@@ -317,12 +317,41 @@ router.post('/beta-private/iteration-12/scenario/start-a-claim/baby-born', funct
 router.post('/beta-private/iteration-12/scenario/start-a-claim/baby-birth-date', function (req, res) {
   if (req.session.data['change'] == true ) {
     req.session.data['change'] = null;
-    // GO TO CHANGED SUMMARY
-    res.redirect('/beta-private/iteration-12/scenario/start-a-claim/summary/'); // NEEDS TO BE CHANGED TO CHANGED SUMMARY
+    // Change made - GO TO CHANGED SUMMARY
+
+    // Changes listed here
+
+    res.redirect('/beta-private/iteration-12/scenario/start-a-claim/summary/change-baby-birth-date'); // NEEDS TO BE CHANGED TO CHANGED SUMMARY
+  }
+  else {
+    res.redirect('/beta-private/iteration-12/scenario/start-a-claim/employment/');
+  }
+});
+
+router.post('/beta-private/iteration-12/scenario/start-a-claim/employment/', function (req, res) {
+  if (req.session.data['employment-type'] == 'agency') {
+    res.redirect('/beta-private/iteration-12/scenario/start-a-claim/employment/test-period-agency');
   }
   else {
     res.redirect('/beta-private/iteration-12/scenario/start-a-claim/stopped-work/');
   }
+});
+
+router.post('/beta-private/iteration-12/scenario/start-a-claim/employment/test-period-agency', function (req, res) {
+  if (req.session.data['test-period-agency'] == 'yes') {
+    res.redirect('/beta-private/iteration-12/scenario/start-a-claim/employment/agency-employment-date');
+  }
+  else {
+    res.redirect('/beta-private/iteration-12/scenario/start-a-claim/stopped-work/');
+  }
+});
+
+router.post('/beta-private/iteration-12/scenario/start-a-claim/employment/agency-employment-date', function (req, res) {
+  res.redirect('/beta-private/iteration-12/scenario/start-a-claim/employment/agency-employed');
+});
+
+router.post('/beta-private/iteration-12/scenario/start-a-claim/employment/agency-employed', function (req, res) {
+  res.redirect('/beta-private/iteration-12/scenario/start-a-claim/stopped-work/');
 });
 
 router.post('/beta-private/iteration-12/scenario/start-a-claim/stopped-work/', function (req, res) {
