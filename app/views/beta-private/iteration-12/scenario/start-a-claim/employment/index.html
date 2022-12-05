@@ -19,10 +19,9 @@ classes: "govuk-radios--inline",
 
       <form class="form" method="post" novalidate>
 
-      {% from "govuk/components/radios/macro.njk" import govukRadios %}
       {% from "govuk/components/input/macro.njk" import govukInput %}
-
-      {{ govukRadios({
+      {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+      {{ govukCheckboxes({
         classes: "govuk-radios",
         idPrefix: "employment-type",
         name: "employment-type",
