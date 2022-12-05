@@ -244,32 +244,6 @@
   </div>
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
-      Claimant's sickness benefit
-    </dt>
-    <dd class="govuk-summary-list__value">
-      {{ data['ma-map-claimant-stopped-work-allowance-type'] }}
-    </dd>
-    <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="date-last-worked?change=true">
-        Change<span class="govuk-visually-hidden"> if the sickness is pregnancy related</span>
-      </a>
-    </dd>
-  </div>
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Sickness benefit start date
-    </dt>
-    <dd class="govuk-summary-list__value">
-      {{ data['ma-map-claimant-stopped-work-allowance-start-date'] }}
-    </dd>
-    <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="date-last-worked?change=true">
-        Change<span class="govuk-visually-hidden"> if the sickness is pregnancy related</span>
-      </a>
-    </dd>
-  </div>
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
       Expected week of confinement
     </dt>
     <dd class="govuk-summary-list__value">
@@ -373,6 +347,14 @@
 <h2 class="govuk-heading-m" id="employment-and-earnings">Employment and earnings</h2>
 
 <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key govuk-!-width-one-half">
+      Employment type
+    </dt>
+    <dd class="govuk-summary-list__value">
+      {{ data['ma-employment-type'] }}
+    </dd>
+  </div>
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key govuk-!-width-one-half">
       Employment test
