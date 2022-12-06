@@ -194,8 +194,8 @@ router.post('/beta-private/iteration-12/', function (req, res) {
     req.session.data['ma-claim-creation-date'] = '6 December 2022';
     req.session.data['ma-claim-decision-date'] = '6 December 2022';
     req.session.data['ma-rate'] = 'Standard rate at £156.66 per week';
-    req.session.data['ma-map-start'] = '5 December 2022';
-    req.session.data['ma-map-end'] = '3 September 2023';
+    req.session.data['ma-map-start'] = '17 December 2022';
+    req.session.data['ma-map-end'] = '15 September 2023';
 
     // Test period dates
     req.session.data['ma-baby-due-date'] = '3 January 2021';
