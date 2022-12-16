@@ -16,32 +16,30 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-
+      
+      <h1 class="govuk-heading-l">Maternity leave</h1>
 
       <form class="form" method="post" novalidate>
-        
+
       {% from "govuk/components/radios/macro.njk" import govukRadios %}
+      {% from "govuk/components/input/macro.njk" import govukInput %}
 
       {{ govukRadios({
-        name: "select-claim",
+        idPrefix: "ma-start-date-provided",
+        name: "ma-start-date-provided",
         fieldset: {
           legend: {
-            text: "Which claim do you want to view?",
-            isPageHeading: true,
-            classes: "govuk-fieldset__legend--l"
+            text: "Has the claimant provided the date they plan to start maternity leave?"
           }
-        },
-        hint: {
-          text: "This claimant has more than one claim."
         },
         items: [
           {
-            value: "claim-1",
-            text: "Claim recieved on " + data['ma-claim-creation-date'] or '[claim-one-creation-date (dd Month yyyy)]'
+            value: "yes",
+            text: "Yes"
           },
           {
-            value: "claim-2",
-            text: "Claim recieved on " + data['ma-claim-two-creation-date'] or '[claim-two-creation-date (dd Month yyyy)]'
+            value: "no",
+            text: "No"
           }
         ]
       }) }}
@@ -49,9 +47,10 @@
       {% from "govuk/components/button/macro.njk" import govukButton %}
 
       {{ govukButton({
-        text: "Continue"
+        text: "Save and continue"
       }) }}
-    </form>
+
+      </form>
 
     </div>
   </div>

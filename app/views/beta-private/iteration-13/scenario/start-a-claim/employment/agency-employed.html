@@ -1,4 +1,4 @@
-
+classes: "govuk-radios--inline",
 {% extends "layout.html" %}
 
 {% block pageTitle %}
@@ -17,31 +17,30 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-
       <form class="form" method="post" novalidate>
-        
+
       {% from "govuk/components/radios/macro.njk" import govukRadios %}
+      {% from "govuk/components/input/macro.njk" import govukInput %}
 
       {{ govukRadios({
-        name: "select-claim",
+        classes: "govuk-radios--inline",
+        idPrefix: "agency-employed",
+        name: "agency-employed",
         fieldset: {
           legend: {
-            text: "Which claim do you want to view?",
+            text: "Is the claimant still employed by the agency?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--l"
           }
         },
-        hint: {
-          text: "This claimant has more than one claim."
-        },
         items: [
           {
-            value: "claim-1",
-            text: "Claim recieved on " + data['ma-claim-creation-date'] or '[claim-one-creation-date (dd Month yyyy)]'
+            value: "yes",
+            text: "Yes"
           },
           {
-            value: "claim-2",
-            text: "Claim recieved on " + data['ma-claim-two-creation-date'] or '[claim-two-creation-date (dd Month yyyy)]'
+            value: "no",
+            text: "No"
           }
         ]
       }) }}
@@ -49,9 +48,10 @@
       {% from "govuk/components/button/macro.njk" import govukButton %}
 
       {{ govukButton({
-        text: "Continue"
+        text: "Save and continue"
       }) }}
-    </form>
+
+      </form>
 
     </div>
   </div>

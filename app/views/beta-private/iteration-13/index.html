@@ -5,13 +5,6 @@
   GOV.UK Prototype Kit
 {% endblock %}
 
-{% block beforeContent %}
-  {{ govukBackLink({
-    text: "Back",
-    href: "javascript:history.go(-1)"
-  }) }}
-{% endblock %}
-
 {% block content %}
 
   <div class="govuk-grid-row">
@@ -23,25 +16,26 @@
       {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
       {{ govukRadios({
-        name: "select-claim",
+        name: "scenario",
         fieldset: {
           legend: {
-            text: "Which claim do you want to view?",
+            text: "Maternity Allowance Private Beta",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--l"
           }
         },
-        hint: {
-          text: "This claimant has more than one claim."
-        },
         items: [
           {
-            value: "claim-1",
-            text: "Claim recieved on " + data['ma-claim-creation-date'] or '[claim-one-creation-date (dd Month yyyy)]'
+            value: "scenario-1",
+            text: "Scenario 1"
           },
           {
-            value: "claim-2",
-            text: "Claim recieved on " + data['ma-claim-two-creation-date'] or '[claim-two-creation-date (dd Month yyyy)]'
+            value: "scenario-2",
+            text: "Scenario 2"
+          },
+          {
+            value: "scenario-3",
+            text: "Scenario 3"
           }
         ]
       }) }}
@@ -49,7 +43,7 @@
       {% from "govuk/components/button/macro.njk" import govukButton %}
 
       {{ govukButton({
-        text: "Continue"
+        text: "Save and continue"
       }) }}
     </form>
 

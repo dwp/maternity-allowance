@@ -17,31 +17,44 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
+      <!--h1 class="govuk-heading-l">Maternity Allowance start date</h1-->
 
       <form class="form" method="post" novalidate>
-        
-      {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
-      {{ govukRadios({
-        name: "select-claim",
+      {% from "govuk/components/radios/macro.njk" import govukRadios %}
+      {% from "govuk/components/input/macro.njk" import govukInput %}
+
+      {% set chosenDateHtml %}
+      {{ govukDateInput({
+        id: "chosen-map-date",
+        namePrefix: "chosen-map-date",
         fieldset: {
           legend: {
-            text: "Which claim do you want to view?",
+            text: "Start date requested by the claimant"
+          }
+        }
+      }) }}
+      {% endset -%}
+
+      {{ govukRadios({
+        classes: "govuk-radios--inline",
+        idPrefix: "ma-date-requested",
+        name: "ma-date-requested",
+        fieldset: {
+          legend: {
+            text: "Has the claimant chosen a Maternity Allowance start date?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--l"
           }
         },
-        hint: {
-          text: "This claimant has more than one claim."
-        },
         items: [
           {
-            value: "claim-1",
-            text: "Claim recieved on " + data['ma-claim-creation-date'] or '[claim-one-creation-date (dd Month yyyy)]'
+            value: "yes",
+            text: "Yes"
           },
           {
-            value: "claim-2",
-            text: "Claim recieved on " + data['ma-claim-two-creation-date'] or '[claim-two-creation-date (dd Month yyyy)]'
+            value: "no",
+            text: "No"
           }
         ]
       }) }}
@@ -49,9 +62,10 @@
       {% from "govuk/components/button/macro.njk" import govukButton %}
 
       {{ govukButton({
-        text: "Continue"
+        text: "Save and continue"
       }) }}
-    </form>
+
+      </form>
 
     </div>
   </div>
