@@ -261,38 +261,180 @@ router.post('/beta-private/iteration-13/', function (req, res) {
     req.session.data['ma-week-13-employer-1-amount'] = '£200.00';
   }
 
-  res.redirect('/beta-private/iteration-13/scenario/');
+// SCENARIO 4 ---------------------------------------------------------------------------------- SCENARIO 4 ---/
+// ------------------------------------------------------------------------------------------------------------/
+if (req.session.data['scenario'] == 'scenario-4') {
+
+  // Claimant information
+  req.session.data['claimant-name'] = 'Annika Martin';
+  req.session.data['claimant-nino'] = 'XX123456X';
+  req.session.data['claimant-dob'] = '18 December 1988';
+  req.session.data['claimant-postcode'] = 'BR8 9WF';
+  req.session.data['claimant-address'] = null;
+  req.session.data['claimant-contact-number'] = '07847 171740';
+
+  // Decision
+  req.session.data['ma-decision'] = 'Allowed';
+  req.session.data['ma-claim-creation-date'] = '6 December 2022';
+  req.session.data['ma-claim-decision-date'] = '6 December 2022';
+  req.session.data['ma-rate'] = 'Standard rate at £156.66 per week';
+  req.session.data['ma-map-start'] = '18 November 2022';
+  req.session.data['ma-map-end'] = '17 August 2023';
+
+  // Test period dates
+  req.session.data['ma-baby-due-date'] = '20 December 2022';
+  req.session.data['ma-baby-birth-date'] = 'Baby not born yet';
+  req.session.data['ma-test-period-first-day'] = '12 September 2021';
+  req.session.data['ma-test-period-last-day'] = '17 December 2022';
+  req.session.data['ma-test-period-week-fifteen'] = '4 September 2022';
+
+  // Maternity Allowance period dates
+  req.session.data['ma-map-claim-date-received'] = '15 October 2022';
+  req.session.data['ma-map-expected-week-of-confinement'] = '18 December 2022';
+  req.session.data['ma-week-eleventh'] = '2 October 2022';
+  req.session.data['ma-week-fourth'] = '20 November 2022';
+  req.session.data['ma-start-date-requested'] = '18 November 2022';
+  req.session.data['ma-start-date-requested-status'] = 'Allowed';
+  req.session.data['ma-map-rule'] = 'Flexible Maternity Allowance Period';
+
+  // Date Last Worked
+  req.session.data['ma-map-claimant-stopped-work-date-last-worked'] = '20 October 2022';
+  req.session.data['ma-map-claimant-stopped-work-reason'] = 'Sick leave';
+  req.session.data['ma-map-claimant-stopped-work-pregnancy-related'] = 'Yes';
+  req.session.data['ma-map-claimant-stopped-work-allowance-type'] = 'None';
+  req.session.data['ma-map-claimant-stopped-work-allowance-start-date'] = null;
+  req.session.data['ma-map-claimant-stopped-work-allowance-end-date'] = null;
+
+  // Employment and earnings
+  req.session.data['ma-employment-type'] = 'Employed';
+  req.session.data['ma-employment-agency-test-period'] = null;
+  req.session.data['ma-employment-agency-employment-start-date'] = null;
+  req.session.data['ma-employment-agency-status'] = null;
+  req.session.data['ma-employment-test'] = 'Met';
+  req.session.data['ma-employer-1'] = 'B&Q';
+  req.session.data['ma-employer-2'] = 'ASDA LTD';
+  req.session.data['ma-earnings-test'] = 'Met';
+  req.session.data['ma-average-earnings'] = '£200';
+
+  // Highest earning weeks
+  req.session.data['ma-week-1'] = '30 January 2022';
+  req.session.data['ma-week-2'] = '6 February 2022';
+  req.session.data['ma-week-3'] = '13 February 2022';
+  req.session.data['ma-week-4'] = '20 February 2022';
+  req.session.data['ma-week-5'] = '27 February 2022';
+  req.session.data['ma-week-6'] = '6 March 2022';
+  req.session.data['ma-week-7'] = '13 March 2022';
+  req.session.data['ma-week-8'] = '20 March 2022';
+  req.session.data['ma-week-9'] = '27 March 2022';
+  req.session.data['ma-week-10'] = '3 April 2022';
+  req.session.data['ma-week-11'] = '10 April 2022';
+  req.session.data['ma-week-12'] = '17 April 2022';
+  req.session.data['ma-week-13'] = '24 April 2022';
+
+  req.session.data['ma-week-1-employer-1-amount'] = 100.30;
+  req.session.data['ma-week-2-employer-1-amount'] = 100.10;
+  req.session.data['ma-week-3-employer-1-amount'] = 100.00;
+  req.session.data['ma-week-4-employer-1-amount'] = 100.00;
+  req.session.data['ma-week-5-employer-1-amount'] = 100.00;
+  req.session.data['ma-week-6-employer-1-amount'] = 100.00;
+  req.session.data['ma-week-7-employer-1-amount'] = 100.00;
+  req.session.data['ma-week-8-employer-1-amount'] = 100.00;
+  req.session.data['ma-week-9-employer-1-amount'] = 100.00;
+  req.session.data['ma-week-10-employer-1-amount'] = 100.00;
+  req.session.data['ma-week-11-employer-1-amount'] = 100.00;
+  req.session.data['ma-week-12-employer-1-amount'] = 100.00;
+  req.session.data['ma-week-13-employer-1-amount'] = 100.00;
+
+  req.session.data['ma-week-1-employer-2-amount'] = 100.10;
+  req.session.data['ma-week-2-employer-2-amount'] = 100.30;
+  req.session.data['ma-week-3-employer-2-amount'] = 100.00;
+  req.session.data['ma-week-4-employer-2-amount'] = 100.00;
+  req.session.data['ma-week-5-employer-2-amount'] = 100.00;
+  req.session.data['ma-week-6-employer-2-amount'] = 100.00;
+  req.session.data['ma-week-7-employer-2-amount'] = 100.00;
+  req.session.data['ma-week-8-employer-2-amount'] = 100.00;
+  req.session.data['ma-week-9-employer-2-amount'] = 100.00;
+  req.session.data['ma-week-10-employer-2-amount'] = 100.00;
+  req.session.data['ma-week-11-employer-2-amount'] = 100.00;
+  req.session.data['ma-week-12-employer-2-amount'] = 100.00;
+  req.session.data['ma-week-13-employer-2-amount'] = 100.00;
+
+  req.session.data['ma-week-1-total-amount'] = req.session.data['ma-week-1-employer-1-amount'] + req.session.data['ma-week-1-employer-2-amount'];
+  req.session.data['ma-week-2-total-amount'] = req.session.data['ma-week-2-employer-1-amount'] + req.session.data['ma-week-2-employer-2-amount'];
+  req.session.data['ma-week-3-total-amount'] = req.session.data['ma-week-3-employer-1-amount'] + req.session.data['ma-week-3-employer-2-amount'];
+  req.session.data['ma-week-4-total-amount'] = req.session.data['ma-week-4-employer-1-amount'] + req.session.data['ma-week-4-employer-2-amount'];
+  req.session.data['ma-week-5-total-amount'] = req.session.data['ma-week-5-employer-1-amount'] + req.session.data['ma-week-5-employer-2-amount'];
+  req.session.data['ma-week-6-total-amount'] = req.session.data['ma-week-6-employer-1-amount'] + req.session.data['ma-week-6-employer-2-amount'];
+  req.session.data['ma-week-7-total-amount'] = req.session.data['ma-week-7-employer-1-amount'] + req.session.data['ma-week-7-employer-2-amount'];
+  req.session.data['ma-week-8-total-amount'] = req.session.data['ma-week-8-employer-1-amount'] + req.session.data['ma-week-8-employer-2-amount'];
+  req.session.data['ma-week-9-total-amount'] = req.session.data['ma-week-9-employer-1-amount'] + req.session.data['ma-week-9-employer-2-amount'];
+  req.session.data['ma-week-10-total-amount'] = req.session.data['ma-week-10-employer-1-amount'] + req.session.data['ma-week-10-employer-2-amount'];
+  req.session.data['ma-week-11-total-amount'] = req.session.data['ma-week-11-employer-1-amount'] + req.session.data['ma-week-11-employer-2-amount'];
+  req.session.data['ma-week-12-total-amount'] = req.session.data['ma-week-12-employer-1-amount'] + req.session.data['ma-week-12-employer-2-amount'];
+  req.session.data['ma-week-13-total-amount'] = req.session.data['ma-week-13-employer-1-amount'] + req.session.data['ma-week-13-employer-2-amount'];
+
+  req.session.data['ma-week-1-employer-1-source'] = 'RTI';
+  req.session.data['ma-week-2-employer-1-source'] = 'RTI';
+  req.session.data['ma-week-3-employer-1-source'] = 'Payslip';
+  req.session.data['ma-week-4-employer-1-source'] = 'RTI';
+  req.session.data['ma-week-5-employer-1-source'] = 'RTI';
+  req.session.data['ma-week-6-employer-1-source'] = 'RTI';
+  req.session.data['ma-week-7-employer-1-source'] = 'Payslip';
+  req.session.data['ma-week-8-employer-1-source'] = 'Payslip';
+  req.session.data['ma-week-9-employer-1-source'] = 'RTI';
+  req.session.data['ma-week-10-employer-1-source'] = 'RTI';
+  req.session.data['ma-week-11-employer-1-source'] = 'RTI';
+  req.session.data['ma-week-12-employer-1-source'] = 'RTI';
+  req.session.data['ma-week-13-employer-1-source'] = 'RTI';
+
+  req.session.data['ma-week-1-employer-2-source'] = 'RTI';
+  req.session.data['ma-week-2-employer-2-source'] = 'Payslip';
+  req.session.data['ma-week-3-employer-2-source'] = 'RTI';
+  req.session.data['ma-week-4-employer-2-source'] = 'RTI';
+  req.session.data['ma-week-5-employer-2-source'] = 'RTI';
+  req.session.data['ma-week-6-employer-2-source'] = 'Payslip';
+  req.session.data['ma-week-7-employer-2-source'] = 'RTI';
+  req.session.data['ma-week-8-employer-2-source'] = 'RTI';
+  req.session.data['ma-week-9-employer-2-source'] = 'RTI';
+  req.session.data['ma-week-10-employer-2-source'] = 'Payslip';
+  req.session.data['ma-week-11-employer-2-source'] = 'RTI';
+  req.session.data['ma-week-12-employer-2-source'] = 'RTI';
+  req.session.data['ma-week-13-employer-2-source'] = 'RTI';
+
+}
+
+  res.redirect('/beta-private/iteration-13/landing');
 });
 
 // *** Scenario 1 ***************************************************************************************************************** //
 
-router.post('/beta-private/iteration-13/scenario/start-a-claim/', function (req, res) {
+router.post('/beta-private/iteration-13/start-a-claim/', function (req, res) {
 
   // Is more claimant information needed, in this scenario?
   var matchMoreInformationNeeded = false;
 
   if (matchMoreInformationNeeded == true) {
-    res.redirect('/beta-private/iteration-13/scenario/start-a-claim/more-claimant-information');
+    res.redirect('/beta-private/iteration-13/start-a-claim/more-claimant-information');
   }
   else {
-    res.redirect('/beta-private/iteration-13/scenario/start-a-claim/claim-date');
+    res.redirect('/beta-private/iteration-13/start-a-claim/claim-date');
   }
 });
 
-router.post('/beta-private/iteration-13/scenario/start-a-claim/more-claimant-information', function (req, res) {
+router.post('/beta-private/iteration-13/start-a-claim/more-claimant-information', function (req, res) {
   // Has a match been made, in this scenario?
   var match = true;
 
   if (match == false) {
     var match = null;
-    res.redirect('/beta-private/iteration-13/scenario/start-a-claim/no-match-found');
+    res.redirect('/beta-private/iteration-13/start-a-claim/no-match-found');
   }
   else {
-    res.redirect('/beta-private/iteration-13/scenario/start-a-claim/claim-date');
+    res.redirect('/beta-private/iteration-13/start-a-claim/claim-date');
   }
 });
 
-router.post('/beta-private/iteration-13/scenario/start-a-claim/claim-date', function (req, res) {
+router.post('/beta-private/iteration-13/start-a-claim/claim-date', function (req, res) {
 
   if (req.session.data['change'] == null) {
     req.session.data['change'] = false;
@@ -303,21 +445,21 @@ router.post('/beta-private/iteration-13/scenario/start-a-claim/claim-date', func
   if (req.session.data['change'] == true ) {
     // Change journey
     req.session.data['change'] = null;
-    res.redirect('/beta-private/iteration-13/scenario/start-a-claim/summary/'); // Goes back to changed summary
+    res.redirect('/beta-private/iteration-13/start-a-claim/summary/'); // Goes back to changed summary
   }
   else {
     // Regular journey
     req.session.data['change'] = null;
-    res.redirect('/beta-private/iteration-13/scenario/start-a-claim/baby-due-date'); // Goes to next screen in the journey
+    res.redirect('/beta-private/iteration-13/start-a-claim/baby-due-date'); // Goes to next screen in the journey
   }
 
 });
 
-router.post('/beta-private/iteration-13/scenario/start-a-claim/baby-due-date', function (req, res) {
-  res.redirect('/beta-private/iteration-13/scenario/start-a-claim/baby-born');
+router.post('/beta-private/iteration-13/start-a-claim/baby-due-date', function (req, res) {
+  res.redirect('/beta-private/iteration-13/start-a-claim/baby-born');
 });
 
-router.post('/beta-private/iteration-13/scenario/start-a-claim/baby-born', function (req, res) {
+router.post('/beta-private/iteration-13/start-a-claim/baby-born', function (req, res) {
 
   if (req.session.data['change'] == null) {
     req.session.data['change'] = false;
@@ -326,25 +468,25 @@ router.post('/beta-private/iteration-13/scenario/start-a-claim/baby-born', funct
   }
 
   if (req.session.data['baby-born'] == 'yes') {
-    res.redirect('/beta-private/iteration-13/scenario/start-a-claim/baby-birth-date');
+    res.redirect('/beta-private/iteration-13/start-a-claim/baby-birth-date');
   }
   else {
 
     if (req.session.data['change'] == true ) {
       req.session.data['change'] = null;
       // No change
-      res.redirect('/beta-private/iteration-13/scenario/start-a-claim/summary/'); // Goes back to unchanged summary
+      res.redirect('/beta-private/iteration-13/start-a-claim/summary/'); // Goes back to unchanged summary
     }
     else {
       req.session.data['change'] = null;
-      res.redirect('/beta-private/iteration-13/scenario/start-a-claim/employment/');
+      res.redirect('/beta-private/iteration-13/start-a-claim/employment/');
     }
 
   }
 
 });
 
-router.post('/beta-private/iteration-13/scenario/start-a-claim/baby-birth-date', function (req, res) {
+router.post('/beta-private/iteration-13/start-a-claim/baby-birth-date', function (req, res) {
   if (req.session.data['change'] == true ) {
     req.session.data['change'] = null;
     // Change made - GO TO CHANGED SUMMARY
@@ -354,42 +496,42 @@ router.post('/beta-private/iteration-13/scenario/start-a-claim/baby-birth-date',
     req.session.data['ma-map-start'] = '2 October 2022';
     req.session.data['ma-map-end'] = '1 July 2023';
 
-    res.redirect('/beta-private/iteration-13/scenario/start-a-claim/summary/change-baby-birth-date'); // NEEDS TO BE CHANGED TO CHANGED SUMMARY
+    res.redirect('/beta-private/iteration-13/start-a-claim/summary/change-baby-birth-date'); // NEEDS TO BE CHANGED TO CHANGED SUMMARY
   }
   else {
-    res.redirect('/beta-private/iteration-13/scenario/start-a-claim/employment/');
+    res.redirect('/beta-private/iteration-13/start-a-claim/employment/');
   }
 });
 
-router.post('/beta-private/iteration-13/scenario/start-a-claim/employment/', function (req, res) {
+router.post('/beta-private/iteration-13/start-a-claim/employment/', function (req, res) {
   if (req.session.data['employment-type'] == 'agency') {
-    res.redirect('/beta-private/iteration-13/scenario/start-a-claim/employment/test-period-agency');
+    res.redirect('/beta-private/iteration-13/start-a-claim/employment/test-period-agency');
   }
   else {
-    res.redirect('/beta-private/iteration-13/scenario/start-a-claim/stopped-work/');
+    res.redirect('/beta-private/iteration-13/start-a-claim/stopped-work/');
   }
 });
 
-router.post('/beta-private/iteration-13/scenario/start-a-claim/employment/test-period-agency', function (req, res) {
+router.post('/beta-private/iteration-13/start-a-claim/employment/test-period-agency', function (req, res) {
   if (req.session.data['test-period-agency'] == 'yes') {
-    res.redirect('/beta-private/iteration-13/scenario/start-a-claim/employment/agency-employment-date');
+    res.redirect('/beta-private/iteration-13/start-a-claim/employment/agency-employment-date');
   }
   else {
-    res.redirect('/beta-private/iteration-13/scenario/start-a-claim/stopped-work/');
+    res.redirect('/beta-private/iteration-13/start-a-claim/stopped-work/');
   }
 });
 
-router.post('/beta-private/iteration-13/scenario/start-a-claim/employment/agency-employment-date', function (req, res) {
-  res.redirect('/beta-private/iteration-13/scenario/start-a-claim/employment/agency-employed');
+router.post('/beta-private/iteration-13/start-a-claim/employment/agency-employment-date', function (req, res) {
+  res.redirect('/beta-private/iteration-13/start-a-claim/employment/agency-employed');
 });
 
-router.post('/beta-private/iteration-13/scenario/start-a-claim/employment/agency-employed', function (req, res) {
-  res.redirect('/beta-private/iteration-13/scenario/start-a-claim/stopped-work/');
+router.post('/beta-private/iteration-13/start-a-claim/employment/agency-employed', function (req, res) {
+  res.redirect('/beta-private/iteration-13/start-a-claim/stopped-work/');
 });
 
-router.post('/beta-private/iteration-13/scenario/start-a-claim/stopped-work/', function (req, res) {
+router.post('/beta-private/iteration-13/start-a-claim/stopped-work/', function (req, res) {
   if (req.session.data['stopped-work'] == 'yes') {
-    res.redirect('/beta-private/iteration-13/scenario/start-a-claim/stopped-work/reason');
+    res.redirect('/beta-private/iteration-13/start-a-claim/stopped-work/reason');
   }
   else {
     // For Private Beta testing for Iteration 4, we will set the change scenario
@@ -397,94 +539,98 @@ router.post('/beta-private/iteration-13/scenario/start-a-claim/stopped-work/', f
     // so that when they click change on the summary, the next time they run through this screen
     // it will return directly to summary after they enter the date on the next screen 'dlw-date'.
     // req.session.data['change'] = true;
-    res.redirect('/beta-private/iteration-13/scenario/start-a-claim/chosen-map-date');
+    res.redirect('/beta-private/iteration-13/start-a-claim/chosen-map-date');
   }
 });
 
-router.post('/beta-private/iteration-13/scenario/start-a-claim/stopped-work/reason', function (req, res) {
+router.post('/beta-private/iteration-13/start-a-claim/stopped-work/reason', function (req, res) {
   if (req.session.data['stopped-work-reason'] == 'sick') {
-    res.redirect('/beta-private/iteration-13/scenario/start-a-claim/stopped-work/sickness/allowance-type');
+    res.redirect('/beta-private/iteration-13/start-a-claim/stopped-work/sickness/allowance-type');
   }
   else {
-    res.redirect('/beta-private/iteration-13/scenario/start-a-claim/stopped-work/date-last-worked');
+    res.redirect('/beta-private/iteration-13/start-a-claim/stopped-work/date-last-worked');
   }
 });
 
-router.post('/beta-private/iteration-13/scenario/start-a-claim/stopped-work/sickness/allowance-type', function (req, res) {
+router.post('/beta-private/iteration-13/start-a-claim/stopped-work/sickness/allowance-type', function (req, res) {
   if (req.session.data['allowance-type'] == 'employment-and-support-allowance') {
-    res.redirect('/beta-private/iteration-13/scenario/start-a-claim/stopped-work/sickness/benefit-start-date');
+    res.redirect('/beta-private/iteration-13/start-a-claim/stopped-work/sickness/benefit-start-date');
   }
   else {
-    res.redirect('/beta-private/iteration-13/scenario/start-a-claim/stopped-work/sickness/pregnancy-related');    
+    res.redirect('/beta-private/iteration-13/start-a-claim/stopped-work/sickness/pregnancy-related');    
   }
 });
 
-router.post('/beta-private/iteration-13/scenario/start-a-claim/stopped-work/sickness/pregnancy-related', function (req, res) {
+router.post('/beta-private/iteration-13/start-a-claim/stopped-work/sickness/pregnancy-related', function (req, res) {
   if (req.session.data['allowance-type'] == 'statutory-sick-pay') {
-    res.redirect('/beta-private/iteration-13/scenario/start-a-claim/stopped-work/sickness/benefit-end-date');
+    res.redirect('/beta-private/iteration-13/start-a-claim/stopped-work/sickness/benefit-end-date');
   }
   else {
-    res.redirect('/beta-private/iteration-13/scenario/start-a-claim/stopped-work/date-last-worked');    
+    res.redirect('/beta-private/iteration-13/start-a-claim/stopped-work/date-last-worked');    
   }
 });
 
-router.post('/beta-private/iteration-13/scenario/start-a-claim/stopped-work/sickness/benefit-end-date', function (req, res) {
-  res.redirect('/beta-private/iteration-13/scenario/start-a-claim/stopped-work/date-last-worked');
+router.post('/beta-private/iteration-13/start-a-claim/stopped-work/sickness/benefit-end-date', function (req, res) {
+  res.redirect('/beta-private/iteration-13/start-a-claim/stopped-work/date-last-worked');
 });
 
-router.post('/beta-private/iteration-13/scenario/start-a-claim/stopped-work/sickness/benefit-start-date', function (req, res) {
-    res.redirect('/beta-private/iteration-13/scenario/start-a-claim/stopped-work/date-last-worked');
+router.post('/beta-private/iteration-13/start-a-claim/stopped-work/sickness/benefit-start-date', function (req, res) {
+    res.redirect('/beta-private/iteration-13/start-a-claim/stopped-work/date-last-worked');
 });
 
-router.post('/beta-private/iteration-13/scenario/start-a-claim/stopped-work/date-last-worked', function (req, res) {
-    res.redirect('/beta-private/iteration-13/scenario/start-a-claim/chosen-map-date');
+router.post('/beta-private/iteration-13/start-a-claim/stopped-work/date-last-worked', function (req, res) {
+    res.redirect('/beta-private/iteration-13/start-a-claim/chosen-map-date');
 });
 
 // Removed maternity leave question
-// router.post('/beta-private/iteration-13/scenario/start-a-claim/ma-start-date-provided', function (req, res) {
+// router.post('/beta-private/iteration-13/start-a-claim/ma-start-date-provided', function (req, res) {
 //  if (req.session.data['ma-start-date-provided'] == 'yes') {
-//    res.redirect('/beta-private/iteration-13/scenario/start-a-claim/planned-dlw-date');
+//    res.redirect('/beta-private/iteration-13/start-a-claim/planned-dlw-date');
 //  }
 //  else {
-//    res.redirect('/beta-private/iteration-13/scenario/start-a-claim/chosen-map-date');
+//    res.redirect('/beta-private/iteration-13/start-a-claim/chosen-map-date');
 //  }
 // });
 
-router.post('/beta-private/iteration-13/scenario/start-a-claim/planned-dlw-date', function (req, res) {
-  res.redirect('/beta-private/iteration-13/scenario/start-a-claim/chosen-map-date');
+router.post('/beta-private/iteration-13/start-a-claim/planned-dlw-date', function (req, res) {
+  res.redirect('/beta-private/iteration-13/start-a-claim/chosen-map-date');
 });
 
-router.post('/beta-private/iteration-13/scenario/start-a-claim/chosen-map-date', function (req, res) {
+router.post('/beta-private/iteration-13/start-a-claim/chosen-map-date', function (req, res) {
   if (req.session.data['ma-date-requested'] == 'yes') {
-    res.redirect('/beta-private/iteration-13/scenario/start-a-claim/requested-start-date');
+    res.redirect('/beta-private/iteration-13/start-a-claim/requested-start-date');
   }
   else {
-    res.redirect('/beta-private/iteration-13/scenario/start-a-claim/summary/');
+    res.redirect('/beta-private/iteration-13/start-a-claim/summary/');
   }
 });
 
-router.post('/beta-private/iteration-13/scenario/start-a-claim/requested-start-date', function (req, res) {
-  res.redirect('/beta-private/iteration-13/scenario/start-a-claim/summary/');
+router.post('/beta-private/iteration-13/start-a-claim/requested-start-date', function (req, res) {
+  res.redirect('/beta-private/iteration-13/start-a-claim/summary/');
 });
 
-router.get('/beta-private/iteration-13/scenario/start-a-claim/summary/', function (req, res) {
+router.get('/beta-private/iteration-13/start-a-claim/summary/', function (req, res) {
   if (req.session.data['scenario'] == 'scenario-1') {
-    res.redirect('/beta-private/iteration-13/scenario/start-a-claim/summary/1');
+    res.redirect('/beta-private/iteration-13/start-a-claim/summary/1');
   } else if (req.session.data['scenario'] == 'scenario-2') {
-    res.redirect('/beta-private/iteration-13/scenario/start-a-claim/summary/2');
+    res.redirect('/beta-private/iteration-13/start-a-claim/summary/2');
   } else {
-    res.redirect('/beta-private/iteration-13/scenario/start-a-claim/summary/3');
+    res.redirect('/beta-private/iteration-13/start-a-claim/summary/3');
   }
 });
 
 // *** Find a claim *** //
 
-router.post('/beta-private/iteration-13/scenario/find-a-claim/', function (req, res) {
-  res.redirect('/beta-private/iteration-13/scenario/find-a-claim/select-claim');
+router.post('/beta-private/iteration-13/find-a-claim/', function (req, res) {
+  if (req.session.data['scenario'] == 'scenario-4') {
+    res.redirect('/beta-private/iteration-13/find-a-claim/rti/summary');
+  } else {
+    res.redirect('/beta-private/iteration-13/find-a-claim/select-claim');
+  }
 });
 
-router.post('/beta-private/iteration-13/scenario/find-a-claim/select-claim', function (req, res) {
-  res.redirect('/beta-private/iteration-13/scenario/find-a-claim/summary');
+router.post('/beta-private/iteration-13/find-a-claim/select-claim', function (req, res) {
+  res.redirect('/beta-private/iteration-13/find-a-claim/summary');
 });
 
 }

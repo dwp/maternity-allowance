@@ -74,6 +74,33 @@
           ]
         }) }}
 
+        {% from "govuk/components/input/macro.njk" import govukInput %}
+        {{ govukInput({
+          id: "cost",
+          name: "cost",
+          label: {
+            text: "Week's earnings for [employer name]"
+          },
+          prefix: {
+            text: "£"
+          },
+          classes: "govuk-input--width-5",
+          spellcheck: false
+        }) }}
+
+        {{ govukInput({
+          id: "cost",
+          name: "cost",
+          label: {
+            text: "Week's earnings for [employer 2 name]"
+          },
+          prefix: {
+            text: "£"
+          },
+          classes: "govuk-input--width-5",
+          spellcheck: false
+        }) }}
+
         {% from "govuk/components/button/macro.njk" import govukButton %}
 
         {{ govukButton({
