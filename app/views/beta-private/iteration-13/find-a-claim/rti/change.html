@@ -59,7 +59,7 @@
           name: "change-source-of-earnings",
           fieldset: {
             legend: {
-              text: "Source of earnings information"
+              text: "Source of earnings information for B&Q"
             }
           },
           items: [
@@ -69,7 +69,29 @@
             },
             {
               value: "rti",
-              text: "RTI"
+              text: "RTI",
+              checked: true
+            }
+          ]
+        }) }}
+
+        {{ govukRadios({
+          idPrefix: "change-source-of-earnings2",
+          name: "change-source-of-earnings2",
+          fieldset: {
+            legend: {
+              text: "Source of earnings information for ASDA"
+            }
+          },
+          items: [
+            {
+              value: "payslip",
+              text: "Payslip"
+            },
+            {
+              value: "rti",
+              text: "RTI",
+              checked: true
             }
           ]
         }) }}
@@ -79,26 +101,28 @@
           id: "cost",
           name: "cost",
           label: {
-            text: "Week's earnings for [employer name]"
+            text: "Week's earnings for B&Q"
           },
           prefix: {
             text: "£"
           },
           classes: "govuk-input--width-5",
-          spellcheck: false
+          spellcheck: false,
+          value: "100.30"
         }) }}
 
         {{ govukInput({
           id: "cost",
           name: "cost",
           label: {
-            text: "Week's earnings for [employer 2 name]"
+            text: "Week's earnings for ASDA"
           },
           prefix: {
             text: "£"
           },
           classes: "govuk-input--width-5",
-          spellcheck: false
+          spellcheck: false,
+          value: "100.10"
         }) }}
 
         {% from "govuk/components/button/macro.njk" import govukButton %}
