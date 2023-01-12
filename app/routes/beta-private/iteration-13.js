@@ -21,7 +21,7 @@ router.post('/beta-private/iteration-13/', function (req, res) {
     req.session.data['claimant-nino'] = 'XX123456X';
     req.session.data['claimant-dob'] = '18 December 1988';
     req.session.data['claimant-postcode'] = 'BR8 9WF';
-    req.session.data['claimant-address'] = null;
+    req.session.data['claimant-address'] = '7 Exelsior Close, Newcastle';
     req.session.data['claimant-contact-number'] = '07847 171740';
 
     // Decision

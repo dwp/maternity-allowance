@@ -1,0 +1,80 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.go(-1)"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">
+        Claimant details
+      </h1>
+
+      <ul class="govuk-list">
+        <li>
+          <span class="govuk-body govuk-!-font-weight-bold">Name: </span>{{ data['claimant-name'] }}
+        </li>
+        <li>
+          <span class="govuk-body govuk-!-font-weight-bold">National Insurance Number: </span>{{ data['claimant-nino'] }}
+        </li>
+        <li>
+          <span class="govuk-body govuk-!-font-weight-bold">Date of birth: </span>{{ data['claimant-dob'] }}
+        </li>
+        <li>
+          <span class="govuk-body govuk-!-font-weight-bold">Address: </span>{{ data['claimant-address'] }}, {{ data['claimant-postcode'] }}
+        </li>
+        <li>
+          <span class="govuk-body govuk-!-font-weight-bold">Contact number: </span>{{ data['claimant-contact-number'] }}
+        </li>
+      </ul>
+
+      <form class="form" method="post" novalidate>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend">
+                Are the details for this claimant correct?
+            </legend>
+            <!--div id="changed-name-hint" class="govuk-hint">
+              {{ data['customer-name'] or '[Customer name]' }}
+            </div-->
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="authorised" name="verified-appointeeship" type="radio" value="authorised">
+                <label class="govuk-label govuk-radios__label" for="authorised">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="not-authorised" name="verified-appointeeship" type="radio" value="not-authorised">
+                <label class="govuk-label govuk-radios__label" for="not-authorised">
+                  No
+                </label>
+              </div>
+            </div>
+
+          </fieldset>
+        </div>
+
+      {% from "govuk/components/button/macro.njk" import govukButton %}
+
+      {{ govukButton({
+        text: "Save and continue"
+      }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
