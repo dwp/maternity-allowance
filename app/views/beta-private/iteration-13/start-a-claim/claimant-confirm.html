@@ -40,31 +40,26 @@
 
       <form class="form" method="post" novalidate>
 
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset">
-            <legend class="govuk-fieldset__legend">
-                Is this the correct claimant?
-            </legend>
-            <!--div id="changed-name-hint" class="govuk-hint">
-              {{ data['customer-name'] or '[Customer name]' }}
-            </div-->
-            <div class="govuk-radios" data-module="govuk-radios">
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="authorised" name="verified-appointeeship" type="radio" value="authorised">
-                <label class="govuk-label govuk-radios__label" for="authorised">
-                  Yes
-                </label>
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="not-authorised" name="verified-appointeeship" type="radio" value="not-authorised">
-                <label class="govuk-label govuk-radios__label" for="not-authorised">
-                  No
-                </label>
-              </div>
-            </div>
-
-          </fieldset>
-        </div>
+      {% from "govuk/components/radios/macro.njk" import govukRadios %}
+      {{ govukRadios({
+        classes: "govuk-radios--inline",
+        name: "claimant-confirm",
+        fieldset: {
+          legend: {
+            text: "Is this the correct claimant?"
+          }
+        },
+        items: [
+          {
+            value: "yes",
+            text: "Yes"
+          },
+          {
+            value: "no",
+            text: "No"
+          }
+        ]
+      }) }}
 
       {% from "govuk/components/button/macro.njk" import govukButton %}
 
