@@ -211,7 +211,7 @@
       {{ data['ma-map-claim-date-received'] }}
     </dd>
     <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="#">
+      <a class="govuk-link" href="../claim-date?change=true">
         Change<span class="govuk-visually-hidden"> date the claim was received</span>
       </a>
     </dd>
@@ -353,6 +353,30 @@
     </dt>
     <dd class="govuk-summary-list__value">
       {{ data['ma-employment-type'] }}
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key govuk-!-width-one-half">
+      Agency employment in Test Period
+    </dt>
+    <dd class="govuk-summary-list__value">
+      {{ data['ma-employment-agency-test-period'] }}
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key govuk-!-width-one-half">
+      Agency employment start date
+    </dt>
+    <dd class="govuk-summary-list__value">
+      {{ data['ma-employment-agency-employment-start-date'] }}
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key govuk-!-width-one-half">
+      Agency employment status
+    </dt>
+    <dd class="govuk-summary-list__value">
+      {{ data['ma-employment-agency-status'] }}
     </dd>
   </div>
   <div class="govuk-summary-list__row">
