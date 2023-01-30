@@ -425,7 +425,7 @@
       Average weekly earnings for earnings test
     </dt>
     <dd class="govuk-summary-list__value">
-      {{ data['ma-average-earnings'] }}
+      {{ '£' + data['ma-average-earnings'].toFixed(2) }}
     </dd>
   </div>
 </dl>
@@ -645,7 +645,7 @@
         <strong>{{ '£' + data['ma-week-5-total-amount'].toFixed(2) }}</strong>
       </dd>
       <dd class="govuk-summary-list__actions">
-        <a class="govuk-link" href="#">
+        <a class="govuk-link" href="../rti/change.html">
           Change<span class="govuk-visually-hidden"> name</span>
         </a>
       </dd>
