@@ -16,7 +16,7 @@
       {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
       {{ govukRadios({
-        name: "scenario",
+        name: "sandbox",
         fieldset: {
           legend: {
             text: "Maternity Allowance Private Beta",
@@ -26,12 +26,12 @@
         },
         items: [
           {
-            value: "scenario-1",
-            text: "Scenario 1"
+            value: "add-employer",
+            text: "Add employer"
           },
           {
-            value: "scenario-2",
-            text: "Scenario 2"
+            value: "copy-button",
+            text: "Copy button"
           }
         ]
       }) }}
@@ -41,21 +41,6 @@
       {{ govukButton({
         text: "Save and continue"
       }) }}
-
-      <details class="govuk-details" data-module="govuk-details">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text">
-            Descriptions
-          </span>
-        </summary>
-        <div class="govuk-details__text">
-          <ol class="govuk-list govuk-list--number">
-            <li>MAST-927 manually override RTI data</li>
-            <li>MAST-711 new data gather for agency workers <br />MAST-1035 reflect the matched person back to the user <br />MAST-686 change date we received the claim</li>
-          </ol>
-          <p><a href="sandbox/">Sandbox</a></p>
-        </div>
-      </details>
 
     </form>
 
