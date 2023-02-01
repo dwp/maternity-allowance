@@ -361,13 +361,16 @@
 
 <h2 class="govuk-heading-m" id="employment-and-earnings">Employment</h2>
 
-<dl class="govuk-summary-list govuk-!-margin-bottom-9">
+<dl class="govuk-summary-list govuk-!-margin-bottom-0">
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key govuk-!-width-one-half">
       Employment type
     </dt>
     <dd class="govuk-summary-list__value">
       {{ data['ma-employment-type'] }}
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      &nbsp;
     </dd>
   </div>
   <div class="govuk-summary-list__row">
@@ -377,6 +380,9 @@
     <dd class="govuk-summary-list__value">
       {{ data['ma-employment-test'] }}
     </dd>
+    <dd class="govuk-summary-list__actions">
+      &nbsp;
+    </dd>
   </div>
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
@@ -384,6 +390,11 @@
     </dt>
     <dd class="govuk-summary-list__value">
       {{ data['ma-employer-1'] }}
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="employers/change-employer-1.html">
+        Change<span class="govuk-visually-hidden"> start date requested by claimant</span>
+      </a>
     </dd>
   </div>
   <div class="govuk-summary-list__row">
@@ -393,8 +404,17 @@
     <dd class="govuk-summary-list__value">
       {{ data['ma-employer-2'] }}
     </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="employers/change-employer-2.html">
+        Change<span class="govuk-visually-hidden"> start date requested by claimant</span>
+      </a>
+    </dd>
   </div>
 </dl>
+
+<p class="govuk-!-padding-top-2 govuk-!-margin-bottom-9">
+  <a href="employers/">Add employer</a>
+</p>
 
 <h2 class="govuk-heading-m" id="employment-and-earnings">Earnings</h2>
 
