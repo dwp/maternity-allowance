@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 
+require('./routes/beta-private/sandbox')(router)
 require('./routes/alpha')(router)
 require('./routes/beta-private/iteration-1')(router)
 require('./routes/beta-private/iteration-2')(router)

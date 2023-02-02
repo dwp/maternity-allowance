@@ -36,12 +36,12 @@
             {
               classes: "govuk-input--width-2",
               name: "day",
-              value: "30"
+              value: "27"
             },
             {
               classes: "govuk-input--width-2",
               name: "month",
-              value: "1"
+              value: "2"
             },
             {
               classes: "govuk-input--width-4",
@@ -59,7 +59,7 @@
           name: "change-source-of-earnings",
           fieldset: {
             legend: {
-              text: "Source of earnings information for B&Q"
+              text: "Source of earnings information for " + data['ma-employer-1']
             }
           },
           items: [
@@ -80,7 +80,7 @@
           name: "change-source-of-earnings2",
           fieldset: {
             legend: {
-              text: "Source of earnings information for ASDA"
+              text: "Source of earnings information for " + data['ma-employer-2']
             }
           },
           items: [
@@ -108,7 +108,7 @@
           },
           classes: "govuk-input--width-5",
           spellcheck: false,
-          value: "100.30"
+          value: data['ma-week-5-employer-1-amount']
         }) }}
 
         {{ govukInput({
@@ -122,7 +122,7 @@
           },
           classes: "govuk-input--width-5",
           spellcheck: false,
-          value: "100.10"
+          value: data['ma-week-5-employer-2-amount']
         }) }}
 
         {% from "govuk/components/button/macro.njk" import govukButton %}
