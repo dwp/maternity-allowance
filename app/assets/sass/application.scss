@@ -28,6 +28,7 @@ $govuk-assets-path: '/govuk/assets/';
 @import "custom/tags";
 @import "custom/navigation";
 @import "custom/statement-view";
+@import "custom/summary-action-list";
 
 .govuk-details__noborder {
   padding-top: 10px;

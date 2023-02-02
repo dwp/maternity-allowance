@@ -19,13 +19,13 @@
 
       <form class="form" method="post" novalidate>
 
-        <h1 class="govuk-heading-xl">You have added 3 directors</h1>
+        <h1 class="govuk-heading-l">Claimant has 2 employers</h1>
         <div class="govuk-form-group">
         
           <dl class="govuk-summary-list hmrc-list-with-actions hmrc-list-with-actions--short">
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key govuk-!-font-weight-regular hmrc-summary-list__key">
-                Sydney Russell
+                {{ data['ma-employer-1'] }}
               </dt>
               <dd class="govuk-summary-list__actions hmrc-summary-list__actions">
                 <ul class="govuk-summary-list__actions-list">
@@ -36,23 +36,12 @@
             </div>
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key govuk-!-font-weight-regular hmrc-summary-list__key">
-                Michael Cain
+                {{ data['ma-employer-2'] }}
               </dt>
               <dd class="govuk-summary-list__actions hmrc-summary-list__actions">
                 <ul class="govuk-summary-list__actions-list">
                   <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#"><span aria-hidden="true">Change</span><span class="govuk-visually-hidden">Change Michael Cain</span></a></li>
                   <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#"><span aria-hidden="true">Remove</span><span class="govuk-visually-hidden">Remove Michael Cain from the list</span></a></li>
-                </ul>
-              </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key govuk-!-font-weight-regular hmrc-summary-list__key">
-                Jeremy Winter
-              </dt>
-              <dd class="govuk-summary-list__actions hmrc-summary-list__actions">
-                <ul class="govuk-summary-list__actions-list">
-                  <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#"><span aria-hidden="true">Change</span><span class="govuk-visually-hidden">Change Jeremy Winter</span></a></li>
-                  <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#"><span aria-hidden="true">Remove</span><span class="govuk-visually-hidden">Remove Jeremy Winter from the list</span></a></li>
                 </ul>
               </dd>
             </div>
@@ -63,21 +52,18 @@
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset" aria-describedby="add-another-hint">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend govuk-fieldset__legend--m">
-                Do you need to add another director?
+                Does the claimant have another employer?
               </legend>
-              <div id="add-another-hint" class="govuk-hint">
-                You must tell us about all your directors.
-              </div>
               <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="add-another" name="add-another" type="radio" value="Yes">
-                  <label class="govuk-label govuk-radios__label" for="add-another">
+                  <input class="govuk-radios__input" id="add-another-employer" name="add-another-employer" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="add-another-employer">
                     Yes
                   </label>
                 </div>
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="add-another-2" name="add-another" type="radio" value="No">
-                  <label class="govuk-label govuk-radios__label" for="add-another-2">
+                  <input class="govuk-radios__input" id="add-another-employer-2" name="add-another-employer" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="add-another-employer-2">
                     No
                   </label>
                 </div>

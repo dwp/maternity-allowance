@@ -158,4 +158,13 @@ router.post('/beta-private/sandbox/employers/', function (req, res) {
   res.redirect('/beta-private/sandbox/employers/summary');
 });
 
+router.post('/beta-private/sandbox/employers/summary', function (req, res) {
+  if (req.session.data['add-another-employer'] == 'yes') {
+    res.redirect('/beta-private/sandbox/employers/');
+  }
+  else {
+    res.redirect('/beta-private/sandbox/add-employer');
+  }
+});
+
 }
