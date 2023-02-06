@@ -55,6 +55,7 @@ router.post('/beta-private/sandbox/', function (req, res) {
     req.session.data['ma-employment-test'] = 'Met';
     req.session.data['ma-employer-1'] = 'ASDA LTD';
     req.session.data['ma-employer-2'] = 'GRAINGERS WHOLESALE LTD';
+    req.session.data['ma-employer-3'] = 'B&Q LTD';
     req.session.data['ma-earnings-test'] = 'Met';
     //req.session.data['ma-average-earnings'] = '£112.31'; 
 
@@ -147,24 +148,44 @@ router.post('/beta-private/sandbox/', function (req, res) {
     req.session.data['ma-week-12-employer-2-source'] = 'RTI';
     req.session.data['ma-week-13-employer-2-source'] = 'RTI';
 
-    res.redirect('/beta-private/sandbox/add-employer'); 
+    res.redirect('/beta-private/sandbox/summary-add-employer'); 
   } else {
     res.redirect('/beta-private/sandbox/copy-button-summary');
   }
 
 });
 
-router.post('/beta-private/sandbox/employers/', function (req, res) {
-  res.redirect('/beta-private/sandbox/employers/summary');
-});
-
-router.post('/beta-private/sandbox/employers/summary', function (req, res) {
+router.post('/beta-private/sandbox/employers/summary-2-employers', function (req, res) {
   if (req.session.data['add-another-employer'] == 'yes') {
     res.redirect('/beta-private/sandbox/employers/');
   }
   else {
-    res.redirect('/beta-private/sandbox/add-employer');
+    res.redirect('/beta-private/sandbox/summary-add-employer');
   }
+});
+
+router.post('/beta-private/sandbox/employers/', function (req, res) {
+  res.redirect('/beta-private/sandbox/employers/summary-3-employers');
+});
+
+router.post('/beta-private/sandbox/employers/change-employer-2', function (req, res) {
+  req.session.data['ma-employer-2'] = 'ANYTHING LTD';
+  res.redirect('/beta-private/sandbox/employers/summary-2-employers');
+});
+
+router.post('/beta-private/sandbox/rti/change', function (req, res) {
+
+  // Make data changes here
+  req.session.data['ma-rate'] = 'Standard rate at £156.66 per week';
+  req.session.data['ma-week-5-employer-1-amount'] = 400.00;
+  req.session.data['ma-week-5-employer-2-amount'] = 600.00;
+  req.session.data['ma-week-5-employer-1-source'] = 'Payslip';
+  req.session.data['ma-week-5-employer-2-source'] = 'Payslip';
+  req.session.data['ma-week-5-total-amount'] = req.session.data['ma-week-5-employer-1-amount'] + req.session.data['ma-week-5-employer-2-amount'];
+  req.session.data['ma-total-earnings'] = req.session.data['ma-week-1-total-amount'] + req.session.data['ma-week-2-total-amount'] + req.session.data['ma-week-3-total-amount'] + req.session.data['ma-week-4-total-amount'] + req.session.data['ma-week-5-total-amount'] + req.session.data['ma-week-6-total-amount'] + req.session.data['ma-week-7-total-amount'] + req.session.data['ma-week-8-total-amount'] + req.session.data['ma-week-9-total-amount'] + req.session.data['ma-week-10-total-amount'] + req.session.data['ma-week-11-total-amount'] + req.session.data['ma-week-12-total-amount'] + req.session.data['ma-week-13-total-amount'];
+  req.session.data['ma-average-earnings'] = req.session.data['ma-total-earnings'] / 13; 
+
+  res.redirect('/beta-private/sandbox/summary-add-employer');
 });
 
 }
