@@ -60,15 +60,15 @@ router.post('/beta-private/sandbox/', function (req, res) {
     //req.session.data['ma-average-earnings'] = '£112.31'; 
 
     // Highest earning weeks
-    req.session.data['ma-week-1'] = '30 January 2022';
-    req.session.data['ma-week-2'] = '6 February 2022';
-    req.session.data['ma-week-3'] = '13 February 2022';
-    req.session.data['ma-week-4'] = '20 February 2022';
-    req.session.data['ma-week-5'] = '27 February 2022';
-    req.session.data['ma-week-6'] = '6 March 2022';
-    req.session.data['ma-week-7'] = '13 March 2022';
-    req.session.data['ma-week-8'] = '20 March 2022';
-    req.session.data['ma-week-9'] = '27 March 2022';
+    req.session.data['ma-week-1'] = '30 Jan';
+    req.session.data['ma-week-2'] = '6 Feb';
+    req.session.data['ma-week-3'] = '13 Feb';
+    req.session.data['ma-week-4'] = '20 Feb';
+    req.session.data['ma-week-5'] = '27 Feb';
+    req.session.data['ma-week-6'] = '6 Mar';
+    req.session.data['ma-week-7'] = '13 Mar';
+    req.session.data['ma-week-8'] = '20 Mar';
+    req.session.data['ma-week-9'] = '27 Mar';
     req.session.data['ma-week-10'] = '3 April 2022';
     req.session.data['ma-week-11'] = '10 April 2022';
     req.session.data['ma-week-12'] = '17 April 2022';

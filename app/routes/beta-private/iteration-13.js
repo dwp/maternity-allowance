@@ -366,7 +366,7 @@ router.post('/beta-private/iteration-13/start-a-claim/employment/', function (re
 // });
 
 router.post('/beta-private/iteration-13/start-a-claim/employment/agency-employment-date', function (req, res) {
-  res.redirect('/beta-private/iteration-13/start-a-claim/stopped-work');
+  res.redirect('/beta-private/iteration-13/start-a-claim/employment/agency-employed');
 });
 
 router.post('/beta-private/iteration-13/start-a-claim/employment/agency-employed', function (req, res) {
@@ -374,7 +374,7 @@ router.post('/beta-private/iteration-13/start-a-claim/employment/agency-employed
     res.redirect('/beta-private/iteration-13/start-a-claim/employment/agency-employment-end-date');
   }
   else {
-    res.redirect('/beta-private/iteration-13/start-a-claim/chosen-map-date');
+    res.redirect('/beta-private/iteration-13/start-a-claim/stopped-work');
   }
 });
 
@@ -399,16 +399,7 @@ router.post('/beta-private/iteration-13/start-a-claim/stopped-work/', function (
 router.post('/beta-private/iteration-13/start-a-claim/stopped-work/reason', function (req, res) {
   if (req.session.data['stopped-work-reason'] == 'sick') {
     res.redirect('/beta-private/iteration-13/start-a-claim/stopped-work/sickness/allowance-type');
-  }
-  else if (req.session.data['stopped-work-reason'] == 'ended-work') {
-    if (req.session.data['employment-type'] == 'agency') {
-      res.redirect('/beta-private/iteration-13/start-a-claim/employment/agency-employed');
-    }
-    else {
-      res.redirect('/beta-private/iteration-13/start-a-claim/stopped-work/date-last-worked');
-    }
-  } 
-  else {
+  } else {
     res.redirect('/beta-private/iteration-13/start-a-claim/stopped-work/date-last-worked');
   }
 });
