@@ -27,8 +27,8 @@ router.post('/beta-private/iteration-13/', function (req, res) {
 
     // Decision
     req.session.data['ma-decision'] = 'Allowed';
-    req.session.data['ma-claim-creation-date'] = '6 December 2022';
-    req.session.data['ma-claim-decision-date'] = '6 December 2022';
+    req.session.data['ma-claim-creation-date'] = '10 January 2023';
+    req.session.data['ma-claim-decision-date'] = '10 January 2023';
     req.session.data['ma-rate'] = 'Variable rate at £101.10 per week';
     req.session.data['ma-map-start'] = '23 January 2023';
     req.session.data['ma-map-end'] = '22 October 2023';
@@ -174,11 +174,11 @@ router.post('/beta-private/iteration-13/', function (req, res) {
 
     // Decision
     req.session.data['ma-decision'] = 'Allowed';
-    req.session.data['ma-claim-creation-date'] = '6 December 2022';
-    req.session.data['ma-claim-decision-date'] = '6 December 2022';
+    req.session.data['ma-claim-creation-date'] = '15 February 2023';
+    req.session.data['ma-claim-decision-date'] = '15 February 2023';
     req.session.data['ma-rate'] = 'Standard rate at £156.66 per week';
-    req.session.data['ma-map-start'] = '25 January 2023';
-    req.session.data['ma-map-end'] = '24 October 2023';
+    req.session.data['ma-map-start'] = '16 January 2023';
+    req.session.data['ma-map-end'] = '15 October 2023';
 
     // Test period dates
     req.session.data['ma-baby-due-date'] = '2 March 2023';
@@ -193,8 +193,8 @@ router.post('/beta-private/iteration-13/', function (req, res) {
     req.session.data['ma-week-eleventh'] = '11 December 2022';
     req.session.data['ma-week-fourth'] = '29 January 2023';
     req.session.data['ma-start-date-requested'] = '25 January 2023';
-    req.session.data['ma-start-date-requested-status'] = 'Allowed';
-    req.session.data['ma-map-rule'] = 'Flexible Maternity Allowance Period';
+    req.session.data['ma-start-date-requested-status'] = 'Declined';
+    req.session.data['ma-map-rule'] = 'Non-flexible Maternity Allowance Period';
 
     // Date Last Worked
     req.session.data['ma-map-claimant-stopped-work-date-last-worked'] = '15 January 2023';
@@ -208,7 +208,7 @@ router.post('/beta-private/iteration-13/', function (req, res) {
     req.session.data['ma-employment-type'] = 'Agency worker';
     req.session.data['ma-employment-agency-test-period'] = 'Employed during Test Period';
     req.session.data['ma-employment-agency-employment-start-date'] = '15 January 2022';
-    req.session.data['ma-employment-agency-status'] = 'Still employed by agency';
+    req.session.data['ma-employment-agency-status'] = 'Not employed by agency';
     req.session.data['ma-employment-test'] = 'Met';
     req.session.data['ma-employer-1'] = 'ROBSONS CARE FORUM';
     req.session.data['ma-earnings-test'] = 'Met';
@@ -494,6 +494,7 @@ router.get('/beta-private/iteration-13/find-a-claim/summary/', function (req, re
 router.post('/beta-private/iteration-13/find-a-claim/rti/change', function (req, res) {
 
   // Make data changes here
+  req.session.data['ma-claim-decision-date'] = '15 February 2023';
   req.session.data['ma-rate'] = 'Standard rate at £156.66 per week';
   req.session.data['ma-week-5-employer-1-amount'] = 400.00;
   req.session.data['ma-week-5-employer-2-amount'] = 600.00;
