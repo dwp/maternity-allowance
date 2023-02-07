@@ -474,7 +474,7 @@ router.get('/beta-private/iteration-13/start-a-claim/summary/', function (req, r
 // *** Find a claim *** //
 
 router.post('/beta-private/iteration-13/find-a-claim/', function (req, res) {
-  res.redirect('/beta-private/iteration-13/find-a-claim/select-claim');
+  res.redirect('/beta-private/iteration-13/find-a-claim/summary');
 });
 
 router.post('/beta-private/iteration-13/find-a-claim/select-claim', function (req, res) {
