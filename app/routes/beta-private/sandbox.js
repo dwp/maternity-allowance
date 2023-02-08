@@ -72,6 +72,7 @@ router.post('/beta-private/sandbox/', function (req, res) {
     req.session.data['ma-he-week-10'] = '3 April 2022';
     req.session.data['ma-he-week-11'] = '10 April 2022';
     req.session.data['ma-he-week-12'] = '17 April 2022';
+    req.session.data['ma-he-week-13'] = '24 April 2022';
 
     req.session.data['ma-week-1'] = '14 Nov';
     req.session.data['ma-week-2'] = '21 Nov';
