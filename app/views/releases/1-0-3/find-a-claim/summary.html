@@ -31,6 +31,9 @@
       <div class="key-details-bar__top-block">
         <dt class="govuk-visually-hidden">Name:</dt>
         <dt class="key-details-bar__name">{{ data['claimant-name'] }}</dt>
+
+        <dt class="govuk-visually-hidden">National Insurance number:</dt>
+        <dt class="key-details-bar__nino">{{ data['claimant-nino'] }}</dt>
       </div>
 
       <div class="key-details-bar__bottom-block">
@@ -38,6 +41,8 @@
         <dd>{{ data['claimant-dob'] }}</dd>
         <dt>Postcode:</dt>
         <dd>{{ data['claimant-postcode'] }}</dd>
+        <dt>Contact number:</dt>
+        <dd>{{ data['claimant-contact-number'] }}</dd>
       </div>
     </dl>
   </section>
@@ -154,6 +159,15 @@
       },
       value: {
         text: data['ma-baby-due-date']
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "baby due date"
+          }
+        ]
       }
     },
     {
@@ -197,7 +211,9 @@
       {{ data['ma-map-claim-date-received'] }}
     </dd>
     <dd class="govuk-summary-list__actions">
-      &nbsp;
+      <a class="govuk-link" href="#">
+        Change<span class="govuk-visually-hidden"> date the claim was received</span>
+      </a>
     </dd>
   </div>
   <div class="govuk-summary-list__row">
@@ -205,10 +221,10 @@
       Date the claimant stopped work
     </dt>
     <dd class="govuk-summary-list__value">
-      {{ data['ma-map-claimant-stopped-work-date-last-worked'] }}
+      {{ data['ma-map-claimant-stopped-work'] }}
     </dd>
     <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="../start-a-claim/stopped-work?change=true">
+      <a class="govuk-link" href="date-last-worked?change=true">
         Change<span class="govuk-visually-hidden"> date the claimant stopped work</span>
       </a>
     </dd>
@@ -232,7 +248,9 @@
       {{ data['ma-baby-birth-date'] }}
     </dd>
     <dd class="govuk-summary-list__actions">
-      &nbsp;
+      <a class="govuk-link" href="about-the-baby?change=true">
+        Change<span class="govuk-visually-hidden"> baby birth date</span>
+      </a>
     </dd>
   </div>
   <div class="govuk-summary-list__row">
@@ -265,11 +283,11 @@
       {{ data['ma-start-date-requested'] }}
       {{govukTag({
         text: data['ma-start-date-requested-status'],
-        classes: "govuk-!-margin-left-2 " + data['ma-start-date-requested-status-colour']
+        classes: "govuk-!-margin-left-2"
       })}}
     </dd>
     <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="../start-a-claim/chosen-map-date?change=true">
+      <a class="govuk-link" href="#">
         Change<span class="govuk-visually-hidden"> start date requested by claimant</span>
       </a>
     </dd>
