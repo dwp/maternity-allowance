@@ -41,7 +41,7 @@
         <dd>{{ data['claimant-dob'] }}</dd>
         <dt>Postcode:</dt>
         <dd>{{ data['claimant-postcode'] }}</dd>
-        <dt>Contact number:</dt>
+        <dt>UK telephone number:</dt>
         <dd>{{ data['claimant-contact-number'] }}</dd>
       </div>
     </dl>
@@ -422,7 +422,7 @@
   -->
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
-      Average weekly earnings for earnings test
+      Average weekly earnings
     </dt>
     <dd class="govuk-summary-list__value">
       {{ '£' + data['ma-average-earnings'].toFixed(2) }}
