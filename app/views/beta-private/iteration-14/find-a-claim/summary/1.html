@@ -94,6 +94,9 @@
         text: data['ma-decision']
       })}}
     </dd>
+    <dd class="govuk-summary-list__actions">
+     &nbsp;
+    </dd>
   </div>
   <!--div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key govuk-!-width-one-half">
@@ -110,6 +113,9 @@
     <dd class="govuk-summary-list__value">
       {{ data['ma-claim-creation-date'] }}
     </dd>
+    <dd class="govuk-summary-list__actions">
+     &nbsp;
+    </dd>
   </div>
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
@@ -117,6 +123,9 @@
     </dt>
     <dd class="govuk-summary-list__value">
       {{ data['ma-claim-decision-date'] }}
+    </dd>
+    <dd class="govuk-summary-list__actions">
+     &nbsp;
     </dd>
   </div>
   <div class="govuk-summary-list__row">
@@ -126,6 +135,9 @@
     <dd class="govuk-summary-list__value">
       {{ data['ma-rate'] }}
     </dd>
+    <dd class="govuk-summary-list__actions">
+     &nbsp;
+    </dd>
   </div>
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
@@ -134,6 +146,9 @@
     <dd class="govuk-summary-list__value">
       {{ data['ma-map-start'] }}
     </dd>
+    <dd class="govuk-summary-list__actions">
+     &nbsp;
+    </dd>
   </div>
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
@@ -141,6 +156,9 @@
     </dt>
     <dd class="govuk-summary-list__value">
       {{ data['ma-map-end'] }}
+    </dd>
+    <dd class="govuk-summary-list__actions">
+     &nbsp;
     </dd>
   </div>
 </dl>
@@ -357,79 +375,103 @@
 
 
 <section id="employment-and-earnings" class="govuk-!-padding-top-9">
-<h2 class="govuk-heading-m" id="employment-and-earnings">Employment and earnings</h2>
 
-<dl class="govuk-summary-list govuk-!-margin-bottom-9">
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key govuk-!-width-one-half">
-      Employment type
-    </dt>
-    <dd class="govuk-summary-list__value">
-      {{ data['ma-employment-type'] }}
-    </dd>
-  </div>
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key govuk-!-width-one-half">
-      Employment test
-    </dt>
-    <dd class="govuk-summary-list__value">
-      {{ data['ma-employment-test'] }}
-    </dd>
-  </div>
-  <!--
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Employment test period
-    </dt>
-    <dd class="govuk-summary-list__value">
-      7 February 2021 to 8 August 2021
-    </dd>
-  </div>
-  -->
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Employer
-    </dt>
-    <dd class="govuk-summary-list__value">
-      {{ data['ma-employer-1'] }}
-    </dd>
-  </div>
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Employer 2
-    </dt>
-    <dd class="govuk-summary-list__value">
-      {{ data['ma-employer-2'] }}
-    </dd>
-  </div>
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Earnings test
-    </dt>
-    <dd class="govuk-summary-list__value">
-      {{ data['ma-employment-test'] }}
-    </dd>
-  </div>
-  <!--
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Earnings test weeks used
-    </dt>
-    <dd class="govuk-summary-list__value">
-      7 February 2021 to 9 May 2021
-    </dd>
-  </div>
-  -->
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Average weekly earnings
-    </dt>
-    <dd class="govuk-summary-list__value">
-      {{ '£' + data['ma-average-earnings'].toFixed(2) }}
-    </dd>
-  </div>
-</dl>
+  <h2 class="govuk-heading-m" id="employment-and-earnings">Employment</h2>
 
+  <dl class="govuk-summary-list govuk-!-margin-bottom-0">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key govuk-!-width-one-half">
+        Employment type
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{ data['ma-employment-type'] }}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        &nbsp;
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key govuk-!-width-one-half">
+        Employment test
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{ data['ma-employment-test'] }}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        &nbsp;
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Employer
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{ data['ma-employer-1'] }}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <ul class="govuk-summary-list__actions-list">
+          <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="../employers/change-employer-1.html"><span aria-hidden="true">Change</span><span class="govuk-visually-hidden">Change Michael Cain</span></a></li>
+          <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#"><span aria-hidden="true">Remove</span><span class="govuk-visually-hidden">Remove Michael Cain from the list</span></a></li>
+        </ul>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Employer 2
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{ data['ma-employer-2'] }}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <ul class="govuk-summary-list__actions-list">
+          <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="../employers/change-employer-2.html"><span aria-hidden="true">Change</span><span class="govuk-visually-hidden">Change Michael Cain</span></a></li>
+          <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#"><span aria-hidden="true">Remove</span><span class="govuk-visually-hidden">Remove Michael Cain from the list</span></a></li>
+        </ul>
+      </dd>
+    </div>
+  </dl>
+  
+  <p class="govuk-!-padding-top-2 govuk-!-margin-bottom-8">
+    <a href="../employers/add-employer.html">Add employer</a>
+  </p>
+  
+  <h2 class="govuk-heading-m" id="employment-and-earnings">Earnings</h2>
+  
+  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+    
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key govuk-!-width-one-half">
+        Earnings test
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{ data['ma-employment-test'] }}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+       &nbsp;
+      </dd>
+    </div>
+    <!--
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Earnings test weeks used
+      </dt>
+      <dd class="govuk-summary-list__value">
+        7 February 2021 to 9 May 2021
+      </dd>
+    </div>
+    -->
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Average weekly earnings for earnings test
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{ '£' + data['ma-average-earnings'].toFixed(2) }}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+       &nbsp;
+      </dd>
+    </div>
+  </dl>
 
       </div>
     </div>

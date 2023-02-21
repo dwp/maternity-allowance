@@ -507,4 +507,32 @@ router.post('/beta-private/iteration-14/find-a-claim/rti/change', function (req,
   res.redirect('/beta-private/iteration-14/find-a-claim/summary/');
 });
 
+router.post('/beta-private/iteration-14/find-a-claim/employers/change-employer-1', function (req, res) {
+  req.session.data['ma-employer-1'] = 'CHANGE EMP 1 LTD';
+  res.redirect('/beta-private/iteration-14/find-a-claim/summary/');
+});
+
+router.post('/beta-private/iteration-14/find-a-claim/employers/change-employer-2', function (req, res) {
+  req.session.data['ma-employer-2'] = 'CHANGE EMP 2 LTD';
+  res.redirect('/beta-private/iteration-14/find-a-claim/summary/');
+});
+
+router.post('/beta-private/iteration-14/find-a-claim/employers/change-employer-3', function (req, res) {
+  req.session.data['ma-employer-3'] = 'CHANGE EMP 3 LTD';
+  res.redirect('/beta-private/iteration-14/find-a-claim/summary/1-three-employers');
+});
+
+router.post('/beta-private/iteration-14/find-a-claim/employers/add-employer', function (req, res) {
+  req.session.data['ma-employer-3'] = 'THIRD EMPLOYER LTD';
+  res.redirect('/beta-private/iteration-14/find-a-claim/summary/1-three-employers');
+});
+
+router.post('/beta-private/iteration-14/find-a-claim/employers/remove-employer-3', function (req, res) {
+  if (req.session.data['remove-employer-3'] == 'yes') {
+    res.redirect('/beta-private/iteration-14/find-a-claim/summary/1');
+  } else {
+    res.redirect('/beta-private/iteration-14/find-a-claim/summary/1-three-employers');
+  }
+});
+
 }
