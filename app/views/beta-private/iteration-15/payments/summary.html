@@ -81,11 +81,12 @@
 </dl>
 </section>
 
+<form class="form" method="post" novalidate>
       {% from "govuk/components/radios/macro.njk" import govukRadios %}
       {{ govukRadios({
         classes: "govuk-radios--inline",
-        idPrefix: "payment-details-confirm",
-        name: "payment-details-confirm",
+        idPrefix: "ma-payment-details-conf",
+        name: "ma-payment-details-conf",
         fieldset: {
           legend: {
             text: "Are these the correct payment account details?"
@@ -103,7 +104,6 @@
         ]
       }) }}
 
-        <form class="form" method="post" novalidate>
 
           <input type="hidden" name="answers-checked" value="true">
 

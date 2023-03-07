@@ -560,7 +560,7 @@ router.post('/beta-private/iteration-15/payments/payment-frequency', function (r
 });
 
 router.post('/beta-private/iteration-15/payments/summary', function (req, res) {
-  if (req.session.data['payment-details-confirm'] == 'yes') {
+  if (req.session.data['ma-payment-details-conf'] == 'yes') {
     res.redirect('/beta-private/iteration-15/payments/somewhere');
   } else {
     res.redirect('/beta-private/iteration-15/payments/prepopulated-account-details');
