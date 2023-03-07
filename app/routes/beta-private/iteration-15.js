@@ -68,6 +68,10 @@ router.post('/beta-private/iteration-15/', function (req, res) {
     req.session.data['ma-earnings-test'] = 'Met';
     //req.session.data['ma-average-earnings'] = '£112.31'; 
 
+    // Payslips
+    req.session.data['ma-payslip-1-date'] = '2 January 2022';
+    req.session.data['ma-payslip-1-amount'] = 355.00;
+
     // Highest earning weeks
     req.session.data['ma-week-1'] = '30 January 2022';
     req.session.data['ma-week-2'] = '6 February 2022';
@@ -524,7 +528,11 @@ router.post('/beta-private/iteration-15/find-a-claim/employers/change-employer-3
 
 router.post('/beta-private/iteration-15/find-a-claim/employers/add-employer', function (req, res) {
   req.session.data['ma-employer-3'] = 'B&Q LTD';
-  res.redirect('/beta-private/iteration-15/find-a-claim/payslip/1');
+  res.redirect('/beta-private/iteration-15/find-a-claim/payslip/add');
+});
+
+router.post('/beta-private/iteration-15/find-a-claim/payslip/add', function (req, res) {
+  res.redirect('/beta-private/iteration-15/find-a-claim/payslip/summary');
 });
 
 router.post('/beta-private/iteration-15/find-a-claim/employers/add-employer', function (req, res) {
