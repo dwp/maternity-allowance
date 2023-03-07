@@ -16,6 +16,73 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+      
+      
+<section id="decision" class="govuk-!-margin-bottom-6">
+  <h1 class="govuk-heading-l">Claimant details</h1>
+  
+  <dl class="govuk-summary-list govuk-!-margin-bottom-0">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key govuk-!-width-one-half">
+        Name
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{ data['claimant-name'] }}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+       &nbsp;
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key govuk-!-width-one-half">
+        National Insurance number
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{ data['claimant-nino'] }}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+       &nbsp;
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Date of birth
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{ data['claimant-dob'] }}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+       &nbsp;
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Address
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{ data['claimant-address'] }}, {{ data['claimant-postcode'] }}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+       &nbsp;
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        UK telephone number
+      </dt>
+      <dd class="govuk-summary-list__value">
+        {{ data['claimant-contact-number'] }}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+       &nbsp;
+      </dd>
+    </div>
+  </dl>
+  </section>
+      
+      
+    <!--  
+      
       <h1 class="govuk-heading-l">
         Claimant details
       </h1>
@@ -38,6 +105,8 @@
         </li>
       </ul>
 
+    -->
+
       <form class="form" method="post" novalidate>
 
       {% from "govuk/components/radios/macro.njk" import govukRadios %}
@@ -46,7 +115,8 @@
         name: "claimant-confirm",
         fieldset: {
           legend: {
-            text: "Is this the correct claimant?"
+            text: "Is this the correct claimant?",
+            classes: "govuk-fieldset__legend--m"
           }
         },
         items: [

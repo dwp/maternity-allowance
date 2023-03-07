@@ -81,38 +81,39 @@
 </dl>
 </section>
 
-<form class="form" method="post" novalidate>
-      {% from "govuk/components/radios/macro.njk" import govukRadios %}
-      {{ govukRadios({
-        classes: "govuk-radios--inline",
-        idPrefix: "ma-payment-details-conf",
-        name: "ma-payment-details-conf",
-        fieldset: {
-          legend: {
-            text: "Are these the correct payment account details?"
-          }
+  <form class="form" method="post" novalidate>
+
+    {% from "govuk/components/radios/macro.njk" import govukRadios %}
+    {{ govukRadios({
+      classes: "govuk-radios--inline",
+      idPrefix: "ma-payment-details-conf",
+      name: "ma-payment-details-conf",
+      fieldset: {
+        legend: {
+          text: "Are these the correct payment account details?",
+          classes: "govuk-fieldset__legend--m"
+        }
+      },
+      items: [
+        {
+          value: "yes",
+          text: "Yes"
         },
-        items: [
-          {
-            value: "yes",
-            text: "Yes"
-          },
-          {
-            value: "no",
-            text: "No"
-          }
-        ]
-      }) }}
+        {
+          value: "no",
+          text: "No"
+        }
+      ]
+    }) }}
 
+    <input type="hidden" name="answers-checked" value="true">
 
-          <input type="hidden" name="answers-checked" value="true">
+    {{ govukButton({
+      text: "Continue"
+    }) }}
 
-          {{ govukButton({
-            text: "Continue"
-          }) }}
+  </form>
 
-        </form>
-
-      </div>
-    </div>
-  {% endblock %}
+  </div>
+</div>
+{% endblock %}
