@@ -28,7 +28,11 @@
 {% from "govuk/components/table/macro.njk" import govukTable %}
 
 <section id="decision" class="govuk-!-margin-bottom-6">
-<h1 class="govuk-heading-l">Payslip details</h1>
+<h1 class="govuk-heading-l govuk-!-margin-bottom-2">Payslip details</h1>
+
+<p class="govuk-hint govuk-!-margin-top-0 govuk-!-margin-bottom-6">
+  Payslips for {{ data['ma-employer-3'] }}.
+</p>
 
 <table class="govuk-table">
   <caption class="govuk-table__caption govuk-table__caption--m govuk-visually-hidden">Payslip dates and amounts</caption>
@@ -55,9 +59,6 @@
 
 
 </section>
-
-
-
 
   <form class="form" method="post" novalidate>
 

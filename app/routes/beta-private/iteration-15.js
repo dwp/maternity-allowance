@@ -68,10 +68,6 @@ router.post('/beta-private/iteration-15/', function (req, res) {
     req.session.data['ma-earnings-test'] = 'Met';
     //req.session.data['ma-average-earnings'] = '£112.31'; 
 
-    // Payslips
-    req.session.data['ma-payslip-1-date'] = '2 January 2022';
-    req.session.data['ma-payslip-1-amount'] = 355.00;
-
     // Highest earning weeks
     req.session.data['ma-week-1'] = '30 January 2022';
     req.session.data['ma-week-2'] = '6 February 2022';
@@ -526,8 +522,63 @@ router.post('/beta-private/iteration-15/find-a-claim/employers/change-employer-3
   res.redirect('/beta-private/iteration-15/find-a-claim/summary/1-three-employers');
 });
 
+// Payslip
+
 router.post('/beta-private/iteration-15/find-a-claim/employers/add-employer', function (req, res) {
+  // Add 3rd employer data
+
   req.session.data['ma-employer-3'] = 'B&Q LTD';
+
+  // Payslips
+  req.session.data['ma-payslip-1-date'] = '2 January 2022';
+  req.session.data['ma-payslip-1-amount'] = 355.00;
+
+  req.session.data['ma-week-1-employer-3-amount'] = 52.50;
+  req.session.data['ma-week-2-employer-3-amount'] = 52.50;
+  req.session.data['ma-week-3-employer-3-amount'] = 52.50;
+  req.session.data['ma-week-4-employer-3-amount'] = 52.50;
+  req.session.data['ma-week-5-employer-3-amount'] = 60.00;
+  req.session.data['ma-week-6-employer-3-amount'] = 52.50;
+  req.session.data['ma-week-7-employer-3-amount'] = 55.00;
+  req.session.data['ma-week-8-employer-3-amount'] = 55.00;
+  req.session.data['ma-week-9-employer-3-amount'] = 52.50;
+  req.session.data['ma-week-10-employer-3-amount'] = 52.50;
+  req.session.data['ma-week-11-employer-3-amount'] = 52.50;
+  req.session.data['ma-week-12-employer-3-amount'] = 55.00;
+  req.session.data['ma-week-13-employer-3-amount'] = 55.00;
+
+  req.session.data['ma-week-1-employer-3-source'] = 'RTI';
+  req.session.data['ma-week-2-employer-3-source'] = 'RTI';
+  req.session.data['ma-week-3-employer-3-source'] = 'RTI';
+  req.session.data['ma-week-4-employer-3-source'] = 'RTI';
+  req.session.data['ma-week-5-employer-3-source'] = 'RTI';
+  req.session.data['ma-week-6-employer-3-source'] = 'RTI';
+  req.session.data['ma-week-7-employer-3-source'] = 'RTI';
+  req.session.data['ma-week-8-employer-3-source'] = 'RTI';
+  req.session.data['ma-week-9-employer-3-source'] = 'RTI';
+  req.session.data['ma-week-10-employer-3-source'] = 'RTI';
+  req.session.data['ma-week-11-employer-3-source'] = 'RTI';
+  req.session.data['ma-week-12-employer-3-source'] = 'RTI';
+  req.session.data['ma-week-13-employer-3-source'] = 'RTI';
+
+  req.session.data['ma-week-1-total-amount'] = req.session.data['ma-week-1-employer-1-amount'] + req.session.data['ma-week-1-employer-2-amount'] + req.session.data['ma-week-1-employer-3-amount'];
+  req.session.data['ma-week-2-total-amount'] = req.session.data['ma-week-2-employer-1-amount'] + req.session.data['ma-week-2-employer-2-amount'] + req.session.data['ma-week-2-employer-3-amount'];
+  req.session.data['ma-week-3-total-amount'] = req.session.data['ma-week-3-employer-1-amount'] + req.session.data['ma-week-3-employer-2-amount'] + req.session.data['ma-week-3-employer-3-amount'];
+  req.session.data['ma-week-4-total-amount'] = req.session.data['ma-week-4-employer-1-amount'] + req.session.data['ma-week-4-employer-2-amount'] + req.session.data['ma-week-4-employer-3-amount'];
+  req.session.data['ma-week-5-total-amount'] = req.session.data['ma-week-5-employer-1-amount'] + req.session.data['ma-week-5-employer-2-amount'] + req.session.data['ma-week-5-employer-3-amount'];
+  req.session.data['ma-week-6-total-amount'] = req.session.data['ma-week-6-employer-1-amount'] + req.session.data['ma-week-6-employer-2-amount'] + req.session.data['ma-week-6-employer-3-amount'];
+  req.session.data['ma-week-7-total-amount'] = req.session.data['ma-week-7-employer-1-amount'] + req.session.data['ma-week-7-employer-2-amount'] + req.session.data['ma-week-7-employer-3-amount'];
+  req.session.data['ma-week-8-total-amount'] = req.session.data['ma-week-8-employer-1-amount'] + req.session.data['ma-week-8-employer-2-amount'] + req.session.data['ma-week-8-employer-3-amount'];
+  req.session.data['ma-week-9-total-amount'] = req.session.data['ma-week-9-employer-1-amount'] + req.session.data['ma-week-9-employer-2-amount'] + req.session.data['ma-week-9-employer-3-amount'];
+  req.session.data['ma-week-10-total-amount'] = req.session.data['ma-week-10-employer-1-amount'] + req.session.data['ma-week-10-employer-2-amount'] + req.session.data['ma-week-10-employer-3-amount'];
+  req.session.data['ma-week-11-total-amount'] = req.session.data['ma-week-11-employer-1-amount'] + req.session.data['ma-week-11-employer-2-amount'] + req.session.data['ma-week-11-employer-3-amount'];
+  req.session.data['ma-week-12-total-amount'] = req.session.data['ma-week-12-employer-1-amount'] + req.session.data['ma-week-12-employer-2-amount'] + req.session.data['ma-week-12-employer-3-amount'];
+  req.session.data['ma-week-13-total-amount'] = req.session.data['ma-week-13-employer-1-amount'] + req.session.data['ma-week-13-employer-2-amount'] + req.session.data['ma-week-13-employer-3-amount'];
+
+  req.session.data['ma-total-earnings'] = req.session.data['ma-week-1-total-amount'] + req.session.data['ma-week-2-total-amount'] + req.session.data['ma-week-3-total-amount'] + req.session.data['ma-week-4-total-amount'] + req.session.data['ma-week-5-total-amount'] + req.session.data['ma-week-6-total-amount'] + req.session.data['ma-week-7-total-amount'] + req.session.data['ma-week-8-total-amount'] + req.session.data['ma-week-9-total-amount'] + req.session.data['ma-week-10-total-amount'] + req.session.data['ma-week-11-total-amount'] + req.session.data['ma-week-12-total-amount'] + req.session.data['ma-week-13-total-amount'];
+  
+  req.session.data['ma-average-earnings'] = req.session.data['ma-total-earnings'] / 13; // total earnings for E1 + E2 per week = week total - add up all weeks / 13 to get average weekly earnings
+
   res.redirect('/beta-private/iteration-15/find-a-claim/payslip/add');
 });
 
@@ -535,9 +586,12 @@ router.post('/beta-private/iteration-15/find-a-claim/payslip/add', function (req
   res.redirect('/beta-private/iteration-15/find-a-claim/payslip/summary');
 });
 
-router.post('/beta-private/iteration-15/find-a-claim/employers/add-employer', function (req, res) {
-  req.session.data['ma-employer-3'] = 'B&Q LTD';
-  res.redirect('/beta-private/iteration-15/find-a-claim/summary/1-three-employers');
+router.post('/beta-private/iteration-15/find-a-claim/payslip/summary', function (req, res) {
+  if (req.session.data['ma-payslip-details-conf'] == 'yes') {
+    res.redirect('/beta-private/iteration-15/find-a-claim/payslip/add');
+  } else {
+    res.redirect('/beta-private/iteration-15/find-a-claim/summary/1-three-employers');
+  }
 });
 
 router.post('/beta-private/iteration-15/find-a-claim/employers/remove-employer-3', function (req, res) {
