@@ -528,6 +528,7 @@ router.post('/beta-private/iteration-15/find-a-claim/employers/add-employer', fu
   // Add 3rd employer data
 
   req.session.data['ma-employer-3'] = 'B&Q LTD';
+  req.session.data['ma-employer-3-pay-frequency'] = 'Every 4 weeks';
 
   // Payslips
   req.session.data['ma-payslip-1-date'] = '2 January 2022';
@@ -579,6 +580,10 @@ router.post('/beta-private/iteration-15/find-a-claim/employers/add-employer', fu
   
   req.session.data['ma-average-earnings'] = req.session.data['ma-total-earnings'] / 13; // total earnings for E1 + E2 per week = week total - add up all weeks / 13 to get average weekly earnings
 
+  res.redirect('/beta-private/iteration-15/find-a-claim/payslip/frequency');
+});
+
+router.post('/beta-private/iteration-15/find-a-claim/payslip/frequency', function (req, res) {
   res.redirect('/beta-private/iteration-15/find-a-claim/payslip/add');
 });
 
