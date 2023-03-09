@@ -169,13 +169,13 @@ router.post('/beta-private/iteration-15/', function (req, res) {
     req.session.data['claimant-nino'] = 'ZZ123456Z';
     req.session.data['claimant-dob'] = '5 November 1995';
     req.session.data['claimant-postcode'] = 'NH9 7DL';
-    req.session.data['claimant-address'] = null;
+    req.session.data['claimant-address'] = '86 Pear Tree Grove';
     req.session.data['claimant-contact-number'] = '07847 171740';
 
     // Decision
     req.session.data['ma-decision'] = 'Allowed';
-    req.session.data['ma-claim-creation-date'] = '22 February 2023';
-    req.session.data['ma-claim-decision-date'] = '22 February 2023';
+    req.session.data['ma-claim-creation-date'] = '14 March 2023';
+    req.session.data['ma-claim-decision-date'] = '14 March 2023';
     req.session.data['ma-rate'] = 'Standard rate at £156.66 per week';
     req.session.data['ma-map-start'] = '25 January 2023';
     req.session.data['ma-map-end'] = '24 October 2023';
@@ -525,42 +525,47 @@ router.post('/beta-private/iteration-15/find-a-claim/employers/change-employer-3
 // Payslip
 
 router.post('/beta-private/iteration-15/find-a-claim/employers/add-employer', function (req, res) {
+  // Change decision date
+
+  req.session.data['ma-claim-decision-date'] = '14 March 2023';
+  req.session.data['ma-rate'] = 'Standard rate at £156.66 per week';
+
   // Add 3rd employer data
 
   req.session.data['ma-employer-3'] = 'B&Q LTD';
   req.session.data['ma-employer-3-pay-frequency'] = 'Every 4 weeks';
 
   // Payslips
-  req.session.data['ma-payslip-1-date'] = '2 January 2022';
-  req.session.data['ma-payslip-1-amount'] = 355.00;
+  req.session.data['ma-payslip-1-date'] = '28 February 2022';
+  req.session.data['ma-payslip-1-amount'] = 2000.00;
 
-  req.session.data['ma-week-1-employer-3-amount'] = 52.50;
-  req.session.data['ma-week-2-employer-3-amount'] = 52.50;
-  req.session.data['ma-week-3-employer-3-amount'] = 52.50;
-  req.session.data['ma-week-4-employer-3-amount'] = 52.50;
-  req.session.data['ma-week-5-employer-3-amount'] = 60.00;
-  req.session.data['ma-week-6-employer-3-amount'] = 52.50;
-  req.session.data['ma-week-7-employer-3-amount'] = 55.00;
-  req.session.data['ma-week-8-employer-3-amount'] = 55.00;
-  req.session.data['ma-week-9-employer-3-amount'] = 52.50;
-  req.session.data['ma-week-10-employer-3-amount'] = 52.50;
-  req.session.data['ma-week-11-employer-3-amount'] = 52.50;
-  req.session.data['ma-week-12-employer-3-amount'] = 55.00;
-  req.session.data['ma-week-13-employer-3-amount'] = 55.00;
+  req.session.data['ma-week-1-employer-3-amount'] = 00;
+  req.session.data['ma-week-2-employer-3-amount'] = 500;
+  req.session.data['ma-week-3-employer-3-amount'] = 500;
+  req.session.data['ma-week-4-employer-3-amount'] = 500;
+  req.session.data['ma-week-5-employer-3-amount'] = 500;
+  req.session.data['ma-week-6-employer-3-amount'] = 00;
+  req.session.data['ma-week-7-employer-3-amount'] = 00;
+  req.session.data['ma-week-8-employer-3-amount'] = 00;
+  req.session.data['ma-week-9-employer-3-amount'] = 00;
+  req.session.data['ma-week-10-employer-3-amount'] = 00;
+  req.session.data['ma-week-11-employer-3-amount'] = 00;
+  req.session.data['ma-week-12-employer-3-amount'] = 00;
+  req.session.data['ma-week-13-employer-3-amount'] = 00;
 
-  req.session.data['ma-week-1-employer-3-source'] = 'RTI';
-  req.session.data['ma-week-2-employer-3-source'] = 'RTI';
-  req.session.data['ma-week-3-employer-3-source'] = 'RTI';
-  req.session.data['ma-week-4-employer-3-source'] = 'RTI';
-  req.session.data['ma-week-5-employer-3-source'] = 'RTI';
-  req.session.data['ma-week-6-employer-3-source'] = 'RTI';
-  req.session.data['ma-week-7-employer-3-source'] = 'RTI';
-  req.session.data['ma-week-8-employer-3-source'] = 'RTI';
-  req.session.data['ma-week-9-employer-3-source'] = 'RTI';
-  req.session.data['ma-week-10-employer-3-source'] = 'RTI';
-  req.session.data['ma-week-11-employer-3-source'] = 'RTI';
-  req.session.data['ma-week-12-employer-3-source'] = 'RTI';
-  req.session.data['ma-week-13-employer-3-source'] = 'RTI';
+  req.session.data['ma-week-1-employer-3-source'] = ' ';
+  req.session.data['ma-week-2-employer-3-source'] = 'Payslip';
+  req.session.data['ma-week-3-employer-3-source'] = 'Payslip';
+  req.session.data['ma-week-4-employer-3-source'] = 'Payslip';
+  req.session.data['ma-week-5-employer-3-source'] = 'Payslip';
+  req.session.data['ma-week-6-employer-3-source'] = ' ';
+  req.session.data['ma-week-7-employer-3-source'] = ' ';
+  req.session.data['ma-week-8-employer-3-source'] = ' ';
+  req.session.data['ma-week-9-employer-3-source'] = ' ';
+  req.session.data['ma-week-10-employer-3-source'] = ' ';
+  req.session.data['ma-week-11-employer-3-source'] = ' ';
+  req.session.data['ma-week-12-employer-3-source'] = ' ';
+  req.session.data['ma-week-13-employer-3-source'] = ' ';
 
   req.session.data['ma-week-1-total-amount'] = req.session.data['ma-week-1-employer-1-amount'] + req.session.data['ma-week-1-employer-2-amount'] + req.session.data['ma-week-1-employer-3-amount'];
   req.session.data['ma-week-2-total-amount'] = req.session.data['ma-week-2-employer-1-amount'] + req.session.data['ma-week-2-employer-2-amount'] + req.session.data['ma-week-2-employer-3-amount'];
